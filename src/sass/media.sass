@@ -1,0 +1,572 @@
+// @media screen and (max-width: 1400px)
+// @media screen and (max-width: 1300px)
+@media screen and (max-width: 1199px)
+   .menu-btn 
+      width: 40px
+      height: 20px
+      position: absolute
+      right: 26px
+      top: 52px
+      z-index: 11
+      overflow: hidden
+   .menu-btn span 
+      width: 40px
+      height: 2px
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      background-color: #005944
+      transition: all 0.5s
+   .menu-btn span:nth-of-type(2) 
+      top: calc(50% - 8.5px)
+      width: 40px
+      height: 2px
+      margin-left: 0
+   .menu-btn span:nth-of-type(3) 
+      top: calc(50% + 9.4px)
+      width: 40px
+      height: 2px
+   .menu 
+      position: fixed
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      padding: 80px 40px 
+      background: #EFF5FF
+      transform: translateX(-100%)
+      transition: transform 0.5s
+      z-index: 10
+      overflow: hidden
+      .header__form
+         display: block
+         margin-bottom: 25px
+      &__list 
+         flex-direction: column
+         li 
+            margin: 0 auto 25px
+            text-align: center
+            a 
+               font-size: 16px
+               font-weight: 500
+               color: #000
+   .menu.active
+      transform: translateX(0)
+   .menu-btn.active 
+      overflow: visible
+      position: fixed
+      right: 30px
+      top: 33px
+   .menu-btn.active span:nth-of-type(1) 
+      display: none
+   .menu-btn.active span:nth-of-type(2) 
+      top: 50%
+      width: 24px
+      transform: translate(-50%, 0%) rotate(45deg)
+      margin-left: 0
+      background-color: #005944
+   .menu-btn.active span:nth-of-type(3) 
+      width: 24px
+      top: 50%
+      transform: translate(-50%, 0%) rotate(-44deg)
+      margin-left: 0
+      background-color: #005944
+   .menu-btn, .menu
+      display: block
+   .footer__content
+      margin: 0
+   .footer__box 
+      justify-content: space-between
+   .ser__box
+      flex-wrap: wrap
+   .ser__right
+      display: none
+   .team__el 
+      width: 75%
+   .menu-box
+      display: none
+   .header__form
+      display: none
+   .header-phone 
+      top: 11px
+      margin-right: 100px
+   .header 
+      padding: 15px 0
+   h1 
+      font-size: 39px
+      line-height: 48px
+   .main__fig1, .main__fig2 
+      display: none
+   .main-box
+      flex-wrap: wrap
+   .main-item
+      width: 48%
+      margin-bottom: 28px
+      .logo5 
+         width: 70%
+         opacity: 0.5
+   .main-item:last-child
+      display: flex
+   .med
+      display: none
+   .accordeon__button.active
+      width: 96% !important
+   .par__content
+      display: flex
+      margin: 17px auto 0
+      justify-content: space-between
+   .par__block
+      margin-left: 0
+   .par__info
+      font-size: 14px
+   .about__pic
+      display: none
+   .about__content 
+      max-width: 100%
+      margin-left: 0
+   .news__right
+      display: none
+   .news__left
+      width: 100%
+@media ( max-width: 991px )
+   .footer__content
+      display: none
+   input, textarea, select
+      -webkit-appearance: none
+      -moz-appearance: none
+      appearance: none
+   h2 
+      font-size: 28px
+      line-height: 140%
+   .team__content
+      margin-right: 0
+      max-width: 100%
+   .team__row
+      flex-direction: column
+   .team__info
+      flex-direction: column
+      position: absolute
+      bottom: 154px
+      left: 50%
+      margin-left: -116px
+   .team__files
+      margin-left: 0
+      margin-top: 20px
+   .team__el
+      width: 100%
+   .team__sub
+      br 
+         display: none
+   .team__box
+      position: relative
+   .team__btn
+      margin-top: 150px
+   .main-item
+      width: 46%
+   .underLinedLink
+      line-height: 24px 
+      font-size: 14px
+      width: 100%
+      display: block
+   .dropdownMenuCustom
+      width: auto
+      gap: 7px
+   .van__flex
+      flex-direction: column
+   .van__block
+      width: 100%
+      margin-bottom: 20px
+   .team__item 
+      padding: 45px 20px
+   .team__name
+      font-size: 15px
+      line-height: 20px
+      margin-bottom: 4px
+   .team__job 
+      font-size: 14px
+      margin-bottom: 20px
+      line-height: 19px
+   .team__text 
+      font-size: 14px
+      line-height: 19px
+   .par__box
+      overflow-y: hidden
+      display: flex
+      overflow-x: auto
+      img 
+         margin-right: 15px
+   .accordeon__button
+      display: none !important
+   .accordeon__panel
+      display: block
+      max-height: max-content
+   .panel__text
+      margin-top: 0
+      margin-bottom: 0
+   .par__block
+      font-size: 28px
+      height: 67px
+      width: 47%  
+   .accordeon
+      margin-top: 0
+      margin-left: 308px
+      margin-right: 25px
+   .accordeon__panel
+      max-height: initial
+   .accordeon__panel
+      overflow: visible
+   .par__map 
+      top: 101px
+      left: inherit
+      width: 100%
+      right: 0
+   .par__info
+      display: none
+   .par__name 
+      margin: 10px 0 0
+   .par__wrap
+      background: #658AC8
+      padding: 20px 0
+      display: flex
+      flex-wrap: initial
+      overflow-x: auto
+      overflow-y: hidden
+      position: relative
+      padding-left: 20px
+   .par__el
+      margin-right: 10px
+      margin-bottom: 0
+   .ser__flex .ser__item:first-child
+      display: none
+   .ser__left, .ser__bottom 
+      width: 48%
+   .ser__item
+      width: 100%
+      img 
+         width: 100%
+@media screen and (max-width: 767px)
+   .footer__box
+      flex-direction: column
+      position: relative
+   .footer__list
+      margin-left: 0
+      margin-top: 20px
+   .footer__left 
+      flex-direction: column
+   .footer__info
+      position: absolute
+      right: 0
+      top: 118px
+   .footer__com 
+      display: block
+      margin: 16px auto 0
+      text-align: center
+   .team__info
+      bottom: 172px
+   .header-phone
+      right: 100px
+   h1 
+      font-size: 29px
+      line-height: 40px
+   .main-subtitle 
+      font-size: 20px
+      line-height: 29px
+      margin: 17px 0 38px
+   h2 
+      font-size: 26px
+   .van__sub
+      font-size: 18px
+   .van__pic
+      display: none
+   .team__line
+      flex-direction: column
+   .team__item 
+      width: 100%
+      margin-bottom: 80px
+      &:last-child
+         margin-bottom: 0
+   .par__box img
+      width: 80%
+   .par__map
+      top: 240px
+   .par__el
+      width: 114px
+      height: 82px
+      background: #F9FBFF
+      border-radius: 4px
+      display: flex
+      flex-direction: column
+      flex: 1 0 auto
+      max-width: 114px
+      img 
+         width: 100%
+      p 
+         font-size: 12px
+@media screen and (max-width: 576px)
+   button:active, button:focus 
+      outline: none
+   button::-moz-focus-inner 
+      border: 0
+   a:active, a:focus
+      outline: none
+   input, textarea
+      outline: none
+   input:active, textarea:active
+      outline: none
+   input:focusout
+      outline: none
+   .mob 
+      display: block
+   .ul 
+      flex-direction: column !important
+      li 
+         margin: 0 auto 40px !important
+         width: 100% !important
+   .footer .logo
+      width: 102px
+   .footer
+      padding: 26px 0 32px
+   .footer__list li a
+      font-size: 14px
+   .footer__info
+      br 
+         display: none
+      .mob 
+         display: block
+      p, a 
+         font-size: 14px
+         line-height: 17px
+   .footer__list li
+      margin-bottom: 6px
+   .footer__info 
+      right: 11px
+      top: 71px
+   .footer__com
+      margin-top: 12px
+   h2 
+      font-size: 23px
+      line-height: 31px
+   .ser .team__box
+      background: white
+      padding: 0
+      position: relative
+      margin-top: 0
+      padding-top: 20px
+      &:before 
+         content: ""
+         display: block
+         position: absolute
+         left: 0
+         top: 0
+         height: 100%
+         width: 500%
+         left: -300%
+         background: white
+         z-index: -1
+      &:after
+         content: ""
+         display: block
+         position: absolute
+         right: 0
+         top: 0
+         height: 100%
+         width: 500%
+         left: -300%
+         background: white
+         z-index: -1
+   .ser .team__form .chous
+      background: #EFF5FF
+   .team__flex
+      flex-direction: column
+      margin-bottom: 0
+   .team__flex .team__el
+      width: 100%
+      margin-bottom: 16px
+   .team__btn
+      margin-top: 148px
+      position: relative
+      width: 202px
+   .team__sub
+      position: relative
+      width: 94%
+      margin: 0 auto
+   .team__form label
+      position: relative
+      font-size: 15px
+      z-index: 1
+   .ser h2
+      position: relative
+      z-index: 1
+   .team__files
+      font-size: 15px
+   .team__row
+      margin-top: 25px
+   .team__info
+      bottom: 142px
+      width: 100%
+      left: 0
+      margin-left: 0
+   .team__form .chous, .dada
+      width: 100%
+   .ser 
+      padding: 50px 0 85px
+   .header 
+      .logo
+         width: 98px
+   .header__phone
+      font-size: 15px
+   .header-phone_btn a
+      font-size: 14px
+   .header-phone 
+      right: 162px
+      top: 4px
+   .header__box
+      align-items: center
+   .phone2 
+      display: none
+   .menu-btn
+      right: 13px
+      top: 36px
+   .main-box 
+      background: transparent
+      box-shadow: inherit
+      padding: 0
+   h1 
+      font-size: 20px
+      line-height: 24px
+   .main-subtitle 
+      font-size: 14px
+      line-height: 19px
+      margin: 13px 0 20px
+   .main-item_name
+      font-size: 12px
+      line-height: 16px
+   .underLinedLink 
+      line-height: 21px
+      font-size: 12px
+   .dropdownMenuCustom a
+      display: flex
+      img 
+         margin-left: 5px
+   .header
+      background: transparent
+   .main
+      margin-top: 20px
+   .main-item
+      margin-bottom: 4px
+      width: 46.5%
+   h2 
+      font-size: 23px
+      line-height: 31px
+   .van
+      padding: 50px 0
+   .van__sub
+      font-size: 14px
+   .van__box
+      margin-top: 25px
+   .van__item p 
+      font-size: 16px
+      margin-left: 9px
+   .van__name 
+      font-size: 20px
+      margin-bottom: 8px
+   .van__text
+      font-size: 14px
+   .team__item 
+      padding: 45px 20px 20px
+      margin-bottom: 60px
+   .team__ava
+      width: 78px
+      height: 78px
+      margin: -87px auto 15px
+      display: block
+   .team__job
+      margin-bottom: 15px
+   .team__box
+      margin-top: 60px
+      padding: 20px
+   .team .team__form .chous, .dada 
+      width: 95%
+      left: 2.5%
+   .team .team__info 
+      bottom: 172px
+   .par
+      padding: 50px 0
+   .par__box
+      background: transparent
+      box-shadow: inherit
+   .par__box
+      margin-top: 20px
+   .par__block 
+      font-size: 16px
+      height: 67px
+      width: 46%
+   .par__bottom
+      margin-top: 140px
+   .par__bottom h2
+      margin-bottom: 10px
+   .par__one
+      font-size: 14px
+      line-height: 170%
+      margin-bottom: 0
+      width: 92%
+   .par__wrap
+      margin-top: 40px
+   .about
+      padding: 0 0 10px
+   .about h2
+      margin-bottom: 20px
+   .about__text
+      font-size: 14px
+      margin-bottom: 0
+      width: 92%
+   .about__btn
+      margin-top: 20px
+      font-size: 14px
+   .news__box
+      margin-top: 20px
+   .news__data
+      font-size: 14px
+   .news__name
+      font-size: 15px
+   .news__text 
+      font-size: 14px
+      line-height: 17px
+   .news__item 
+      width: 100%
+      padding-bottom: 21px
+      margin-bottom: 30px
+   .news__link
+      font-size: 16px
+      line-height: 19px
+      margin: 0px 
+      justify-content: flex-start
+   .ser 
+      padding: 30px 0 85px
+   .ser__box
+      margin-top: 20px
+   .ser .news__link 
+      margin-top: 0px
+      margin-bottom: 40px
+   .header-phone_number
+      margin-bottom: 0
+   .header__phone
+      margin-bottom: 0
+   .par__box img 
+      width: 60%
+@media screen and (max-width: 360px)
+   .footer__info
+      right: 0
+   .footer__info p, .footer__info a
+      font-size: 12px
+   .footer__list li a
+      font-size: 12px
+   .team__info 
+      bottom: 150px
+   .team .team__info 
+      bottom: 188px
+   .main-item_name
+      font-size: 11px
+   .header-phone
+      display: none
