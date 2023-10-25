@@ -35,6 +35,45 @@ window.addEventListener("DOMContentLoaded", function () {
 
 });
 document.addEventListener("DOMContentLoaded", () => {
+  // svg
+  $(function () {
+    jQuery('img.svg').each(function () {
+      var $img = jQuery(this);
+      var imgID = $img.attr('id');
+      var imgClass = $img.attr('class');
+      var imgURL = $img.attr('src');
+
+      jQuery.get(imgURL, function (data) {
+        // Get the SVG tag, ignore the rest
+        var $svg = jQuery(data).find('svg');
+
+        // Add replaced image's ID to the new SVG
+        if (typeof imgID !== 'undefined') {
+          $svg = $svg.attr('id', imgID);
+        }
+        // Add replaced image's classes to the new SVG
+        if (typeof imgClass !== 'undefined') {
+          $svg = $svg.attr('class', imgClass + ' replaced-svg');
+        }
+
+        // Remove any invalid XML tags as per http://validator.w3.org
+        $svg = $svg.removeAttr('xmlns:a');
+
+        // Check if the viewport is set, else we gonna set it if we can.
+        if (!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+          $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
+        }
+
+        // Replace image with new SVG
+        $img.replaceWith($svg);
+
+      }, 'xml');
+
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
   var accordeonButtons = document.getElementsByClassName("accordeon__button");
 
   //пишем событие при клике на кнопки - вызов функции toggle
@@ -131,82 +170,6 @@ document.addEventListener("DOMContentLoaded", () => {
   new ItcTabs('.tabs');
 });
 document.addEventListener("DOMContentLoaded", () => {
-  const value = document.querySelector("#value")
-  const input = document.querySelector("#pi_input")
-  value.textContent = input.value
-  input.addEventListener("input", (event) => {
-    value.textContent = event.target.value
-  })
-});
-document.addEventListener("DOMContentLoaded", () => {
-  const value = document.querySelector("#value2")
-  const input = document.querySelector("#pi_input2")
-  value.textContent = input.value
-  input.addEventListener("input", (event) => {
-    value.textContent = event.target.value
-  })
-});
-document.addEventListener("DOMContentLoaded", () => {
-  const value = document.querySelector("#value3")
-  const input = document.querySelector("#pi_input3")
-  value.textContent = input.value
-  input.addEventListener("input", (event) => {
-    value.textContent = event.target.value
-  })
-});
-document.addEventListener("DOMContentLoaded", () => {
-  class ItcTabs {
-    constructor(target, config) {
-      const defaultConfig = {};
-      this._config = Object.assign(defaultConfig, config);
-      this._elTabs = typeof target === 'string' ? document.querySelector(target) : target;
-      this._elButtons = this._elTabs.querySelectorAll('.tabs__btn');
-      this._elPanes = this._elTabs.querySelectorAll('.tabs__pane');
-      this._eventShow = new Event('tab.itc.change');
-      this._init();
-      this._events();
-    }
-    _init() {
-      this._elTabs.setAttribute('role', 'tablist');
-      this._elButtons.forEach((el, index) => {
-        el.dataset.index = index;
-        el.setAttribute('role', 'tab');
-        this._elPanes[index].setAttribute('role', 'tabpanel');
-      });
-    }
-    show(elLinkTarget) {
-      const elPaneTarget = this._elPanes[elLinkTarget.dataset.index];
-      const elLinkActive = this._elTabs.querySelector('.tabs__btn_active');
-      const elPaneShow = this._elTabs.querySelector('.tabs__pane_show');
-      if (elLinkTarget === elLinkActive) {
-        return;
-      }
-      elLinkActive ? elLinkActive.classList.remove('tabs__btn_active') : null;
-      elPaneShow ? elPaneShow.classList.remove('tabs__pane_show') : null;
-      elLinkTarget.classList.add('tabs__btn_active');
-      elPaneTarget.classList.add('tabs__pane_show');
-      this._elTabs.dispatchEvent(this._eventShow);
-      elLinkTarget.focus();
-    }
-    showByIndex(index) {
-      const elLinkTarget = this._elButtons[index];
-      elLinkTarget ? this.show(elLinkTarget) : null;
-    };
-    _events() {
-      this._elTabs.addEventListener('click', (e) => {
-        const target = e.target.closest('.tabs__btn');
-        if (target) {
-          e.preventDefault();
-          this.show(target);
-        }
-      });
-    }
-  }
-
-  // инициализация .tabs как табов
-  new ItcTabs('.tabs2');
-});
-document.addEventListener("DOMContentLoaded", () => {
   $(document).ready(function () {
     $(".youtube-link").grtyoutube({
       autoPlay: true
@@ -270,13 +233,13 @@ document.addEventListener("DOMContentLoaded", () => {
     return false; // выключаем стандартное действие
   });
 });
-document.addEventListener("DOMContentLoaded", () => {
-  $('.menu li a').click(function (event) {
-    $('.menu-btn').toggleClass('active');
-    $('.menu').toggleClass('active');
-    return false;
-  });
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//   $('.menu li a').click(function (event) {
+//     $('.menu-btn').toggleClass('active');
+//     $('.menu').toggleClass('active');
+//     return false;
+//   });
+// });
 document.addEventListener("DOMContentLoaded", () => {
   $('.item__link2').click(function (event) {
     $(this).css('display', 'none');
@@ -289,6 +252,22 @@ document.addEventListener("DOMContentLoaded", () => {
   $('.about__link2').click(function (event) {
     $(this).css('display', 'none');
     $('.about__see2').slideToggle();
+    $('.about__content').addClass('opened');
+    return false;
+  });
+});
+document.addEventListener("DOMContentLoaded", () => {
+  $('.partners__link').click(function (event) {
+    $(this).css('display', 'none');
+    $('.partners__see').slideToggle();
+    $('.about__content').addClass('opened');
+    return false;
+  });
+});
+document.addEventListener("DOMContentLoaded", () => {
+  $('.partners__link2').click(function (event) {
+    $(this).css('display', 'none');
+    $('.partners__see2').slideToggle();
     $('.about__content').addClass('opened');
     return false;
   });
@@ -425,29 +404,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const rangeInputs = document.querySelectorAll('input[type="range"]')
-  const numberInput = document.querySelector('input[type="number"]')
-
-  function handleInputChange(e) {
-    let target = e.target
-    if (e.target.type !== 'range') {
-      target = document.getElementById('range')
-    }
-    const min = target.min
-    const max = target.max
-    const val = target.value
-
-    target.style.backgroundSize = (val - min) * 100 / (max - min) + '% 100%'
-  }
-
-  rangeInputs.forEach(input => {
-    input.addEventListener('input', handleInputChange)
-  })
-
-  numberInput.addEventListener('input', handleInputChange)
-
-});
 document.addEventListener('DOMContentLoaded', function () {
   var swiper = new Swiper(".swiper1", {
     spaceBetween: 0,
@@ -583,6 +539,55 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   });
+  var swiper5 = new Swiper(".swiper5", {
+    spaceBetween: 24,
+    slidesPerView: "3",
+    loop: false,
+    pagination: {
+      el: ".swiper-pagination5",
+      clickable: true,
+
+    },
+    navigation: {
+      nextEl: ".swiper-button-next5",
+      prevEl: ".swiper-button-prev5",
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        spaceBetween: 6,
+        slidesPerView: 2
+      },
+      767: {
+        spaceBetween: 20,
+        slidesPerView: 2
+      },
+      992: {
+        spaceBetween: 20,
+        slidesPerView: 2
+      },
+      1200: {
+        spaceBetween: 24,
+        slidesPerView: 3
+      }
+    }
+  });
+});
+document.addEventListener("DOMContentLoaded", () => {
+  let menuBtn = document.querySelector('.menu-btn');
+  let menu = document.querySelector('.menu');
+  menuBtn.addEventListener('click', function () {
+    menuBtn.classList.toggle('active');
+    menu.classList.toggle('active');
+  });
+});
+document.addEventListener("DOMContentLoaded", () => {
+  let menuBtn3 = document.querySelector('.menu-btn3');
+  let menu3 = document.querySelector('.menu3');
+  menuBtn3.addEventListener('click', function () {
+    menuBtn3.classList.toggle('active');
+    menu3.classList.toggle('active');
+  });
 });
 document.addEventListener("DOMContentLoaded", () => {
   //popup1
@@ -632,56 +637,214 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 document.addEventListener("DOMContentLoaded", () => {
-  let menuBtn = document.querySelector('.menu-btn');
-  let menu = document.querySelector('.menu');
-  menuBtn.addEventListener('click', function () {
-    menuBtn.classList.toggle('active');
-    menu.classList.toggle('active');
+  //popup2
+  let popupBg2 = document.querySelector('.popup__bg2');
+  let popup2 = document.querySelector('.popup2');
+  let openPopupButtons2 = document.querySelectorAll('.i1');
+  let closePopupButton2 = document.querySelector('.close-popup2');
+
+  openPopupButtons2.forEach((button) => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      popupBg2.classList.add('active');
+      popup2.classList.add('active');
+    })
+  });
+
+  closePopupButton2.addEventListener('click', () => {
+    popupBg2.classList.remove('active');
+    popup2.classList.remove('active');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (e.target === popupBg2) {
+      popupBg2.classList.remove('active');
+      popup2.classList.remove('active');
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      //ваша функция закрытия окна
+      popupBg2.classList.remove('active');
+      popup2.classList.remove('active');
+    }
   });
 });
 document.addEventListener("DOMContentLoaded", () => {
-  let menuBtn2 = document.querySelector('.menu-btn2');
-  let menu2 = document.querySelector('.menu2');
-  menuBtn2.addEventListener('click', function () {
-    menuBtn2.classList.toggle('active');
-    menu2.classList.toggle('active');
+  //popup3
+  let popupBg3 = document.querySelector('.popup__bg3');
+  let popup3 = document.querySelector('.popup3');
+  let openPopupButtons3 = document.querySelectorAll('.i2');
+  let closePopupButton3 = document.querySelector('.close-popup3');
+
+  openPopupButtons3.forEach((button) => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      popupBg3.classList.add('active');
+      popup3.classList.add('active');
+    })
+  });
+
+  closePopupButton3.addEventListener('click', () => {
+    popupBg3.classList.remove('active');
+    popup3.classList.remove('active');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (e.target === popupBg3) {
+      popupBg3.classList.remove('active');
+      popup3.classList.remove('active');
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      //ваша функция закрытия окна
+      popupBg3.classList.remove('active');
+      popup3.classList.remove('active');
+    }
   });
 });
 document.addEventListener("DOMContentLoaded", () => {
-  // svg
-  $(function () {
-    jQuery('img.svg').each(function () {
-      var $img = jQuery(this);
-      var imgID = $img.attr('id');
-      var imgClass = $img.attr('class');
-      var imgURL = $img.attr('src');
+  //popup4
+  let popupBg4 = document.querySelector('.popup__bg4');
+  let popup4 = document.querySelector('.popup4');
+  let openPopupButtons4 = document.querySelectorAll('.i3');
+  let closePopupButton4 = document.querySelector('.close-popup4');
 
-      jQuery.get(imgURL, function (data) {
-        // Get the SVG tag, ignore the rest
-        var $svg = jQuery(data).find('svg');
+  openPopupButtons4.forEach((button) => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      popupBg4.classList.add('active');
+      popup4.classList.add('active');
+    })
+  });
 
-        // Add replaced image's ID to the new SVG
-        if (typeof imgID !== 'undefined') {
-          $svg = $svg.attr('id', imgID);
-        }
-        // Add replaced image's classes to the new SVG
-        if (typeof imgClass !== 'undefined') {
-          $svg = $svg.attr('class', imgClass + ' replaced-svg');
-        }
+  closePopupButton4.addEventListener('click', () => {
+    popupBg4.classList.remove('active');
+    popup4.classList.remove('active');
+  });
 
-        // Remove any invalid XML tags as per http://validator.w3.org
-        $svg = $svg.removeAttr('xmlns:a');
-
-        // Check if the viewport is set, else we gonna set it if we can.
-        if (!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-          $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
-        }
-
-        // Replace image with new SVG
-        $img.replaceWith($svg);
-
-      }, 'xml');
-
-    });
+  document.addEventListener('click', (e) => {
+    if (e.target === popupBg4) {
+      popupBg4.classList.remove('active');
+      popup4.classList.remove('active');
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      //ваша функция закрытия окна
+      popupBg4.classList.remove('active');
+      popup4.classList.remove('active');
+    }
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  //popup5
+  let popupBg5 = document.querySelector('.popup__bg5');
+  let popup5 = document.querySelector('.popup5');
+  let openPopupButtons5 = document.querySelectorAll('.i4');
+  let closePopupButton5 = document.querySelector('.close-popup5');
+
+  openPopupButtons5.forEach((button) => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      popupBg5.classList.add('active');
+      popup5.classList.add('active');
+    })
+  });
+
+  closePopupButton5.addEventListener('click', () => {
+    popupBg5.classList.remove('active');
+    popup5.classList.remove('active');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (e.target === popupBg5) {
+      popupBg5.classList.remove('active');
+      popup5.classList.remove('active');
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      //ваша функция закрытия окна
+      popupBg5.classList.remove('active');
+      popup5.classList.remove('active');
+    }
+  });
+});
+document.addEventListener("DOMContentLoaded", () => {
+  //popup6
+  let popupBg6 = document.querySelector('.popup__bg6');
+  let popup6 = document.querySelector('.popup6');
+  let openPopupButtons6 = document.querySelectorAll('.i5');
+  let closePopupButton6 = document.querySelector('.close-popup6');
+
+  openPopupButtons6.forEach((button) => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      popupBg6.classList.add('active');
+      popup6.classList.add('active');
+    })
+  });
+
+  closePopupButton6.addEventListener('click', () => {
+    popupBg6.classList.remove('active');
+    popup6.classList.remove('active');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (e.target === popupBg6) {
+      popupBg6.classList.remove('active');
+      popup6.classList.remove('active');
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      //ваша функция закрытия окна
+      popupBg6.classList.remove('active');
+      popup6.classList.remove('active');
+    }
+  });
+});
+document.addEventListener("DOMContentLoaded", () => {
+  //popup7
+  let popupBg7 = document.querySelector('.popup__bg7');
+  let popup7 = document.querySelector('.popup7');
+  let openPopupButtons7 = document.querySelectorAll('.i6');
+  let closePopupButton7 = document.querySelector('.close-popup7');
+
+  openPopupButtons7.forEach((button) => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      popupBg7.classList.add('active');
+      popup7.classList.add('active');
+    })
+  });
+
+  closePopupButton7.addEventListener('click', () => {
+    popupBg7.classList.remove('active');
+    popup7.classList.remove('active');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (e.target === popupBg7) {
+      popupBg7.classList.remove('active');
+      popup7.classList.remove('active');
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      //ваша функция закрытия окна
+      popupBg7.classList.remove('active');
+      popup7.classList.remove('active');
+    }
+  });
+});
+// document.addEventListener("DOMContentLoaded", () => {
+//   let menuBtn2 = document.querySelector('.menu-btn2');
+//   let menu2 = document.querySelector('.menu2');
+//   menuBtn2.addEventListener('click', function () {
+//     menuBtn2.classList.toggle('active');
+//     menu2.classList.toggle('active');
+//   });
+// });

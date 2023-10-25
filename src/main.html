@@ -45,7 +45,6 @@
 								<div class="innerUpper">
 									<span class="innerName">Продукция</span>
 									<div class="innerBack">
-										<img src="img/innerBackArrow.svg" alt="innerBackArrow">
 										<span>Назад</span>
 									</div>
 								</div>
@@ -263,9 +262,6 @@
 								<li><a href="video">Видео</a></li>
 								<li><a href="kontaktyi" class="menu-margin">Контакты</a></li>
 							</ul>
-							<div class="close-icon">
-								<img src="img/close-icon.svg">
-							</div>
 						</div>
 						<form action="#" class="header__form">
 							<input type="search" name="search" placeholder="Поиск">
@@ -301,11 +297,45 @@
 								Главная
 							</a>
 						</li>
-						<li>
-							<a href="#">
-								Продукция
-							</a>
-						</li>
+						<div class="accordeon">
+							<div class="accordeon-container">
+								<li class="accordeon__item">
+									<div class="accordeon__button closed">Продукция</div>
+									<ul class="accordeon__panel">
+										<li class="panel__text">
+											<a href="#">
+												Нейрохирургия
+											</a>
+										</li>
+										<li class="panel__text">
+											<a href="#">
+												Хирургия
+											</a>
+										</li>
+										<li class="panel__text">
+											<a href="#">
+												Нейрофизиология и функциональная диагностика
+											</a>
+										</li>
+										<li class="panel__text">
+											<a href="#">
+												Анестезиология и реанимация
+											</a>
+										</li>
+										<li class="panel__text">
+											<a href="#">
+												Неонатология
+											</a>
+										</li>
+										<li class="panel__text">
+											<a href="#">
+												Комплектующие
+											</a>
+										</li>
+									</ul>
+								</li>
+							</div>
+						</div>
 						<li>
 							<a href="#">
 								О компании
@@ -450,7 +480,7 @@
 				</div>
 			</div>
 		</main>
-		</section>
+
 		<section class="van" id="van">
 			<div class="container">
 				<h2>
@@ -573,7 +603,6 @@
 											</a>
 										</div>
 										<div class="swiper-slide">
-											<img src="/img/med3.png" alt="" class="med__pic">
 											<p class="med__name">
 												Навигация CURVE
 											</p>
@@ -1478,6 +1507,35 @@
 				</a>
 			</div>
 		</footer>
+	</div>
+	<div class="popup__bg" id="popup">
+		<div class="popup">
+			<img src="/img/close.svg" alt="" class="close-popup svg">
+			<div class="popup__wrap">
+				<div class="popup__content">
+					<p class="popup__title">
+						Заказать звонок
+					</p>
+					<p class="popup__text">
+						Оставьте заявку и мы перезвоним <br>
+						Вам в ближайшее время
+					</p>
+					<form action="#" class="popup__form">
+						<div class="popup__item">
+							<label>Ваше имя</label>
+							<input type="text" name="name" placeholder="Иванов Иван">
+						</div>
+						<div class="popup__item">
+							<label>Ваш номер телефона</label>
+							<input type="tel" name="tel" placeholder="+7 999 999 99 99" class="tel">
+						</div>
+						<button class="popup__btn btn">
+							Отправить заявку
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>

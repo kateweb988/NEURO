@@ -10,61 +10,93 @@
       margin-top: 300px
    .menu-btn 
       width: 40px
-      height: 20px
+      height: 40px
+      cursor: pointer
       position: absolute
       right: 26px
-      top: 52px
+      top: 46px
       z-index: 11
       overflow: hidden
-   .menu-btn span 
-      width: 40px
-      height: 2px
-      position: absolute
-      top: 50%
-      left: 50%
-      transform: translate(-50%, -50%)
-      background-color: #005944
-      transition: all 0.5s
-   .menu-btn span:nth-of-type(2) 
-      top: calc(50% - 8.5px)
-      width: 40px
-      height: 2px
-      margin-left: 0
-   .menu-btn span:nth-of-type(3) 
-      top: calc(50% + 9.4px)
-      width: 40px
-      height: 2px
+      background: url(/img/bur.svg) no-repeat
+   // .menu-btn span 
+   //    width: 40px
+   //    opacity: 0
+   //    height: 2px
+   //    position: absolute
+   //    top: 50%
+   //    left: 50%
+   //    transform: translate(-50%, -50%)
+   //    background-color: #005944
+   //    transition: all 0.5s
+   // .menu-btn span:nth-of-type(2) 
+   //    top: calc(50% - 8.5px)
+   //    width: 40px
+   //    height: 2px
+   //    margin-left: 0
+   // .menu-btn span:nth-of-type(3) 
+   //    top: calc(50% + 9.4px)
+   //    width: 40px
+   //    height: 2px
    .menu 
       position: fixed
-      top: 0
+      top: 0px
       left: 0
       width: 100%
       height: 100%
-      padding: 80px 40px 
+      padding: 15px 40px 80px
       background: #EFF5FF
       transform: translateX(-100%)
       transition: transform 0.5s
       z-index: 10
       overflow: hidden
+      &__top
+         margin-bottom: 24px
+      .catalog
+         margin: 10px auto 25px 
+         width: 100%
+         max-width: 100%
+         padding-left: 0
+         justify-content: center
+         height: 34px
+         font-size: 12px
+         font-style: normal
+         font-weight: 500
+         line-height: 18px
+         img 
+            position: relative
+            margin-right: 6px
       .header__form
+         height: 34px
+         margin-top: 0
          display: block
-         margin-bottom: 25px
+         input 
+            border-radius: 8px
+            background: #FFF
+            padding-left: 50px
+            border: 1px solid #FFF
+            font-size: 12px
+         button 
+            right: inherit
+            top: 7px
+            left: 12px
       &__list 
          flex-direction: column
          li 
-            margin: 0 auto 25px
-            text-align: center
+            margin: 0 0 15px
+            text-align: left
             a 
-               font-size: 16px
-               font-weight: 500
-               color: #000
+               color: #111720
+               font-size: 18px
+               font-style: normal
+               font-weight: 400
+               border-bottom: 1px solid #111720
+               opacity: 0.9
    .menu.active
       transform: translateX(0)
    .menu-btn.active 
       overflow: visible
       position: fixed
-      right: 30px
-      top: 33px
+      background: url(/img/bur2.svg) no-repeat
    .menu-btn.active span:nth-of-type(1) 
       display: none
    .menu-btn.active span:nth-of-type(2) 
@@ -96,13 +128,17 @@
    .header__form
       display: none
    .header-phone 
-      top: 11px
+      top: 21px
       margin-right: 100px
    .header 
       padding: 15px 0
    h1 
-      font-size: 39px
-      line-height: 48px
+      font-size: 39px !important
+      line-height: 48px !important
+   .new-main__wrap h2
+      font-size: 32px
+   .new-main__sub
+      font-size: 28px
    .main__fig1, .main__fig2 
       display: none
    .main-box
@@ -337,6 +373,144 @@
    .item12.item3__row
       flex-direction: column-reverse
       margin-bottom: 80px
+   .menu
+      .accordeon
+         margin-left: 0
+         margin-right: 0
+         margin-top: 0
+         margin-bottom: 0
+      .accordeon__button
+         background: transparent !important
+         font-size: 16px !important
+         font-weight: 500 !important
+         color: #000 !important
+         position: relative !important
+         top: 0 !important
+         bottom: 0 !important
+         height: auto   !important
+         display: block !important
+         &:after 
+            height: 20px !important
+            display: block !important
+            left: initial !important
+            right: 118px !important
+            position: absolute !important
+            top: 8px !important
+      .accordeon__button.active
+         margin-bottom: 30px
+         position: relative !important
+         left: 8px !important
+         &:after 
+            transform: rotate(180deg)
+            top: -9px !important
+      .accordeon__button:after
+         background: url(/img/down3.svg) no-repeat !important
+         background-size: 10px !important
+      .accordeon__panel
+         overflow: hidden !important
+         max-height: 0 
+      .menu__list li 
+         width: max-content
+   .item13__top
+      flex-direction: column
+      align-items: center
+   .item13__bott img 
+      position: absolute
+      right: 0
+      top: 0
+      width: 54%
+   .item13-area__sub img
+      display: none
+   .item14__item 
+      img 
+         width: 100%
+   .item14__bott
+      img 
+         top: 104px
+   .new__flex, .phone2, .footer__info
+      display: none
+   .header-phone
+      white-space: nowrap
+   // .logo
+   //    width: 93px 
+   //    max-width: 93px 
+   .new-main__box
+      position: relative
+      flex-direction: column-reverse
+   .new-main__content
+      max-width: 100%
+   .new-main__pic
+      width: 100%
+      margin-top: 20px
+   .new-main__block
+      white-space: inherit
+      width: 100% !important
+      max-width: 100% !important
+   .new-main__flex 
+      position: absolute
+      bottom: 0px !important
+      left: 0 !important
+      right: inherit !important
+      width: 100% !important
+      height: max-content
+      top: inherit !important
+   .about-main__area .med-arr
+      display: none
+   .about-main__row
+      flex-direction: column 
+      height: auto
+   .about-main__big
+      margin-bottom: 10px
+      margin-right: 0
+      max-width: 100%
+      height: 300px
+   .new-main__area
+      position: absolute
+      left: 18px
+      width: 40px
+      margin-top: -110px
+      height: 40px
+      img 
+         width: 19px
+   .new-main__item
+      height: auto
+      width: 49%
+      padding: 12px 12px 24px
+   .new-main__wrap
+      margin-bottom: 39px
+   .item-new__item
+      flex-direction: column
+      padding: 20px 20px 40px
+   .item-new__left
+      width: 100%
+   .item-new__right
+      max-width: 100%
+      position: relative
+      margin-top: 20px
+   .item-new__title
+      margin-top: 60px
+      max-width: 100%
+   .item-new__block
+      position: absolute
+      right: 0
+      top: -66px
+   .item-new__flex 
+      flex-direction: column
+      position: absolute
+      right: 0
+      top: -59px
+      p 
+         margin-bottom: 10px
+   .about-main__wrap_2 .new-main__box
+      flex-direction: initial !important
+      .new-main__pic
+         margin-top: 0
+   .partners__item
+      width: 32.7%
+   .ser.new-main__wrap .ser__box .ser__item img
+      object-fit: contain
+   .ser.new-main__wrap .ser__box .ser__item
+      height: 220px
 @media ( max-width: 991px )
    .footer__content
       display: none
@@ -345,8 +519,8 @@
       -moz-appearance: none
       appearance: none
    h2 
-      font-size: 28px
-      line-height: 140%
+      font-size: 28px !important
+      line-height: 140% !important
    .team__content
       margin-right: 0
       max-width: 100%
@@ -560,6 +734,83 @@
       flex-direction: column-reverse
       img 
          margin-bottom: 40px
+   .item13__bottom
+      flex-direction: column
+   .item13__el p
+      max-width: 100%
+   .item13__one
+      width: 100% !important
+   .item13 .item10__block
+      width: 100% !important
+   .popup2, .popup3, .popup4, .popup5, .popup6, .popup7
+      width: 90%
+      padding: 40px 20px 140px
+   .item13__bott img
+      top: 67px
+   .item13-area__sub
+      white-space: inherit
+   .item13-area__name
+      font-size: 24px
+   .item13-main__title
+      font-size: 27px
+   .popup3__pic 
+      position: absolute
+      right: 50%
+      top: inherit
+      bottom: 0
+      margin-right: -128px
+   .item14__item
+      width: 47.5%
+   .item14__bott img
+      right: -43px
+   .team2 .team__row
+      flex-direction: column-reverse
+   .team2 .team__content
+      margin: 0
+      max-width: 100% 
+      width: 100%
+   .team2 .team__sub, .team2 .team__form .chous
+      display: none
+   .team2 .team__box
+      position: relative
+      border-bottom: 1px solid #dae0ea
+      button 
+         position: absolute
+         bottom: 20px
+         left: 0
+         height: 39px
+         font-size: 12px
+   .team2 .team__content input
+      margin-bottom: 6px
+      height: 39px
+      font-size: 12px
+   .team2 textarea
+      min-height: 96px 
+      font-size: 12px
+   .team2 h2
+      margin-bottom: 10px
+   .item-new__area
+      flex-direction: column 
+      p 
+         width: 100%
+         margin-bottom: 15px
+         &:last-child
+            margin-bottom: 0
+   .about-main__sub
+      br 
+         display: none
+   .about-main__item
+      height: auto
+   .partners__item 
+      width: 49.5%
+   .ser.new-main__wrap .ser__box .ser__item
+      width: 50%
+   .global__info p 
+      font-size: 49px
+      line-height: 100%
+      margin-bottom: 20px
+   .global__box
+      top: 0
 @media screen and (max-width: 767px)
    .footer__box
       flex-direction: column
@@ -582,8 +833,8 @@
    .header-phone
       right: 100px
    h1 
-      font-size: 29px
-      line-height: 40px
+      font-size: 29px !important
+      line-height: 40px !important
    .main-subtitle 
       font-size: 20px
       line-height: 29px
@@ -708,6 +959,52 @@
       font-size: 14px
    .item12__box .item10__block
       width: 100% !important
+   .item14__bott img
+      right: -110px
+   .logo
+      width: 93px
+      max-width: 93px
+   .new__mail, .header__phone
+      font-size: 12px
+   .header__phone
+      margin-top: 0
+      top: 0
+   .header-phone
+      top: 10px
+   .menu-btn
+      top: 25px
+   .new-main__block
+      br 
+         display: none
+   .new-main__item
+      width: 100%
+   .new-main__area
+      margin-top: -134px
+   .new-main__el
+      padding: 8px
+      width: 40px
+      height: 40px
+      img 
+         width: 100%
+   .footer__soc
+      display: none
+   .footer__left p
+      margin-right: 0
+      margin-bottom: 16px
+   .socials
+      width: 195px
+      height: 34px
+      p 
+         top: 0
+         font-size: 12px
+      a 
+         width: 26px
+         height: 26px
+         margin-left: 8px
+         top: 0
+         img 
+            width: 100%
+            height: 100%
 @media screen and (max-width: 576px)
    button:active, button:focus 
       outline: none
@@ -838,8 +1135,19 @@
       box-shadow: inherit
       padding: 0
    h1 
-      font-size: 20px
-      line-height: 24px
+      font-size: 18px !important
+      line-height: 115% !important
+   .new-main__sub
+      font-size: 18px
+      line-height: 115%
+      margin-bottom: 8px
+   .new-main__text
+      font-size: 12px
+      line-height: 150%
+      color: #111720
+      margin-bottom: 3px
+   .new-main h1
+      margin-bottom: 20px
    .main-subtitle 
       font-size: 14px
       line-height: 19px
@@ -1343,7 +1651,346 @@
          font-size: 20px
    .item12__bottom img
       width: 100%
-@media screen and (max-width: 360px)
+   .popup
+      width: 90%
+      padding: 20px
+      &__title 
+         font-size: 23px
+      &__text 
+         font-size: 14px
+   .popup__form
+      label, input
+         font-size: 15px
+   .menu .menu__list li
+      width: auto
+   .menu .accordeon__button:after 
+      right: 73px !important
+   .item13 
+      h1 
+         font-size: 28px
+         line-height: 121%
+         width: 100%
+         max-width: 313px
+   .item13__box
+      padding-top: 16px
+      .item__pic1
+         width: 190px   
+   .item13__pic
+      width: 100%
+   .item13__content
+      padding: 15px 20px 35px
+   .item13__title
+      font-size: 16px
+      margin-top: 10px
+   .item13__txt
+      font-size: 14px
+   .popup3__title
+      font-size: 24px
+   .popup3__text
+      font-size: 14px
+   .popup2, .popup3, .popup4, .popup5, .popup6, .popup7
+      padding-bottom: 158px
+   .item13__bott .info__name
+      font-size: 28px
+      white-space: normal
+      position: relative
+      z-index: 1
+      margin-bottom: 260px
+      padding-left: 10px
+   .item13__bott
+      padding: 0
+   .item13__bott img 
+      top: 80px
+      right: 50%
+      width: 330px
+      margin-right: -165px
+   .item13 .item3__content
+      white-space: inherit
+   .item13-area__sub
+      font-size: 20px
+      font-style: normal
+      font-weight: 600
+      margin-bottom: 30px
+   .item13-area__item span
+      font-size: 14px
+   .item13-area__name
+      font-size: 20px
+      margin-bottom: 10px
+   .item13-area__text
+      font-size: 14px
+   .item13-area__item
+      margin-bottom: 20px
+   .item13-main
+      display: none
+   .item13 .item2__box
+      margin-top: 25px
+   .item13-area
+      margin-bottom: 40px
+   .item14__item
+      width: 100%
+      margin-bottom: 20px
+      p, a 
+         font-size: 14px
+   .item14__box
+      padding: 20px 20px 10px 
+      margin-top: 70px
+   .item14__bott img
+      top: 112px
+   .header
+      background: #EFF5FF
+   .menu-btn 
+      right: 6px
+      top: 24px
+   .header-phone
+      right: 60px
+      margin-right: 0
+   .header__phone
+      font-size: 12px
+   .menu
+      padding-left: 10px
+      padding-right: 10px
+   .new-main__block
+      font-size: 12px
+      line-height: 150%
+      padding: 24px 8px 15px
+      min-height: 93px
+   .new-main__area
+      left: 8px
+      margin-top: -93px
+   .new-main__pic 
+      width: 100%
+      margin-top: 20px
+      height: 240px
+      object-fit: cover
+   .new-main__wrap h2
+      font-size: 18px !important
+      line-height: 115% !important
+      margin-bottom: 8px
+   .new-main__one
+      font-size: 12px
+      margin-bottom: 11px
+      color: #111720
+      br 
+         display: none
+   .new-main h1
+      br 
+         display: none
+   .new-main__wrap
+      margin-top: 26px
+   .new-main__item:first-child .new-main__name
+      font-size: 16px !important
+   .new-main__item
+      height: auto
+      margin-bottom: 6px
+   .new-main__el
+      margin-bottom: 8px
+   .new-main__name
+      font-size: 14px
+      margin-bottom: 8px
+   .new-main__txt
+      font-size: 12px
+   .new-main__row
+      margin-bottom: 20px
+   .team2
+      padding-top: 20px
+      h2 
+         font-size: 18px !important
+         margin-bottom: 8px
+   .team2 .team__el
+      font-size: 12px
+      margin-bottom: 8px
+   .team2 .team__row
+      margin-top: 10px
+   .footer .logo
+      width: 130px
+   .footer__lists
+      max-width: 100%
+      margin-top: 15px
+      flex-direction: column
+   .footer__list li a
+      font-size: 18px !important
+   .footer__list li
+      margin-bottom: 12px
+   .footer__list
+      margin-top: 12px
+   .footer__com
+      width: 75px
+      margin: 0 0 0 auto 
+      position: relative 
+      top: 0px
+      img 
+         width: 100%
+         height: 100%
+      p 
+         font-size: 12px
+   .footer
+      .container
+         position: relative
+   .footer__left 
+      position: absolute
+      right: 10px
+      text-align: right
+      top: 95px
+      align-items: flex-end
+      p 
+         font-size: 14px
+   .footer__bottom
+      margin-top: 0
+      height: 0
+   .socials
+      right: 3%
+      bottom: 7%
+   .item-new
+      background: white
+      padding: 24px 0
+      .item__box
+         margin-top: 0
+      .item__pic1
+         width: 70px
+         margin-bottom: 0
+   .item-new__main
+      font-size: 14px
+      line-height: 135%
+      margin-bottom: 20px
+   .item-new__pic
+      width: 100%
+   .item-new__info
+      margin-top: 20px
+      width: 131px
+      font-size: 14px
+      height: 33px
+   .item-new__block
+      margin-bottom: 0
+      top: -52px
+      width: 122px
+      height: 31px
+      font-size: 12px
+   .item-new__item
+      padding: 10px 10px 30px
+   .item-new__title
+      margin-top: 20px
+      margin-bottom: 12px
+      font-size: 16px
+      line-height: 135.023%
+   .item-new__name
+      font-size: 14px
+      margin-bottom: 8px
+   .item-new__text
+      margin-bottom: 10px
+      font-size: 12px
+   .item-new__flex p
+      font-size: 12px
+      line-height: 135.023%
+      width: auto
+   .item-new__flex 
+      right: -51px
+      top: -56px
+   .item-new__item
+      &:nth-child(n+4)
+         .item-new__title
+            margin-top: 30px
+   .item-new__bottom
+      margin-top: 24px
+   .item-new__bottom h2
+      font-size: 18px !important
+      line-height: 135%
+   .item-new__area
+      margin-top: 16px
+      p 
+         font-size: 12px
+         margin-bottom: 10px
+   .new-main h1
+      font-size: 32px !important
+      line-height: 115% !important
+      margin-bottom: 12px
+   .about-main__sub
+      font-size: 18px
+      line-height: 140%
+      margin-bottom: 0px
+   .about-main .new-main__block
+      padding-left: 15px
+   .about-main .swiper5
+      height: 158px
+   .about-main__area .swiper-pagination5 .swiper-pagination-bullet
+      width: 7px
+      height: 7px
+   .about-main__big
+      height: 123px
+      margin-bottom: 5px
+      p 
+         font-size: 12px
+         line-height: 150%
+         margin-top: 8px
+   .about-main__block
+      width: 40px !important
+      padding: 7px
+      flex: 1 0 auto 
+      max-width: 40px
+      height: 40px !important
+      img 
+         width: 100%
+   .about-main__item 
+      height: 64px
+      flex-direction: initial
+      align-items: center
+      width: 100%
+      padding: 14px 12px
+      margin-bottom: 5px
+      justify-content: space-between   
+   .about-main__item
+      p
+         font-size: 12px
+         line-height: 150%
+         margin-top: 0px
+         order: 1
+      .about-main__block
+         order: 2
+   .about-main__wrap_2 .new-main__box
+      height: 236px
+   .partners .new-main__wrap
+      margin-top: 0
+      margin-bottom: 20px
+   .partners__item
+      padding: 30px 20px 
+      height: 86px
+      margin-bottom: 6px
+      width: 49%
+      img 
+         width: 100%
+         height: 100%
+         object-fit: contain
+      &:nth-child(n+5)
+         display: none
+      &:nth-child(8)
+         img 
+            height: 50px
+            position: relative
+            top: -12px
+   .partners__link, .partners__link2
+      display: flex
+   .ser.new-main__wrap .ser__box .ser__item
+      height: 108px
+      margin-bottom: 10px
+      width: 48%
+   .ser.new-main__wrap
+      padding-bottom: 0
+      margin-bottom: 20px
+      .news__link
+         display: none
+      .ser__item
+         &:nth-child(n+5)
+            display: none
+   .global__info p
+      font-size: 24px
+      margin-bottom: 10px
+   .global__box img
+      top: -22px
+   .global
+      margin-bottom: 10px !important
+@media screen and (max-width: 420px)
+   .menu .accordeon__button:after 
+      right: 80px !important
+@media screen and (max-width: 375px)
    .footer__info
       right: 0
    .footer__info p, .footer__info a
@@ -1356,5 +2003,10 @@
       bottom: 188px
    .main-item_name
       font-size: 11px
-   .header-phone
-      display: none
+   .menu .accordeon__button:after
+      right: 50px !important
+   .about-main .new-main__block
+      padding-top: 32px
+   .about-main__wrap_2
+      .new-main__area
+         margin-top: -117px
