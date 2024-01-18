@@ -84,7 +84,7 @@ button
       input 
          width: 100%
          padding: 15px
-         border-radius: 4px;
+         border-radius: 4px 
          border: 1px solid rgba(17, 23, 32, 0.20)
          background: #FFF
          color: #000
@@ -2884,7 +2884,7 @@ input[type='search']::-webkit-search-results-decoration
       margin-top: 30px
    &__content 
       border: 1px solid rgba(0, 35, 27, 0.03)
-      padding: 30px 30px 35px
+      padding: 30px 35px 35px
       position: relative
       bottom: 0px
       border-bottom: none
@@ -3142,7 +3142,7 @@ input[type='search']::-webkit-search-results-decoration
    overflow: hidden
    box-shadow: 0px 4px 15px 0px rgba(17, 23, 32, 0.34)
    &__item 
-      border-right: 1px solid #111720
+      border-right: 1px solid rgba(0, 0, 0, 0.15)
       padding: 18px
       width: 20%
       &:last-child
@@ -3466,14 +3466,14 @@ input[type='search']::-webkit-search-results-decoration
    bottom: 5%
    border-radius: 48px
    border: 1px solid #658AC8
-   p 
+   .socials__link
       margin-right: 4px
       color: #658AC8
       font-size: 18px
       font-weight: 600
       line-height: 18px
       position: relative
-      top: 2px
+      top: 1px
    a 
       margin-left: 12px
       position: relative
@@ -3550,13 +3550,19 @@ input[type='search']::-webkit-search-results-decoration
       font-weight: 400
       line-height: normal
    &__text 
-      color: #111720
-      font-size: 18px
-      font-weight: 400
       margin-bottom: 20px
       line-height: normal
       &:last-child
          margin-bottom: 0
+      a
+         color: #111720
+         font-size: 18px
+         font-weight: 400
+         padding-left: 4px
+         &:first-child
+            padding-left: 0
+         &:hover 
+            color: $blue
    &__flex 
       justify-content: space-between
       align-items: flex-start
@@ -3612,6 +3618,7 @@ input[type='search']::-webkit-search-results-decoration
       right: -54px
    .swiper5 
       overflow: hidden
+      box-sizing: content-box
       height: 406px
       .swiper-slide
          height: 100%
@@ -3834,3 +3841,944 @@ input[type='search']::-webkit-search-results-decoration
          margin-bottom: 40px
          &:last-child
             margin-bottom: 0
+/*ACCORDION*/
+.accordion-container  
+   position: relative 
+   height: auto 
+   padding-bottom: 0px 
+   margin: 0px
+   z-index: 3 
+   max-width: 100%
+   width: 100%
+   .content
+      position: absolute
+      width: 100%
+      height: auto
+      top: 20px
+      display: none
+      overflow: auto
+      background: #EFF5FF
+      height: auto
+      margin: 20px 0 20px
+      transition: all 0s linear 
+      padding-bottom: 200px
+   .menu3__list
+      position: relative
+      z-index: 50000
+      background: #EFF5FF
+.set  
+   position: relative 
+   width: 100% 
+   height: auto 
+   padding-bottom: 20px
+   transition: all 0s linear 
+   margin-bottom: 20px
+   border-bottom: 1px solid #000
+   &:last-child
+      padding-bottom: 0
+      margin-bottom: 0
+      border-bottom: none
+   li 
+      margin-bottom: 10px
+      width: max-content
+      margin-left: 10px
+      a 
+         font-size: 14px !important
+         width: max-content
+   a 
+      width: max-content !important
+.set > a  
+   display: block 
+   text-decoration: none 
+   -webkit-transition: all 0s linear 
+   -moz-transition: all 0s linear 
+   transition: all 0s linear 
+   color: #111720
+   font-size: 18px
+   font-weight: 600 
+   line-height: normal
+   padding-right: 15px
+   width: 100%
+   background: url(/img/plus.svg) no-repeat 100% 65% !important
+   background-size: 8px !important
+.set > a.active  
+   display: block 
+   text-decoration: none 
+   -webkit-transition: all 0.2s linear 
+   -moz-transition: all 0.2s linear 
+   transition: all 0.2s linear 
+   color: #111720
+   font-size: 18px
+   font-weight: 600 
+   line-height: normal
+   padding-right: 15px
+   width: 100%
+   background: url(/img/plus.svg) no-repeat 100% 65% !important
+   background-size: 8px !important
+.product-section
+   padding-top: 40px !important
+.bol 
+   font-weight: bold
+.item17 
+   &__top
+      align-items: center
+      margin-bottom: 30px
+   &__block 
+      align-items: center
+      justify-content: center
+      width: max-content
+      height: 40px
+      padding: 0px 15px
+      border-radius: 34px
+      border: 1px solid #7CADFD
+      font-size: 16px
+      color: #7CADFD
+      font-style: normal
+      font-weight: 400
+      padding-top: 2px
+      margin-right: 16px
+      &:last-child
+         margin-right: 0
+      &:hover 
+         background: #7CADFD
+         color: white
+   &__name 
+      width: 100%
+      margin-bottom: 20px
+      color:  #111720
+      font-size: 20px
+      padding-left: 32px
+      font-weight: 700
+      line-height: 150%
+   &__row 
+      justify-content: flex-start
+      flex-wrap: wrap 
+      padding-left: 30px
+      width: 100%
+      max-width: 808px
+      padding-bottom: 20px
+      .item13__el
+         padding: 0
+         margin-bottom: 19px
+         border: none
+         margin-right: 16px
+         p
+            margin-left: 6px
+            color: #111720
+            font-size: 16px
+            font-weight: 400
+            line-height: 150%
+            max-width: initial
+   &__bott 
+      li
+         p 
+            width: 100%
+            max-width: 650px
+            line-height: 24px
+            color: rgba(128, 128, 128, 0.80)
+      img 
+         top: 90px
+   &__wrap 
+      margin: 80px 0
+      h2 
+         text-align: left
+         margin-bottom: 24px
+      .tabs__nav
+         justify-content: flex-start
+         margin-bottom: 32px  
+         .tabs__btn
+            height: 46px
+            padding: 0px 24px
+            border-radius: 23px
+            border: 1px solid #7CADFD
+            width: max-content
+            margin-right: 16px
+            color: #111720
+            font-size: 16px
+            font-style: normal
+            font-weight: 600
+            line-height: normal
+      &_2 
+         margin-bottom: 70px
+         .item13__one
+            border-radius: 8px
+            border: 1px solid rgba(124, 173, 253, 0.50)
+            background: #FFF
+            box-shadow: initial
+            padding: 24px
+            margin-bottom: 24px
+            &:nth-child(1)
+               width: 65.83%
+            &:nth-child(2)
+               width: 32%
+            &:nth-child(3), &:nth-child(4), &:nth-child(5)
+               width: 32%
+            &:nth-child(6)
+               width: 32%
+            &:nth-child(7)
+               width: 65.83%
+            .item13__txt
+               width: 100%
+               max-width: 623px
+   &__sub      
+      width: 100%
+      max-width: 770px
+      margin-bottom: 30px
+      color: #111720
+      font-size: 16px
+      color: #808080
+      font-weight: 500
+      line-height: 135%
+   &__content  
+      width: 100%
+      height: auto
+      padding: 20px 36px 20px
+      border-radius: 16px
+      border: 1px solid rgba(124, 173, 253, 0.50)
+      background: #FDFFFE
+      margin-bottom: 20px
+      h3 
+         margin-top: 0
+         color: #658AC8
+         font-size: 24px
+         font-weight: 700
+         line-height: 135.023%
+         margin-bottom: 16px
+   &__size 
+      color: #111720
+      font-size: 18px
+      font-weight: 500
+      line-height: 135.023%
+      margin-bottom: 8px
+      span 
+         color: rgba(17, 23, 32, 0.60)
+   &__info 
+      color: #111720
+      font-size: 18px
+      font-weight: 500
+      line-height: 135.023%
+      margin-bottom: 20px
+   &__flex 
+      align-items: center
+      justify-content: space-between
+      img 
+         &:first-child
+            margin-right: 10px
+   &__box 
+      margin: 60px 0 100px
+      h2 
+         text-align: left
+         margin-bottom: 15px
+   &__sub2 
+      color: #808080
+      font-size: 18px
+      font-weight: 500
+      line-height: 150%
+      margin-bottom: 25px
+      margin-top: -10px
+   &__view 
+      overflow: hidden 
+      position: relative
+      width: 100%
+      border-radius: 4px
+      height: 500px
+   &__bg 
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 0
+   &__video
+      position: absolute
+      top: 50%
+      left: 50%
+      transition: 0.5s 
+      cursor: pointer
+      margin-left: -47px
+      margin-top: -47px
+      z-index: 2
+      &:hover 
+         opacity: 0.6
+.item17
+   background: #F8FAFF
+   .item2__bottom_3
+      h2
+         text-align: left
+         color: #111720
+         font-size: 32px
+         font-style: normal
+         font-weight: 700
+         line-height: normal
+         margin-bottom: 30px
+   .accordeon_17
+      margin-bottom: 90px
+      .accordeon__button
+         height: 59px !important
+         justify-content: space-between !important
+         border: 1px solid #658AC8 !important
+         padding: 10px !important
+         margin-bottom: 2px
+         background: #F8FAFF !important
+         color: #658AC8 !important
+         font-size: 16px !important
+         font-weight: 700 !important
+         line-height: normal
+         border-radius: 5px !important
+         left: 0  !important
+         position: relative !important
+         bottom: 0 !important
+         margin-left: 0 !important
+         transition: 0.5s !important
+         &:hover 
+            background: $blue !important
+            color: white !important
+            border: 1px solid $blue !important
+         &:after 
+            left: initial
+            right: 1px
+            background: url(/img/own2.svg) no-repeat !important
+         &.active 
+            width: 100% !important
+            color: white !important
+            background: #7CADFD !important
+            &:after 
+               left: initial
+               right: 4px
+               background: url(/img/down.svg) no-repeat !important
+               transform: rotate(180deg)
+               top: -10px
+   .accordeon__panel
+      transition: 0.5s !important
+   .panel__text
+      margin: 20px 0
+      align-items: center
+      justify-content: space-between
+      padding: 0 10px 10px
+      border-bottom: 1px solid #D3D3D3
+      p 
+         color: #808080
+         font-size: 16px
+         font-style: normal
+         font-weight: 500
+         line-height: normal
+      &:last-child
+         border-bottom: none 
+         margin-bottom: 10px
+   &__area 
+      h2 
+         text-align: left
+         margin-bottom: 30px
+   &__line 
+      justify-content: space-between
+      flex-wrap: wrap
+      div 
+         width: 23%
+         margin-bottom: 30px
+         border-radius: 12px
+         border: 1px solid rgba(124, 173, 253, 0.50)
+         background: #7CADFD
+         height: 64px
+         color: #F8FAFF
+         font-size: 16px
+         font-style: normal
+         font-weight: 600
+         line-height: 150%
+         padding: 20px 10px 20px 20px
+   .accordeon_18
+      margin-top: 0
+      margin-bottom: 25px
+      .accordeon__button, .accordeon__button.active
+         background: transparent !important
+         padding-left: 11px !important
+         padding-right: 0 !important
+         border: none !important
+         padding-top: 0 !important
+         padding-bottom: 0 !important
+         height: auto !important
+         padding-left: 0 !important
+         &:hover 
+            background: transparent !important
+            border: none !important
+            color: white !important
+      .accordeon__button:after
+         background: transparent !important
+         content: "Подробнее"
+         color: #658AC8
+         font-size: 14px
+         font-style: normal
+         font-weight: 700
+         line-height: 135.023%
+         height: auto !important
+         width: auto !important
+         top: -9px !important
+         right: 0 !important
+      .accordeon__item
+         padding: 13px 0 13px 14px
+         border-bottom: 1px solid #D3D3D3
+         box-sizing: border-box
+         &:hover 
+            .area__title, .accordeon__button:after
+               color: $blue
+      .accordeon__button.active:after 
+         content: "Скрыть"
+         transform: inherit
+      .accordeon__panel
+         max-width: 760px
+         margin-left: auto
+         width: 100%
+   .partners__link2, .partners__link
+      display: inline-block
+      margin: 0
+      color: #658AC8
+      font-size: 16px
+      font-style: normal
+      font-weight: 700
+      line-height: normal
+      &:hover 
+         opacity: 0.7
+   .partners__see2, .partners__see
+      display: none
+   .partners__see
+      margin-bottom: 40px
+   .accordeon_19 
+      margin-top: -2px
+      margin-bottom: 20px
+      position: relative
+      .area__nums 
+         &:last-child
+            margin-bottom: 40px
+      .accordeon__button, .accordeon__button.active
+         width: 100% !important
+         height: 54px !important
+         border-radius: 5px !important
+         background: #EFF5FF !important
+         justify-content: center !important
+         border: none !important
+         &:after 
+            display: none
+         &:hover 
+            background: $blue !important
+            color: white !important
+            border: none !important
+            .new 
+               color: white !important
+      .accordeon__button.active
+         position: absolute !important
+         bottom: -27px !important
+         left: 0 !important
+         .ol 
+           display: none
+         .new 
+            display: block
+            transition: 0.5s
+            color: #658AC8 !important 
+.area 
+   &__images 
+      align-items: center
+      margin-top: -20px
+      img 
+         &:first-child
+            margin-right: 38px
+   &__lap 
+      align-items: flex-start
+      justify-content: space-between
+      margin-top: 15px
+      p 
+         width: 100%
+         max-width: 43%
+         color: #808080
+         font-size: 14px
+         font-weight: 500
+         line-height: 24px
+   &__sub 
+      margin-bottom: 6px
+      color: rgba(17, 23, 32, 0.80)
+      font-size: 18px
+      font-style: normal
+      font-weight: 700
+      line-height: 135.023%
+   &__top 
+      align-items: center
+      justify-content: space-between
+      margin-bottom: 35px
+   &__text 
+      width: 100%
+      max-width: 45.5%
+      color: #808080
+      font-size: 16px
+      font-style: normal
+      font-weight: 500
+      line-height: 25px
+   &__wrap 
+      width: 100%
+      max-width: 526px
+      height: auto
+      border-radius: 20px
+      border: 1px solid #7CADFD
+      background: #FFF
+      align-items: center
+      padding: 30px
+   &__right 
+      margin-left: 30px
+   &__name 
+      color: #111720
+      font-size: 14px
+      font-weight: 700
+      line-height: 20px 
+      margin-bottom: 4px
+   &__info 
+      color: #808080
+      font-size: 14px
+      font-weight: 500
+      line-height: 20px
+   &__box 
+      justify-content: space-between
+      flex-wrap: wrap 
+   &__row 
+      align-items: center
+      justify-content: space-between
+      width: 48%
+      border-bottom: 1px solid #D3D3D3
+      padding-bottom: 7px
+      margin-bottom: 9px
+      p 
+         color:#808080
+         text-align: right
+         font-size: 14px
+         font-weight: 500
+         line-height: normal
+      &:nth-child(6), &:nth-child(5)
+         border-bottom: none
+         margin-bottom: 0
+   &__block 
+      margin-top: 30px
+   &__head
+      width: 100%
+      height: 64px
+      border-radius: 5px
+      background: #7CADFD
+      padding: 13px 100px 13px 21px 
+      align-items: center
+      justify-content: flex-start
+      p 
+         color: #FDFFFE
+         font-size: 14px
+         font-style: normal
+         margin-right: 29px
+         font-weight: 700
+         line-height: 135.023%
+         &:first-child
+            margin-right: 206px
+   &__flex 
+      align-items: center
+      width: 100%
+   &__title 
+      color: #111720
+      font-size: 14px
+      font-style: normal
+      font-weight: 700
+      line-height: 18px
+      min-width: 180px
+      transition: 0.5s
+      margin-right: 21px
+   &__tab 
+      border-top: 1px solid #D3D3D3
+      width: 100%
+      align-items: center
+      padding-top: 5px
+      margin-top: 6px
+      p 
+         color:#808080
+         font-size: 14px
+         font-style: normal
+         font-weight: 500
+         line-height: normal
+         &:first-child
+            margin-right: 71px
+            min-width: 30px
+         &:nth-child(2)
+            margin-right: 20px
+            min-width: 136px
+         &:nth-child(3)
+            margin-right: 20px
+            min-width: 104px
+         &:nth-child(4)
+            margin-right: 20px
+            min-width: 100px
+      &:first-child
+         margin-top: 13px
+      &_new 
+         display: none
+         align-items: center
+   &-title 
+      color: #658AC8
+      font-size: 16px
+      font-style: normal
+      font-weight: 700
+      line-height: normal
+      margin-bottom: 20px  
+   &__lists 
+      justify-content: space-between
+      margin: 25px 0
+   &__nums 
+      align-items: center
+      padding: 15px 0 15px 10px
+      border-bottom: 1px solid #D3D3D3
+      p 
+         color: #808080
+         font-size: 14px
+         font-style: normal
+         font-weight: 500
+         line-height: normal
+         &:first-child
+            min-width: 102px
+            margin-right: 245px
+         &:nth-child(2)
+            min-width: 102px
+            margin-right: 238px
+         &:nth-child(3)
+            min-width: 102px
+            margin-right: 80px
+         &:nth-child(4)
+            min-width: 107px
+            margin-right: 45px
+.item17__content_2
+   .area__head
+      height: 39px
+      padding: 13px 35px 13px 10px
+      p 
+         font-size: 16px
+         &:first-child
+            margin-right: 102px
+         &:nth-child(2)
+            margin-right: 122px
+         &:nth-child(3)
+            margin-right: 104px
+         &:last-child
+            margin-left: auto
+            margin-right: 0
+.item17__content_3 
+   .area__images img:first-child 
+      margin-right: -37px
+   .area__lap
+      p 
+         max-width: 79.5%
+      .area-name 
+         margin-bottom: 26px
+         color:#111720
+         font-size: 32px
+         font-style: normal
+         font-weight: 700
+         line-height: normal
+         max-width: 609px
+   .info__list li
+      margin-bottom: 15px
+      &:before 
+         background: url(/img/item-dot2.svg) no-repeat
+.item17__content_4 
+   padding: 20px 0px 20px 100px
+   .per__images img:first-child
+      margin-right: 0
+.item17__content_5 
+   padding: 40px 100px
+   .per__images img:first-child
+      margin-right: 0
+.per 
+   &__box 
+      align-items: center
+      justify-content: space-between
+   &__content 
+      width: 100%
+      max-width: 523px 
+   &__title 
+      margin-bottom: 24px
+      color: #111720
+      font-size: 32px
+      font-style: normal
+      font-weight: 700
+      line-height: normal
+   &__name 
+      color: #111720
+      font-size: 16px
+      font-style: normal
+      font-weight: 700
+      line-height: 25px
+      margin-bottom: 2px
+   &__text 
+      color: #808080
+      font-size: 16px
+      font-style: normal
+      font-weight: 500
+      line-height: 25px
+   &__item 
+      margin-bottom: 37px
+      &_2 
+         margin-bottom: 0
+   &__images 
+      align-items: center
+      img 
+         &:first-child
+            margin-right: 60px
+   &__row 
+      justify-content: space-between
+   &__block 
+      align-items: center
+      justify-content: flex-start
+      margin-bottom: 20px
+      min-height: 133px
+   &__one 
+      margin-bottom: 3px
+      color: #658AC8
+      font-size: 16px
+      font-weight: 700
+      line-height: 25px
+   &__two 
+      color: #808080
+      font-size: 16px
+      font-weight: 500
+      line-height: 25px
+      span 
+         color: #111720
+         font-weight: 400
+   &__el 
+      width: 25.52%
+      &:first-child
+         width: 30%
+.item18
+   &__photos 
+      display: none !important
+   &__pic 
+      display: block
+      margin: 25px auto
+   &__sub 
+      width: 100%
+      margin-bottom: 39px
+      color: #00231B
+      text-align: center
+      font-size: 24px
+      font-style: normal
+      font-weight: 800
+      line-height: normal
+   &__row 
+      justify-content: space-between
+   &__item 
+      width: 33%
+      border-radius: 0px 10px 0px 0px
+      border: 1px solid rgba(0, 35, 27, 0.03)
+      background: #FDFFFE
+      padding: 30px 27px 40px
+      img 
+         margin-bottom: 20px
+         width: 229px
+         height: 144.185px
+         object-fit: cover
+   &__name 
+      font-size: 20px
+      font-weight: 700
+      line-height: normal
+      margin-bottom: 21px
+   &__text 
+      margin-bottom: 30px
+      color:  #808080
+      font-size: 15.5px
+      font-style: normal
+      font-weight: 400
+      line-height: normal
+   &-wrap 
+      h1 
+         font-size: 55px
+         font-style: normal
+         font-weight: 800
+         line-height: normal
+      .bread a
+         color: #00231B
+         font-size: 15px
+         font-style: normal
+         font-weight: 800
+         line-height: normal
+         opacity: 0.8
+   &__btn
+      width: 370px
+      height: 59px
+      margin: 47px auto 64px
+   &__title 
+      color:#00231B
+      text-align: center
+      font-size: 24px
+      font-style: normal
+      font-weight: 700
+      line-height: normal
+      margin-bottom: 34px
+   &__area
+      justify-content: space-between
+      margin-bottom: 80px
+   &__el 
+      width: 47%
+      height: 641px
+      border-radius: 16px
+      border: 1px solid rgba(124, 173, 253, 0.50)
+      background: #FDFFFE
+      text-align: center
+      padding: 45px 50px
+      p 
+         color: #111720
+         font-size: 22px
+         font-family: 'Inter', sans-serif
+         font-style: normal
+         font-weight: 500
+         line-height: 135.023%
+   &__block 
+      align-items: center
+      justify-content: center
+      width: 100%
+      height: 100%
+      max-height: 450px
+      margin-bottom: 50px
+      img 
+         width: 100%
+         height: 100%
+         object-fit: contain
+   &__wrap 
+      font-family: 'Inter', sans-serif
+      .item13__one 
+         border-radius: 8px
+         border: 1px solid rgba(124, 173, 253, 0.50)
+         background: #FCFCFD
+         width: 32%
+         margin-bottom: 26px
+         padding: 24px 23px 29px
+         &:nth-child(1), &:last-child
+            width: 66%
+      .item13__txt
+         width: 100%
+         max-width: 623px
+.mbb 
+   display: none
+.item19
+   &__row 
+      justify-content: space-between
+      margin-top: 38px
+      width: 100%
+      .item2__one
+         width: 100%
+         margin-top: 40px
+      .item2__title
+         color: #658AC8
+         margin-bottom: 20px
+         border-bottom: 2px solid #658AC8
+      .item2__line
+         justify-content: space-between
+      .item2__line p:first-child
+         margin-right: 30px
+         width: 100%
+         max-width: 36%
+   &__left 
+      max-width: 513px
+      width: 100%
+      border-radius: 10px 12px 12px 10px
+      background: #EFF5FF
+      padding: 42px 20px 42px 30px
+      flex: 1 0 auto
+      p 
+         color:  #808080
+         font-size: 16px
+         font-style: normal
+         font-weight: 500
+         line-height: normal
+         margin-top: 30px
+   &__top 
+      align-items: center
+      font-size: 24px
+      font-style: normal
+      margin-bottom: 40px
+      font-weight: 800
+      line-height: normal
+      img
+         margin-left: 25px 
+         margin-top: 7px
+   &__pic 
+      width: 100%
+   &__right 
+      border-radius: 0px 10px 0px 0px
+      border: 1px solid rgba(0, 35, 27, 0.03)
+      background: #FDFFFE
+      padding: 30px
+      width: 100%
+   &__name 
+      font-size: 20px
+      font-style: normal
+      font-weight: 700
+      line-height: normal
+      margin-bottom: 10px
+   &__list 
+      padding-left: 20px
+      li 
+         color:  #808080
+         font-size: 16px
+         font-weight: 500
+         line-height: normal
+         color:#808080
+         display: flex 
+         align-items: flex-start
+         font-size: 16px
+         font-weight: 400
+         line-height: normal
+         &:before 
+            content: ""
+            display: inline-flex 
+            width: 4px
+            height: 4px
+            flex: 1 0 auto 
+            max-width: 4px 
+            position: relative
+            background: #808080
+            border-radius: 50%
+            margin-right: 9px
+            top: 10px
+   &__el 
+      margin-bottom: 50px
+.item20 
+   &__row 
+      .item19__left
+         position: relative
+      .item19__top
+         position: relative
+         img 
+            position: absolute
+            left: 207px
+            bottom: 0
+   &__pic 
+      position: absolute
+      right: 12px
+      top: 25px
+   &__sub 
+      color: #808080
+      font-size: 16px
+      font-weight: 400
+      line-height: normal
+      span 
+         color: #03A3DD
+   &__bottom 
+      margin-bottom: 100px
+      h2 
+         text-align: left
+   &__btn 
+      width: 281px
+.item21
+   &__left
+      padding-bottom: 20px
+      .item19__pic
+         max-height: 408px
+         object-fit: contain
+   &__right 
+      .item19__el:last-child
+         margin-bottom: 0
+.mar1 
+   margin-bottom: 107px
+.mar2 
+   margin-bottom: 68px
+.mar3 
+   margin-bottom: 51px
+.mar4
+   margin-bottom: 49px
