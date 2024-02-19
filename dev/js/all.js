@@ -595,6 +595,41 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   });
+  var swiper6 = new Swiper(".swiper_news", {
+    slidesPerView: 3,
+    grid: {
+      rows: 2,
+    },
+    spaceBetween: 5,
+    navigation: {
+      nextEl: ".swiper-button-next_news",
+      prevEl: ".swiper-button-prev_news",
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        spaceBetween: 5,
+        slidesPerView: 1,
+        loop: true,
+        grid: {
+          rows: 1,
+        },
+      },
+      767: {
+        spaceBetween: 5,
+        slidesPerView: 2
+      },
+      992: {
+        slidesPerView: 2
+      },
+      1200: {
+        slidesPerView: 3,
+        grid: {
+          rows: 2,
+        },
+      }
+    }
+  });
 });
 document.addEventListener("DOMContentLoaded", () => {
   let menuBtn = document.querySelector('.menu-btn');

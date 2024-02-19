@@ -22,25 +22,6 @@
       z-index: 11
       overflow: hidden
       background: url(/img/bur.svg) no-repeat
-   // .menu-btn span 
-   //    width: 40px
-   //    opacity: 0
-   //    height: 2px
-   //    position: absolute
-   //    top: 50%
-   //    left: 50%
-   //    transform: translate(-50%, -50%)
-   //    background-color: #005944
-   //    transition: all 0.5s
-   // .menu-btn span:nth-of-type(2) 
-   //    top: calc(50% - 8.5px)
-   //    width: 40px
-   //    height: 2px
-   //    margin-left: 0
-   // .menu-btn span:nth-of-type(3) 
-   //    top: calc(50% + 9.4px)
-   //    width: 40px
-   //    height: 2px
    .menu 
       position: fixed
       top: 0px
@@ -422,13 +403,6 @@
          + 
             .accordeon__panel
                overflow: visible !important
-         // left: 8px !important
-         // &:after 
-         //    transform: rotate(180deg)
-         //    top: -9px !important
-      // .accordeon__button:after
-      //    background: url(/img/down3.svg) no-repeat !important
-      //    background-size: 10px !important
       .accordeon__panel
          overflow: hidden !important
          max-height: 0 
@@ -476,9 +450,6 @@
       display: none
    .header-phone
       white-space: nowrap
-   // .logo
-   //    width: 93px 
-   //    max-width: 93px 
    .new-main__box
       position: relative
       flex-direction: column-reverse
@@ -703,6 +674,33 @@
       display: none
    .item20__bottom
       margin-bottom: 50px
+   .pairs__item
+      flex-direction: column
+   .pairs__info
+      max-width: 100%
+      padding: 15px 15px 20px
+      margin-top: 20px
+   .pairs__logo
+      margin: 20px 0 10px
+   .pairs__content
+      max-width: 100%
+   .pairs__text
+      br 
+         display: none
+   .pairs__sub, .pairs__title 
+      margin-bottom: 10px
+   .media__pic 
+      border-radius: 8px
+   .media__item 
+      flex-direction: column
+      padding: 20px
+   .video__item 
+      width: 48.5%
+      margin: 0 20px 20px 0 
+      &:nth-child(3n)
+         margin-right: 20px
+      &:nth-child(2n)
+         margin-right: 0
 @media ( max-width: 991px )
    .footer__content
       display: none
@@ -1096,6 +1094,34 @@
          margin: 30px 0 0
       .item19__pic
          order: 1
+   .pairs__link
+      padding: 0 11px 
+      height: 38px
+      margin: 0 10px 10px 0
+      font-size: 12px
+      line-height: 100%
+   .pairs__sub
+      font-size: 16px
+   .pairs__title
+      font-size: 15px
+   .pairs__list li a
+      font-size: 13px
+   .pairs__list li
+      margin-bottom: 5px
+   .pairs__local
+      font-size: 18px
+      margin-bottom: 10px
+   .pairs__text
+      font-size: 14px
+      margin-bottom: 10px
+   .pairs__logo
+      max-height: 60px
+      width: auto
+   .media__pic
+      width: 100%
+   .video__item 
+      width: 100%
+      margin-right: 0 !important
 @media screen and (max-width: 767px)
    .footer__box
       flex-direction: column
@@ -2637,6 +2663,137 @@
       font-size: 14px
    .item21__left
       padding-bottom: 30px
+   .pairs__box h2
+      display: none
+   .pairs__box
+      margin-top: 20px
+   .pairs__link 
+      padding: 0 11px
+      height: 21px
+      margin: 0 6px 10px 0
+      font-size: 8px
+      line-height: 100%
+   .pairs__logo
+      margin-top: 0
+      max-width: 167px
+      padding-left: 15px
+   .pairs__wrap
+      margin: 20px 0 
+   .pairs__sub 
+      font-size: 14px
+      line-height: 125%
+      margin-bottom: 15px
+      padding-left: 15px
+   .pairs__title
+      line-height: 100%
+      font-size: 13px
+      padding-left: 15px
+   .pairs__list li
+      margin-bottom: 0
+      padding-left: 15px
+      a
+         font-size: 11px
+         line-height: 100%
+   .pairs__local 
+      font-size: 16px
+      margin-bottom: 10px
+      line-height: 100%
+   .pairs__text 
+      font-size: 10px
+      margin-bottom: 12px
+      line-height: 123%
+   .pairs__item:last-child
+      margin-bottom: 0
+   .page2 .ser .team__box
+      padding: 20px
+   .ser h2
+      font-size: 22px !important
+   .media__box h1
+      font-size: 21px !important
+      margin-bottom: 10px
+   .media__box h2
+      font-size: 18px !important
+      margin-bottom: 20px
+   .media__item
+      padding: 0
+      background: transparent
+   .media__content
+      padding: 20px 0 0
+   .media__data 
+      margin-bottom: 10px
+      font-size: 12px
+      line-height: 100%
+   .media__name 
+      margin-bottom: 10px
+      font-size: 16px
+      line-height: 130%
+   .media__text 
+      font-size: 14px
+      line-height: 130%
+   .media__box .media__title
+      margin-top: 40px
+   .media__top
+      margin: 40px 0 15px
+   .media__area 
+      position: relative
+      padding-bottom: 70px
+   .media__top
+      h2 
+         font-size: 22px !important
+   .swiper_news .swiper-wrapper a img
+      object-position: top center
+      border-radius: 4px
+   .swiper_news
+      overflow: hidden
+   .media__arrows
+      position: absolute
+      bottom: 10px
+      z-index: 3
+      left: 50%
+      margin-left: -54px
+   .media__arrow
+      width: 44px
+      height: 44px
+      background: rgb(255, 255, 255)
+   .media__bottom p
+      margin-right: 0 
+      font-size: 13px
+   .media__bottom a
+      font-size: 14px
+   .media__bottom 
+      align-items: flex-end
+      margin: 0
+      position: absolute
+      top: 13px
+      right: 0
+      flex-direction: column
+   .video__top
+      flex-direction: column 
+      align-items: flex-start
+   .video__top .tabs__nav
+      margin: 5px 0 0
+      a 
+         padding: 0 11px
+         height: 30px
+         margin: 0 10px 0px 0
+         font-size: 12px
+         line-height: 100%
+   .video__top
+      margin-bottom: 30px
+   .video__content
+      padding: 20px
+   .video__name 
+      margin-bottom: 10px
+      font-size: 15px
+      line-height: 140%
+   .video__text 
+      font-size: 13px
+      line-height: 136%
+      margin-bottom: 15px
+   .video__btn
+      width: 170px
+      height: 40px
+      font-size: 12px
 @media screen and (max-width: 420px)
    .menu .accordeon__button:after 
       right: 80px !important
