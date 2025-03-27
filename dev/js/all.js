@@ -34,6 +34,63 @@ window.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+$(document).ready(function () {
+  $(".productionDropdownMenum").hover(
+    function () {
+      $(".body-wrap").addClass("ss");
+    },
+    function () {
+      $(".body-wrap").removeClass("ss");
+    }
+  );
+});
+$(document).ready(function () {
+  $(".menu-box_main").hover(
+    function () {
+      $(".body-wrap").addClass("ss");
+    },
+    function () {
+      $(".body-wrap").removeClass("ss");
+    }
+  );
+});
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".med__name").forEach(function (nameElement) {
+    nameElement.addEventListener("click", function () {
+      let nextUl = this.nextElementSibling;
+      if (nextUl) {
+        nextUl.style.display = nextUl.style.display === "block" ? "none" : "block";
+      }
+      this.classList.toggle("active");
+    });
+  });
+});
+document.addEventListener('DOMContentLoaded', function () {
+  const mainItems = document.querySelectorAll('.main .main-item');
+  mainItems.forEach(item => {
+    item.addEventListener('click', function () {
+      // Удаляем класс 'active' у всех элементов med__name
+      document.querySelectorAll('.med__name').forEach(name => {
+        name.classList.remove('active');
+      });
+      // Скрываем все списки
+      document.querySelectorAll('.med__menu ul').forEach(ul => {
+        ul.style.display = 'none';
+      });
+      // Добавляем класс 'active' к соответствующему med__name
+      const index = Array.from(mainItems).indexOf(item);
+      const medName = document.querySelector(`.med__name_${index + 1}`);
+      if (medName) {
+        medName.classList.add('active');
+        // Отображаем соответствующий список
+        const ul = medName.nextElementSibling;
+        if (ul && ul.tagName.toLowerCase() === 'ul') {
+          ul.style.display = 'block';
+        }
+      }
+    });
+  });
+});
 document.addEventListener("DOMContentLoaded", () => {
   // svg
   $(function () {
@@ -193,6 +250,148 @@ document.addEventListener("DOMContentLoaded", () => {
   new ItcTabs('.tabs');
 });
 document.addEventListener("DOMContentLoaded", () => {
+  class ItcTabs {
+    constructor(target, config) {
+      const defaultConfig = {};
+      this._config = Object.assign(defaultConfig, config);
+      this._elTabs = typeof target === 'string' ? document.querySelector(target) : target;
+      this._elButtons = this._elTabs.querySelectorAll('.tabs__btn');
+      this._elPanes = this._elTabs.querySelectorAll('.tabs__pane');
+      this._eventShow = new Event('tab.itc.change');
+      this._init();
+      this._events();
+    }
+    _init() {
+      this._elTabs.setAttribute('role', 'tablist');
+      this._elButtons.forEach((el, index) => {
+        el.dataset.index = index;
+        el.setAttribute('role', 'tab');
+        this._elPanes[index].setAttribute('role', 'tabpanel');
+      });
+    }
+    show(elLinkTarget) {
+      const elPaneTarget = this._elPanes[elLinkTarget.dataset.index];
+      const elLinkActive = this._elTabs.querySelector('.tabs__btn_active');
+      const elPaneShow = this._elTabs.querySelector('.tabs__pane_show');
+      if (elLinkTarget === elLinkActive) {
+        return;
+      }
+      elLinkActive ? elLinkActive.classList.remove('tabs__btn_active') : null;
+      elPaneShow ? elPaneShow.classList.remove('tabs__pane_show') : null;
+      elLinkTarget.classList.add('tabs__btn_active');
+      elPaneTarget.classList.add('tabs__pane_show');
+      this._elTabs.dispatchEvent(this._eventShow);
+      elLinkTarget.focus();
+    }
+    showByIndex(index) {
+      const elLinkTarget = this._elButtons[index];
+      elLinkTarget ? this.show(elLinkTarget) : null;
+    };
+    _events() {
+      this._elTabs.addEventListener('click', (e) => {
+        const target = e.target.closest('.tabs__btn');
+        if (target) {
+          e.preventDefault();
+          this.show(target);
+        }
+      });
+    }
+  }
+
+  // инициализация .tabs как табов
+  new ItcTabs('.tabs2');
+});
+document.addEventListener("DOMContentLoaded", () => {
+  class ItcTabs {
+    constructor(target, config) {
+      const defaultConfig = {};
+      this._config = Object.assign(defaultConfig, config);
+      this._elTabs = typeof target === 'string' ? document.querySelector(target) : target;
+      this._elButtons = this._elTabs.querySelectorAll('.tabs__btn');
+      this._elPanes = this._elTabs.querySelectorAll('.tabs__pane');
+      this._eventShow = new Event('tab.itc.change');
+      this._init();
+      this._events();
+    }
+    _init() {
+      this._elTabs.setAttribute('role', 'tablist');
+      this._elButtons.forEach((el, index) => {
+        el.dataset.index = index;
+        el.setAttribute('role', 'tab');
+        this._elPanes[index].setAttribute('role', 'tabpanel');
+      });
+    }
+    show(elLinkTarget) {
+      const elPaneTarget = this._elPanes[elLinkTarget.dataset.index];
+      const elLinkActive = this._elTabs.querySelector('.tabs__btn_active');
+      const elPaneShow = this._elTabs.querySelector('.tabs__pane_show');
+      if (elLinkTarget === elLinkActive) {
+        return;
+      }
+      elLinkActive ? elLinkActive.classList.remove('tabs__btn_active') : null;
+      elPaneShow ? elPaneShow.classList.remove('tabs__pane_show') : null;
+      elLinkTarget.classList.add('tabs__btn_active');
+      elPaneTarget.classList.add('tabs__pane_show');
+      this._elTabs.dispatchEvent(this._eventShow);
+      elLinkTarget.focus();
+    }
+    showByIndex(index) {
+      const elLinkTarget = this._elButtons[index];
+      elLinkTarget ? this.show(elLinkTarget) : null;
+    };
+    _events() {
+      this._elTabs.addEventListener('click', (e) => {
+        const target = e.target.closest('.tabs__btn');
+        if (target) {
+          e.preventDefault();
+          this.show(target);
+        }
+      });
+    }
+  }
+
+  // инициализация .tabs как табов
+  new ItcTabs('.tabs3');
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const tabs = document.querySelectorAll('.tab-btn');
+  const subTabs = document.querySelectorAll('.sub-tab-btn');
+  const tabContents = document.querySelectorAll('.tab-content');
+  const subTabContents = document.querySelectorAll('.sub-tab-content');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const tabData = tab.getAttribute('data-tab');
+      tabContents.forEach(content => {
+        content.classList.remove('active');
+        if (content.getAttribute('id') === tabData) {
+          content.classList.add('active');
+        }
+      });
+      tabs.forEach(tab => {
+        tab.classList.remove('active');
+      });
+      tab.classList.add('active');
+    });
+  });
+
+  subTabs.forEach(subTab => {
+    subTab.addEventListener('click', () => {
+      const subTabData = subTab.getAttribute('data-tab');
+      subTabContents.forEach(content => {
+        content.classList.remove('active');
+        if (content.getAttribute('id') === subTabData) {
+          content.classList.add('active');
+        }
+      });
+      subTabs.forEach(subTab => {
+        subTab.classList.remove('active');
+      });
+      subTab.classList.add('active');
+    });
+  });
+});
+document.addEventListener("DOMContentLoaded", () => {
   $(document).ready(function () {
     $(".youtube-link").grtyoutube({
       autoPlay: true
@@ -256,13 +455,6 @@ document.addEventListener("DOMContentLoaded", () => {
     return false; // выключаем стандартное действие
   });
 });
-// document.addEventListener("DOMContentLoaded", () => {
-//   $('.menu li a').click(function (event) {
-//     $('.menu-btn').toggleClass('active');
-//     $('.menu').toggleClass('active');
-//     return false;
-//   });
-// });
 document.addEventListener("DOMContentLoaded", () => {
   $('.item__link2').click(function (event) {
     $(this).css('display', 'none');
@@ -630,6 +822,166 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   });
+  var swiper7 = new Swiper(".swiper_team", {
+    slidesPerView: 3,
+    spaceBetween: 24,
+    navigation: {
+      nextEl: ".swiper-button-next_team",
+      prevEl: ".swiper-button-prev_team",
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        spaceBetween: 10,
+        slidesPerView: 1,
+        loop: true,
+      },
+      767: {
+        spaceBetween: 20,
+        slidesPerView: 2
+      },
+      992: {
+        slidesPerView: 2
+      },
+      1200: {
+        spaceBetween: 20,
+        slidesPerView: 3
+      }
+    }
+  });
+  var swiper8 = new Swiper(".swiper_van", {
+    slidesPerView: 1,
+    spaceBetween: 5,
+    navigation: {
+      nextEl: ".swiper-button-next_van",
+      prevEl: ".swiper-button-prev_van",
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        spaceBetween: 5,
+        slidesPerView: 1,
+        loop: true,
+      },
+      767: {
+        spaceBetween: 5,
+        slidesPerView: 1
+      },
+      992: {
+        slidesPerView: 1
+      },
+      1200: {
+        spaceBetween: 5,
+        slidesPerView: 1
+      }
+    }
+  });
+  var swiper9 = new Swiper(".swiper_van2", {
+    slidesPerView: 1,
+    spaceBetween: 5,
+    pagination: {
+      el: ".swiper-pagination_van2",
+      clickable: true,
+
+    },
+    navigation: {
+      nextEl: ".swiper-button-next_van2",
+      prevEl: ".swiper-button-prev_van2",
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        spaceBetween: 5,
+        slidesPerView: 1,
+        loop: true,
+      },
+      767: {
+        spaceBetween: 5,
+        slidesPerView: 1
+      },
+      992: {
+        slidesPerView: 1
+      },
+      1200: {
+        spaceBetween: 5,
+        slidesPerView: 1
+      }
+    }
+  });
+  var swiper10 = new Swiper(".swiper_two", {
+    spaceBetween: 80,
+    slidesPerView: 3,
+    freeMode: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        spaceBetween: 40,
+        loop: true,
+      },
+      767: {
+        spaceBetween: 40
+      },
+      992: {
+        spaceBetween: 40
+      },
+      1500: {
+        spaceBetween: 40
+      }
+    }
+  });
+  var swiper11 = new Swiper(".swiper_one", {
+    spaceBetween: 0,
+    pagination: {
+      el: ".swiper-pagination_char",
+      clickable: true,
+
+    },
+    navigation: {
+      nextEl: ".swiper-button-prev_char",
+      prevEl: ".swiper-button-next_char",
+    },
+    thumbs: {
+      swiper: swiper10,
+    },
+  });
+  var swiper12 = new Swiper(".swiper_two2", {
+    spaceBetween: 80,
+    slidesPerView: 3,
+    freeMode: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        spaceBetween: 40,
+        loop: true,
+      },
+      767: {
+        spaceBetween: 40
+      },
+      992: {
+        spaceBetween: 40
+      },
+      1500: {
+        spaceBetween: 40
+      }
+    }
+  });
+  var swiper13 = new Swiper(".swiper_one2", {
+    spaceBetween: 0,
+    pagination: {
+      el: ".swiper-pagination_char2",
+      clickable: true,
+
+    },
+    navigation: {
+      nextEl: ".swiper-button-prev_char2",
+      prevEl: ".swiper-button-next_char2",
+    },
+    thumbs: {
+      swiper: swiper12,
+    },
+  });
 });
 document.addEventListener("DOMContentLoaded", () => {
   let menuBtn = document.querySelector('.menu-btn');
@@ -637,14 +989,6 @@ document.addEventListener("DOMContentLoaded", () => {
   menuBtn.addEventListener('click', function () {
     menuBtn.classList.toggle('active');
     menu.classList.toggle('active');
-  });
-});
-document.addEventListener("DOMContentLoaded", () => {
-  let menuBtn3 = document.querySelector('.menu-btn3');
-  let menu3 = document.querySelector('.menu3');
-  menuBtn3.addEventListener('click', function () {
-    menuBtn3.classList.toggle('active');
-    menu3.classList.toggle('active');
   });
 });
 document.addEventListener("DOMContentLoaded", () => {
@@ -698,7 +1042,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //popup2
   let popupBg2 = document.querySelector('.popup__bg2');
   let popup2 = document.querySelector('.popup2');
-  let openPopupButtons2 = document.querySelectorAll('.i1');
+  let openPopupButtons2 = document.querySelectorAll('.a2');
   let closePopupButton2 = document.querySelector('.close-popup2');
 
   openPopupButtons2.forEach((button) => {
@@ -732,7 +1076,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //popup3
   let popupBg3 = document.querySelector('.popup__bg3');
   let popup3 = document.querySelector('.popup3');
-  let openPopupButtons3 = document.querySelectorAll('.i2');
+  let openPopupButtons3 = document.querySelectorAll('.a3');
   let closePopupButton3 = document.querySelector('.close-popup3');
 
   openPopupButtons3.forEach((button) => {
@@ -762,147 +1106,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-document.addEventListener("DOMContentLoaded", () => {
-  //popup4
-  let popupBg4 = document.querySelector('.popup__bg4');
-  let popup4 = document.querySelector('.popup4');
-  let openPopupButtons4 = document.querySelectorAll('.i3');
-  let closePopupButton4 = document.querySelector('.close-popup4');
+document.addEventListener("DOMContentLoaded", function () {
+  const parBlockMap = document.querySelector(".par__block_map");
+  const map = document.querySelector(".map");
+  const parInfoElements = document.querySelectorAll(".par__item");
 
-  openPopupButtons4.forEach((button) => {
-    button.addEventListener('click', (e) => {
-      e.preventDefault();
-      popupBg4.classList.add('active');
-      popup4.classList.add('active');
-    })
-  });
-
-  closePopupButton4.addEventListener('click', () => {
-    popupBg4.classList.remove('active');
-    popup4.classList.remove('active');
-  });
-
-  document.addEventListener('click', (e) => {
-    if (e.target === popupBg4) {
-      popupBg4.classList.remove('active');
-      popup4.classList.remove('active');
-    }
-  });
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') {
-      //ваша функция закрытия окна
-      popupBg4.classList.remove('active');
-      popup4.classList.remove('active');
-    }
-  });
+  if (parBlockMap && map) {
+    parBlockMap.addEventListener("click", function () {
+      map.classList.toggle("active");
+      parInfoElements.forEach(element => element.classList.toggle("none"));
+    });
+  }
 });
-document.addEventListener("DOMContentLoaded", () => {
-  //popup5
-  let popupBg5 = document.querySelector('.popup__bg5');
-  let popup5 = document.querySelector('.popup5');
-  let openPopupButtons5 = document.querySelectorAll('.i4');
-  let closePopupButton5 = document.querySelector('.close-popup5');
-
-  openPopupButtons5.forEach((button) => {
-    button.addEventListener('click', (e) => {
-      e.preventDefault();
-      popupBg5.classList.add('active');
-      popup5.classList.add('active');
-    })
-  });
-
-  closePopupButton5.addEventListener('click', () => {
-    popupBg5.classList.remove('active');
-    popup5.classList.remove('active');
-  });
-
-  document.addEventListener('click', (e) => {
-    if (e.target === popupBg5) {
-      popupBg5.classList.remove('active');
-      popup5.classList.remove('active');
-    }
-  });
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') {
-      //ваша функция закрытия окна
-      popupBg5.classList.remove('active');
-      popup5.classList.remove('active');
-    }
-  });
-});
-document.addEventListener("DOMContentLoaded", () => {
-  //popup6
-  let popupBg6 = document.querySelector('.popup__bg6');
-  let popup6 = document.querySelector('.popup6');
-  let openPopupButtons6 = document.querySelectorAll('.i5');
-  let closePopupButton6 = document.querySelector('.close-popup6');
-
-  openPopupButtons6.forEach((button) => {
-    button.addEventListener('click', (e) => {
-      e.preventDefault();
-      popupBg6.classList.add('active');
-      popup6.classList.add('active');
-    })
-  });
-
-  closePopupButton6.addEventListener('click', () => {
-    popupBg6.classList.remove('active');
-    popup6.classList.remove('active');
-  });
-
-  document.addEventListener('click', (e) => {
-    if (e.target === popupBg6) {
-      popupBg6.classList.remove('active');
-      popup6.classList.remove('active');
-    }
-  });
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') {
-      //ваша функция закрытия окна
-      popupBg6.classList.remove('active');
-      popup6.classList.remove('active');
-    }
-  });
-});
-document.addEventListener("DOMContentLoaded", () => {
-  //popup7
-  let popupBg7 = document.querySelector('.popup__bg7');
-  let popup7 = document.querySelector('.popup7');
-  let openPopupButtons7 = document.querySelectorAll('.i6');
-  let closePopupButton7 = document.querySelector('.close-popup7');
-
-  openPopupButtons7.forEach((button) => {
-    button.addEventListener('click', (e) => {
-      e.preventDefault();
-      popupBg7.classList.add('active');
-      popup7.classList.add('active');
-    })
-  });
-
-  closePopupButton7.addEventListener('click', () => {
-    popupBg7.classList.remove('active');
-    popup7.classList.remove('active');
-  });
-
-  document.addEventListener('click', (e) => {
-    if (e.target === popupBg7) {
-      popupBg7.classList.remove('active');
-      popup7.classList.remove('active');
-    }
-  });
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') {
-      //ваша функция закрытия окна
-      popupBg7.classList.remove('active');
-      popup7.classList.remove('active');
-    }
-  });
-});
-// document.addEventListener("DOMContentLoaded", () => {
-//   let menuBtn2 = document.querySelector('.menu-btn2');
-//   let menu2 = document.querySelector('.menu2');
-//   menuBtn2.addEventListener('click', function () {
-//     menuBtn2.classList.toggle('active');
-//     menu2.classList.toggle('active');
-//   });
-// });

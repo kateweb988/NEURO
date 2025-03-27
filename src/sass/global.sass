@@ -1,10 +1,10 @@
 body
-   font-family: 'Inter', sans-serif
-   background: #f8faff
+   font-family: "Manrope", sans-serif
+   background: #454F60
    font-weight: 400
    font-size: 16px
    line-height: 130%
-   color: #111720
+   color: #454F60
 a
    text-decoration: none
    box-sizing: border-box
@@ -12,8 +12,8 @@ a
    &:hover 
       color: $blue
 .container
-   padding: 0 15px
-   max-width: 1200px
+   padding: 0 30px
+   max-width: 1920px
    margin: 0 auto
    width: 100%
    @media ( max-width: 1199px )
@@ -26,7 +26,7 @@ a
 .d-flex
    display: flex
 .body-wrap
-   overflow: hidden
+   overflow-x: hidden
    position: relative
    display: flex
    flex-direction: column
@@ -35,15 +35,17 @@ footer
    margin-top: auto
 h1
    margin: 0
-   font-weight: bold
-   font-size: 48px
-   line-height: 58px
+   font-style: normal
+   font-weight: 600
+   font-size: 62px
+   line-height: 65px
+   color: #FCFCFD
 h2 
    margin: 0
    font-weight: 600
-   font-size: 32px
-   line-height: 160%
-   text-align: center
+   font-size: 42px
+   line-height: 44px
+   color: #454F60
 ul 
    margin: 0
    padding: 0
@@ -52,8 +54,8 @@ p
    margin: 0
 .blue 
    color: $blue
-.svg 
-   transition: 0.5s ease
+.svg, path, circle
+   transition: 0.5s !important
 a
    transition: color 0.5s ease
    box-sizing: border-box
@@ -88,7 +90,7 @@ path, circle
 div 
    box-sizing: border-box
 .icon 
-   transition: fill 0.5s, stroke 0.5s
+   transition: 0.5s
 html * 
    scrollbar-width: thin
    scrollbar-color: blue $blue
@@ -104,7 +106,11 @@ html *::-webkit-scrollbar-track
 html *::-webkit-scrollbar-thumb 
    background-color: $blue
    border-radius: 6px
-
+section, main
+   margin: 0 30px
+.van2__row, .popup__bg, .popup__bg2, .popup__bg3, .scroll, header, .productionDropdownMenu, nav
+   scrollbar-width: thin
+   scrollbar-color: transparent transparent
 .item3__bottom 
    scrollbar-width: thin
    scrollbar-color: blue $blue
@@ -120,20 +126,40 @@ html *::-webkit-scrollbar-thumb
 .btn 
    display: flex
    align-items: center
-   justify-content: center
-   width: 189px
-   height: 59px
-   background: $blue
-   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.04)
-   border-radius: 5px
-   font-weight: 500
-   font-size: 16px
-   line-height: 19px
-   color: #F5F9FF
-   border: 2px solid $blue
-   &:hover 
-      color: $blue
-      background: transparent
-      border: 2px solid $blue
+   justify-content: flex-start
+   width: max-content
+   height: 60px
+   transition: 0.5s
+   div 
+      transition: 0.5s
+      &:first-child
+         display: flex
+         align-items: center
+         justify-content: center
+         font-weight: 700
+         font-size: 15px
+         line-height: 15px
+         letter-spacing: 0.05em
+         text-transform: uppercase
+         color: #576864
+         width: 280px
+         height: 100%
+         background: #FDFFFE
+         border-radius: 20px
+      &:nth-child(2)
+         width: 59px
+         height: 60px
+         border-radius: 20px
+         background: rgb(253, 255, 254)
+         display: flex
+         align-items: center
+         justify-content: center
+   &:hover
+      div 
+         color: white 
+         background: $blue
+         .svg 
+            path 
+               stroke: white
 .mob 
    display: none

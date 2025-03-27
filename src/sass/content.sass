@@ -1,44 +1,44 @@
-.close-popup, .close-popup2, .close-popup3, .close-popup4, .close-popup5, .close-popup6, .close-popup7
+.close-popup, .close-popup2, .close-popup3
    position: absolute
-   top: 15px
-   right: 15px
+   top: 30px
+   right: 30px
    cursor: pointer
-   width: 22px
-   height: 22px
+   width: 60px
+   height: 60px
    z-index: 20
    transform: rotate(0deg)
    transition: 0.5s
    &:hover 
       transform: rotate(90deg)
 input::-webkit-input-placeholder 
-   color: #111720 !important
-   opacity: 0.2 
+   color: rgb(253, 255, 254) !important
+   opacity: 0.5
 input::-moz-placeholder
-   color: #111720 !important
-   opacity: 0.2 
+   color: rgb(253, 255, 254) !important
+   opacity: 0.5
 input:-ms-input-placeholder 
-   color: #111720 !important
-   opacity: 0.2 
+   color: rgb(253, 255, 254) !important
+   opacity: 0.5
 input:-moz-placeholder 
-   color: #111720 !important
-   opacity: 0.2 
+   color: rgb(253, 255, 254) !important
+   opacity: 0.5
 textarea::-webkit-input-placeholder 
-   color: #111720 !important
-   opacity: 0.2 
+   color: rgb(253, 255, 254) !important
+   opacity: 0.5
 textarea::-moz-placeholder
-   color: #111720 !important
-   opacity: 0.2 
+   color: rgb(253, 255, 254) !important
+   opacity: 0.5
 textarea:-ms-input-placeholder 
-   color: #111720 !important
-   opacity: 0.2 
+   color: rgb(253, 255, 254) !important
+   opacity: 0.5 
 textarea:-moz-placeholder 
-   color: #111720 !important
-   opacity: 0.2 
+   color: rgb(253, 255, 254) !important
+   opacity: 0.5
 .menu-btn, .menu
    display: none
 button 
    transition: 0.5s
-.popup__bg, .popup__bg2, .popup__bg3, .popup__bg4, .popup__bg5, .popup__bg6, .popup__bg7
+.popup__bg, .popup__bg2, .popup__bg3
    position: fixed
    top: 0
    left: 0
@@ -51,55 +51,46 @@ button
    transition: 0.5s all
    overflow-y: auto
    overflow-x: hidden
-.popup__bg.active, .popup__bg2.active, .popup__bg3.active, .popup__bg4.active, .popup__bg5.active, .popup__bg6.active, .popup__bg7.active
+.popup__bg.active, .popup__bg2.active, .popup__bg3.active
    opacity: 1
    pointer-events: all
    transition: 0.5s all
    z-index: 22
-.popup, .popup2, .popup3, .popup4, .popup5, .popup6, .popup7
+.popup, .popup2, .popup3
    position: absolute
    top: 49%
    left: 50%
    transform: translate(-50%, -50%) scale(0)
    height: auto
    transition: 0.5s all
-   width: 392px
-   padding: 40px
-   border-radius: 8px
-   background: #FFF
+   padding: 82px 117px
+   width: 860px
+   background: #FDFFFE
+   border-radius: 60px
    &__title 
-      margin-bottom: 10px
-      color:#111720
-      font-size: 32px
       font-weight: 600
-   &__text 
-      color: #111720
-      margin-bottom: 30px
-   &__form 
-      width: 100%
-      label 
-         display: block
-         margin-bottom: 10px
-         color: #111720
-      input 
-         width: 100%
-         padding: 15px
-         border-radius: 4px 
-         border: 1px solid rgba(17, 23, 32, 0.20)
-         background: #FFF
-         color: #000
-   &__item 
-      margin-bottom: 20px
-   &__btn 
-      width: 100%
-      height: 59px
-      margin-top: 30px
-.popup.active, .popup2.active, .popup3.active, .popup4.active, .popup5.active, .popup6.active, .popup7.active
+      font-size: 48.2838px
+      line-height: 48px
+      text-align: center
+      color: #454F60
+   &__content.van-partners
+      padding: 0 !important
+      .team__content
+         max-width: 100%
+      .team__info
+         padding-left: 0
+         padding-right: 0
+         padding-bottom: 0
+      .btn 
+         margin-top: 40px
+.popup.active, .popup2.active, .popup3.active
    transform: translate(-50%, -46%) scale(1)
    transition: 0.5s all
-.popup, .popup2, .popup3, .popup4, .popup5, .popup6, .popup7
+.popup, .popup2, .popup3
    position: relative
    height: auto
+.popup3.active
+   background: #00B68A
 .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after, .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after
    display: none
 .custom-checkbox 
@@ -491,13 +482,13 @@ input[type="range"]::-ms-track
    display: block
 .menu-parent1.menu-parent > a  
    padding-right: 25px !important 
-   background: url(../img/ungle-down.svg) no-repeat right center !important 
+   background: url(/img/ungle-down.svg) no-repeat right center !important 
 .menu-parent3.menu-parent > a  
    padding-right: 25px !important 
-   background: url(../img/ungle-right.svg) no-repeat calc(100% - 20px) center 
+   background: url(/img/ungle-right.svg) no-repeat calc(100% - 20px) center 
 .menu-parent2.menu-parent > a  
    padding-right: 25px !important 
-   background: url(../img/ungle-right.svg) no-repeat calc(100% - 20px) center 
+   background: url(/img/ungle-right.svg) no-repeat calc(100% - 20px) center 
 header 
     z-index: 1001 
 @media screen and (max-width: 991px)  
@@ -506,7 +497,7 @@ header
       width: 100vw 
       height: 100vh 
       z-index: 9999 
-      background: url(../img/menu-uzor.svg) no-repeat bottom right, #EFF5FF 
+      background: url(/img/menu-uzor.svg) no-repeat bottom right, #EFF5FF 
       right: -200% 
       overflow-y: scroll 
       padding-bottom: 40px   
@@ -517,17 +508,31 @@ header
    background: #FFFFFF 
    box-shadow: 0px 22px 40px rgba(0, 0, 0, 0.1) 
    border-radius: 15px 
-   padding: 50px 30px 
+   padding: 50px 50px 87px
    gap: 10px 
 .main-item  
    background: none 
    background: #EFF5FF 
    border-radius: 5px 
-   padding: 20px 17px 
+   padding: 30px 37px 
    position: relative 
    width: unset 
    height: auto
+   cursor: pointer
    width: 19% 
+   &:after 
+      content: ""
+      display: block
+      width: 100%
+      border-radius: 40px 
+      height: 100%
+      z-index: 0
+      position: absolute
+      top: 0
+      left: 0
+      transition: 0.5s
+      background: linear-gradient(90.00deg, rgb(0, 165, 126),rgb(0, 191, 146) 100%)
+      opacity: 0
    &:nth-child(3)
       .main-item_img img
          position: relative
@@ -537,17 +542,32 @@ header
    &:nth-child(4)
       .main-item_name
          position: relative
-   &:last-child
-      display: none
+   // &:last-child
+   //    display: none
+   &:hover 
+      &:after 
+         opacity: 1
+      .main-item_name
+         color: white
+         span
+            background: rgb(253, 255, 254)
+            color: rgb(69, 79, 96)
 .main-item_img 
    margin-top: unset 
    height: auto
    margin-bottom: 0px
+   position: absolute
+   bottom: 20px 
+   z-index: 0
+   z-index: 2
+   left: 50%
+   margin-left: -100px
 .main-item_img img  
    width: auto
    height: auto
    position: relative
    top: 0px
+   max-width: 100%
 .dropdownMenuCustom  
    position: absolute 
    width: max-content 
@@ -591,6 +611,7 @@ header
    background-size: 0% 2px 
    transition: background-size .3s 
    line-height: 35px 
+   color: #000
 .underLinedLink:hover, .underLinedLink:focus  
    background-size: 100% 2px 
    color: $blue 
@@ -604,23 +625,70 @@ section.geader-section
    padding-bottom: 7px 
 .menu-box_main  
    position: relative 
+   // &:after 
+   //    position: absolute
+   //    right: 0
+   //    top: 0
+   //    width: 9px
+   //    height: 5px
+   //    background: url(/img/vec.svg) no-repeat !important
 .productionDropdownMenu  
-   width: 84vw 
-   display: none 
-   flex-direction: column 
-   align-items: center 
-   position: absolute 
-   background-color: #fff 
-   box-shadow: 0px 22px 40px rgba(0, 0, 0, 0.1) 
-   border-radius: 15px 
-   z-index: 10 
-   left: -26vw 
-   top: 35px 
+   width: 99.8vw
+   display: none
+   flex-direction: column
+   align-items: center
+   position: absolute
+   background: #454F60
+   box-shadow: none
+   border-radius: 0px
+   z-index: 10
+   left: 48%
+   margin-left: -525px
+   top: 62px
+   padding: 20px 40px 40px
+   overflow-x: hidden
+   .main-box
+      box-shadow: initial
+      padding: 0
+      background: transparent
+      width: 100%
+      .main-item
+         width: 100%
+         height: 282px
+         background: rgb(152, 167, 191)
+      .main-item_img 
+         bottom: 0
+.body-wrap.ss 
+   overflow: hidden !important
+.menu__item 
+   width: max-content
+   width: 20%
+   ul 
+      display: block !important
+      position: relative !important
+      top: 0 !important
+      width: auto !important
+      background: transparent !important
+      margin-left: 20px
+      margin-top: 25px
+      li 
+         margin-right: 0
+         a 
+            align-items: flex-start
+            text-align: left
 .productionMenuHoverItem:hover .productionDropdownMenu  
    display: flex !important 
 .productionDropdownMenuUpper  
    display: flex 
    justify-content: center 
+.productionMenuHoverItem:after
+   position: absolute
+   bottom: -37px
+   content: ""
+   display: block
+   width: 100%
+   height: 50px
+   background: transparent
 .productionDropdownMenuItem .productionMenuMainImage  
    width: 170px 
    height: 150px 
@@ -632,6 +700,11 @@ section.geader-section
    gap: 20px 
    border-right: 1px solid rgba(0, 0, 0, 0.15) 
    padding: 20px 10px 
+   span 
+      color: #000
+      transition: 0.5s 
+      &:hover 
+         color: $blue
 .productionMenuItems  
    display: flex 
    flex-direction: column 
@@ -685,7 +758,7 @@ section.geader-section
       display: none !important 
 .productionInnerMenu  
    padding: 20px 
-   background: url(../img/menu-uzor.svg) no-repeat bottom right, #EFF5FF 
+   background: url(/img/menu-uzor.svg) no-repeat bottom right, #EFF5FF 
    position: absolute 
    width: 100vw 
    height: 100vh 
@@ -708,23 +781,25 @@ section.geader-section
       width: 100% 
       margin: 10px 0
 .logo 
-   width: 185px 
+   width: 215px 
    height: auto
    display: flex
    flex: 1 0 auto 
-   max-width: 185px
+   max-width: 215px
+   margin-right: 84px
    img 
       width: 100%
       height: 100%
       object-fit: contain
 .header__phone 
-   color: #000 
-   display: block 
-   margin-bottom: 0px 
-   text-decoration: none 
-   font-size: 18px
-   font-weight: 500   
-   margin-top: 15px
+   color: rgb(253, 255, 254)
+   font-size: 19px
+   font-weight: 700
+   line-height: 26px
+   text-transform: uppercase
+   display: block
+   &:first-child
+      margin-top: 0
 /* HEADER */
 .overflow-hidden  
    overflow: hidden 
@@ -740,45 +815,56 @@ section.geader-section
    -webkit-box-align: center 
    -ms-flex-align: center 
    align-items: center 
-   padding: 43px 0 32px
+   padding: 32px 0
    position: relative 
    z-index: 999 
-   background: #EFF5FF
    &__box 
       align-items: flex-start
    &__content 
       width: 100%
-      max-width: 716px
-      margin: -8px 44px 0
+      max-width: 100%
+      margin: 0px
+      display: flex
+      align-items: center
+      justify-content: space-between
    &__form 
-      width: 100%
+      width: max-content
       height: 43px
       position: relative
       margin-top: 5px
+      display: flex
+      align-items: center
       input 
-         width: 100%
-         height: 100%
-         background: #FCFCFD
-         border-radius: 4px
-         padding-left: 20px
-         color: #000
-         font-size: 16px
+         width: 350px
+         height: 63px
+         background: #5D6777
+         border-radius: 100px
          border: 1px solid rgba(17, 23, 32, 0.2)
+         font-weight: 500
+         font-size: 18px
+         line-height: 140%
+         color: #FDFFFE
+         padding-left: 20px
          &::-ms-clear 
             display: none
             width: 0
             opacity: 0
             -webkit-appearance: none !important
       button 
-         position: absolute
-         right: 14px
-         top: 11px
-         background: transparent
+         display: flex
+         align-items: center
+         justify-content: center
+         width: 63px
+         height: 63px
+         background: #5D6777
+         border-radius: 100px
          border: none
+         transition: 0.5s
          &:hover
+            background: $blue
             .svg 
                path 
-                  stroke: $blue
+                  fill: white
                   opacity: 1
 input[type='search']::-webkit-search-decoration, 
 input[type='search']::-webkit-search-cancel-button, 
@@ -811,7 +897,7 @@ input[type='search']::-webkit-search-results-decoration
 .menu-box li  
    height: 100% 
    position: relative 
-   margin-right: 20px 
+   margin-right: 55px 
    &:last-child
       margin-right: 0
       a 
@@ -844,15 +930,15 @@ input[type='search']::-webkit-search-results-decoration
    padding: 10px 13px 
    padding-left: 0px !important 
    width: 100% 
-   font-size: calc(15px + 1 * ((100vw - 320px) / 1600)) 
-   color: #000 
    font-weight: 500
    font-size: 18px
+   line-height: 140%
+   color: #FDFFFE
    &:hover 
       color: $blue
 .menu-box_main  
    padding-right: 25px !important 
-   background: url(../img/ungle-down.svg) no-repeat right center !important 
+   background: url(/img/ungle-down.svg) no-repeat right center !important 
 /* inner-menu */
 .menu-wrapper ul ul ul  
    right: -230px 
@@ -872,7 +958,7 @@ input[type='search']::-webkit-search-results-decoration
    background-color: #f0f1f1 
 .menu-box_main2 a  
    padding-right: 25px !important 
-   background: url(../img/ungle-right.svg) no-repeat calc(100% - 20px) center 
+   background: url(/img/ungle-right.svg) no-repeat calc(100% - 20px) center 
 .menu-box_inner2 li a  
    background: #fff 
 .close-icon  
@@ -881,40 +967,82 @@ input[type='search']::-webkit-search-results-decoration
 .header-phone  
    text-align: right 
    position: relative
-   top: 2px
+   top: -13px
+   margin-left: 60px
 .header-phone_number  
-   font-size: 18px 
-   font-weight: 500 
-   color: #000 
+   font-style: normal
+   font-weight: 700
+   font-size: 19px
+   line-height: 26px
+   letter-spacing: 0.05em
+   text-transform: uppercase
+   color: #FDFFFE
    display: block 
    margin-bottom: 5px 
    width: max-content
-.header-phone_btn a  
-   color: #005944 
-   font-size: 16px 
-   font-weight: 600 
-   margin-top: -3px
+.header-phone_btn a
+   font-style: normal
+   font-weight: 500
+   font-size: 18px
+   line-height: 140%
+   color: #00BF92
    display: block
+   width: max-content
+   margin-left: auto
    &:hover 
-      color: $blue
+      color: white
 /* main-section */
 .main-section 
     overflow: hidden 
 .main  
-   margin-top: 35px 
+   margin-top: -30px 
    position: relative
-   &__fig1 
-      position: absolute
-      left: 0
-      top: -186px
-      z-index: -1
-   &__fig2
-      position: absolute
-      right: 0
-      top: -186px
-      z-index: -1
+   &-top 
+      width: 100%
+      overflow: hidden
+      position: relative
+      background: linear-gradient(90deg, #00A57E 0%, #00BF92 100%)
+      border-radius: 70px
+      margin-bottom: 5px
+      padding: 150px 23px
+      &__pic 
+         position: absolute
+         top: 0
+         right: 50%
+         z-index: 0
+         margin-right: -525px
+         height: 100%
+      &__row 
+         display: flex
+         align-items: center
+         justify-content: space-between
+      &__content 
+         width: 100%
+         max-width: 772px
+         position: relative
+         z-index: 2
+      &__btn 
+         margin-top: 34px
+         &:hover 
+            div, div:nth-child(2) 
+               background: #454f60 !important
+      &__info 
+         p 
+            margin-bottom: 7px
+            color: rgb(252, 252, 253)
+            font-size: 26px
+            font-weight: 600
+            line-height: 28px
+            text-align: right
+         a 
+            color: rgb(252, 252, 253)
+            font-size: 42px
+            font-weight: 600
+            line-height: 44px
+            &:hover 
+               color: #000
 .main-section  
-	background: url(../img/main-section-bg.svg) no-repeat center bottom/cover 
+	background: url(/img/main-section-bg.svg) no-repeat center bottom/cover 
 	height: 810px 
 .main-subtitle
    font-weight: 400
@@ -963,23 +1091,36 @@ input[type='search']::-webkit-search-results-decoration
    -webkit-box-pack: justify 
    -ms-flex-pack: justify 
    justify-content: space-between 
+   border-radius: 70px 70px 0 0
+   background: rgb(253, 255, 254)
+   padding: 50px 50px 87px
 .main-item  
-   width: 206px 
-   height: auto
-   text-align: center 
-   display: -webkit-box 
-   display: -ms-flexbox 
-   display: flex 
-   -webkit-box-orient: vertical 
-   -webkit-box-direction: normal 
-   -ms-flex-direction: column 
-   flex-direction: column 
-   align-items: center
-   justify-content: center
+   width: 19%
+   height: 334px
+   border-radius: 40px
+   background: rgb(241, 244, 249)
+   text-align: left
 .main-item_name  
-   font-size: 16px
-   font-weight: 500 
-   margin-top: auto
+   color: rgb(69, 79, 96)
+   font-size: 26px
+   font-weight: 600
+   line-height: 28px
+   transition: 0.5s
+   text-align: left
+   position: relative
+   z-index: 2
+   span 
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 124.21px
+      height: 30.33px
+      border-radius: 23.6px
+      background: rgb(227, 233, 240)
+      font-size: 15.89px
+      font-weight: 600
+      line-height: 130%
+      margin-top: 10px
 .main-uzor2  
    position: absolute 
    right: 0 
@@ -1004,52 +1145,129 @@ input[type='search']::-webkit-search-results-decoration
 .productionMenuItems.new3
    position: relative
 .van 
-   padding: 100px 0 50px 
+   padding: 0 
+   margin: 5px 0 0
+   &__year 
+      color: rgb(69, 79, 96)
+      font-size: 42px
+      font-weight: 600
+      line-height: 44px
+      text-align: center
+      position: relative
+      z-index: 2
+      align-self: flex-start
+      margin: 0 auto
    &__box 
       position: relative 
       overflow: hidden
-      margin: 50px 0 30px
+      margin: 0
       height: auto
-      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1)
-      border-radius: 16px
-      padding: 26px 20px
-      background: url(/img/van-bg.png) no-repeat center center / cover
+      display: flex
+      align-items: normal
+      justify-content: space-between
+   &__content 
+      overflow: hidden
+      border-radius: 70px
+      background: rgb(255, 255, 255)
+      padding: 53px 50px 22px
+      width: 100%
+      max-width: 49.8%
+      h2 
+         margin-bottom: 20px
+   &__sub 
+      color: rgb(69, 79, 96)
+      font-size: 18px
+      font-weight: 600
+      line-height: 24px
+      margin-bottom: 200px
    &__item 
       align-items: center
       margin-bottom: 11.5px
+      width: 100%
+      max-width: 223px
+      margin-right: 40px
+      margin-bottom: 40px
+      img 
+         width: 80px
       p 
+         color: rgb(69, 79, 96)
          font-size: 18px
-         margin-left: 12px
+         font-weight: 600
+         line-height: 24px
+         margin-left: 0px
+         margin-top: 10px
       &:last-child
-         margin-bottom: 0
-   &__sub 
+         margin-right: 0
+   &__txt
       font-size: 20px
-      text-align: center
       margin-top: 5px
+      margin-bottom: 200px
    &__pic 
-      position: absolute
+      position: relative
+      overflow: hidden
+      border-radius: 70px
+      object-fit: cover
       right: 0
       bottom: 0
+      width: 100%
+      max-width: 49.8%
+      height: 881px
    &__flex 
       justify-content: space-between
+      margin-top: 5px
+      border-radius: 70px
+      backdrop-filter: blur(60px)
+      background: rgb(255, 255, 255)
+      overflow: hidden
+      padding: 50px
+   &__row 
+      justify-content: flex-start
+      flex-wrap: wrap
+      display: flex
+   &__bottom 
+      display: flex
+      justify-content: space-between
+      align-items: flex-end
+      margin-top: 100px
    &__block 
-      width: 48.8%
-      background: #F8FAFF
-      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1)
-      border-radius: 16px
-      padding: 20px
+      &:first-child
+         .van__name 
+            margin-bottom: 250px
+      &:nth-child(2)
+         width: 51.5%
+         overflow: hidden
+         border-radius: 50px
+         background: rgb(241, 244, 249)
+         padding: 40px
+         .van__text
+            max-width: 39%
+      .btn 
+         div 
+            background: $blue
+            color: white
+         .svg 
+            path
+               stroke: white
+         &:hover
+            div 
+               background: black
    &__name 
+      color: rgb(69, 79, 96)
+      font-size: 42px
       font-weight: 600
-      font-size: 24px
-      margin-bottom: 13px
+      line-height: 44px
    &__text 
-      font-size: 16px
-      line-height: 150%
+      color: rgb(69, 79, 96)
+      font-size: 18px
+      font-weight: 500
+      line-height: 140%
+      width: 100%
+      max-width: 489px
 .tabs__nav 
    justify-content: center
    position: relative
    margin-bottom: 30px
-   a 
+   a, div 
       margin-right: 20px
       display: flex
       align-items: center
@@ -1058,6 +1276,7 @@ input[type='search']::-webkit-search-results-decoration
       width: max-content
       text-align: center
       font-weight: 500
+      cursor: pointer
       font-size: 16px
       line-height: 19px
       color: #111720
@@ -1075,68 +1294,171 @@ input[type='search']::-webkit-search-results-decoration
       background: $blue
       color: white !important
 .med 
-   padding: 45px 0 100px
+   padding: 50px 0
+   border-radius: 70px
+   background: linear-gradient(90.00deg, rgb(0, 165, 126),rgb(0, 191, 146) 100%)
+   overflow: visible
+   position: relative
+   z-index: 3
+   margin-top: -64px
    &__box 
-      margin-top: 30px
-      background: #FFFFFF
-      box-shadow: 0px 22px 40px rgba(0, 0, 0, 0.1)
-      border-radius: 16px
-      padding: 24px 30px 40px
-   .swiper2 
-      overflow: hidden
-      position: relative
-      margin: 0 79px
-      .swiper-slide 
-         background: #EFF5FF
-         border-radius: 4px
-         overflow: hidden
-         padding: 20px
-         display: flex
-         height: auto
-         flex-direction: column
-   &__pic 
-      display: block
-      margin: 0 auto 16px
-   &__name 
-      margin-bottom: 8px
-      font-weight: 600
-      font-size: 18px
-      line-height: 22px
-      text-align: center
-      margin-top: auto
-   &__text 
-      font-size: 14px
-      line-height: 17px
-      opacity: 0.9
-      margin-bottom: 16px
-   &__btn 
-      width: 211px
-      margin: 0 auto
-   &-arr 
-      position: absolute
-      top: 40%
-      z-index: 2
-      cursor: pointer
-      transition: 0.5s 
-      &:hover 
-         opacity: 0.5
-   .swiper-button-next2
-      right: 0
-      left: inherit
-   .swiper-button-disabled
-      opacity: 0
-   .swiper-pagination2
-      position: relative
       display: flex
-      justify-content: center
-      margin-top: 40px
+      align-items: flex-start
+      justify-content: space-between
+   &__menu 
+      position: sticky
+      top: 20px
+      width: 100%
+      max-width: 23.25%
+      margin-right: 29px
+   &__name 
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding: 10px 30px 
+      overflow: hidden 
+      width: 100%
+      border-radius: 20px
+      color: rgb(253, 255, 254)
+      font-size: 26px
+      font-weight: 600
+      line-height: 28px
+      margin-bottom: 0px
+      background: transparent
+      transition: 0.5s
+      cursor: pointer
+      min-height: 86px
+      img 
+         width: 77px
+         opacity: 0
+         transition: 0.5s
+      &.active 
+         background: rgb(13, 141, 111) !important
+         color: white !important
+         margin-bottom: 20px
+         margin-top: 40px
+         img
+            opacity: 1
+      &_last 
+         img 
+            width: auto
+      &:hover 
+         background: #F1F4F9
+         color: #000
+   &__area 
+      margin-bottom: 10px
+      &:first-child
+         .med__name 
+            margin-top: 0 !important
+      ul 
+         padding-left: 0px
+         display: none
+         li 
+            margin-bottom: 15px
+            &:last-child
+               margin-bottom: 0
+            a 
+               color: rgb(253, 255, 254)
+               font-size: 18px
+               font-weight: 500
+               border-radius: 10px
+               line-height: 140%
+               padding: 10px 30px
+               display: flex
+               align-items: center
+               justify-content: flex-start
+               &:hover 
+                  background: #F1F4F9
+                  color: black !important
+   &__content 
+      width: 100%
+      max-width: 100%
+      display: flex
+      flex-wrap: wrap 
+      justify-content: flex-start
+   &__item 
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      overflow: hidden
+      width: 32%
+      height: 580px
+      margin-bottom: 24px
+      border-radius: 40px
+      background: rgb(253, 255, 254)
+      padding: 35px
+      margin-right: 24px
+      position: relative
+      &:nth-child(3n)
+         margin-right: 0
+      span 
+         display: flex
+         align-items: center
+         justify-content: center
+         width: 165px
+         height: 31px
+         border-radius: 25px
+         background: rgb(227, 233, 240)
+         color: rgb(69, 79, 96)
+         font-size: 15px
+         font-weight: 600
+         line-height: 130%
+         margin: 10px 0
+         position: relative
+         z-index: 2
+      &:after 
+         background: linear-gradient(90deg, #00A57E 0%, #00BF92 100%)
+         position: absolute
+         bottom: 0
+         left: 0
+         width: 100%
+         height: 0%
+         z-index: 1
+         content: ""
+         display: block
+         transition: 0.5s
+      &:hover 
+         .med__text 
+            color: white
+         .med__title
+            color: white
+         &:after 
+            height: 100%
+   &__logo 
+      position: relative
       z-index: 2
-      .swiper-pagination-bullet
-         background: rgba(160, 160, 160, 0.3)
-         opacity: 1
-      .swiper-pagination-bullet-active
-         background: #658AC8
-.about 
+   &__title 
+      color: rgb(69, 79, 96)
+      font-size: 26px
+      font-weight: 600
+      line-height: 28px
+      margin-bottom: 10px
+      transition: 0.5s 
+      position: relative
+      z-index: 2
+   &__pic 
+      object-fit: contain
+      max-width: 100% 
+      max-height: 100% 
+      width: auto
+      height: 274px
+      margin: auto auto 50px
+      position: relative
+      z-index: 2
+   &__text
+      transition: 0.5s 
+      color: rgb(69, 79, 96)
+      font-size: 15px
+      font-weight: 700
+      line-height: 15px
+      text-align: center
+      text-transform: uppercase
+      margin: 0 auto
+      position: relative
+      z-index: 2
+.body-wrap
+   overflow: visible
+.about
    padding: 50px 0
    &__box 
       justify-content: center
@@ -1162,66 +1484,132 @@ input[type='search']::-webkit-search-results-decoration
       text-align: left
       margin-bottom: 40px
 .news 
-   padding: 44px 0 
+   padding: 100px 0 70px
+   border-radius: 70px
+   background: rgb(253, 255, 254)
+   margin-top: 5px
    &__box 
       justify-content: space-between
-      margin-top: 44px
+      margin-top: 60px
+      flex-wrap: wrap
    h2 
-      text-align: left
-   &__left  
-      width: 57.5%
-   &__right 
-      width: 40%
-   &__item 
+      text-align: center
+   &__block 
+      position: absolute
+      transition: 0.5s
+      bottom: -100%
       width: 100%
-      padding-bottom: 30px
-      border-bottom: 3px solid rgba(17, 23, 32, 0.1)
-      display: block
-      margin-bottom: 60px
+      height: 273px
+      border-radius: 40px
+      opacity: 0
+      left: 0
+      pointer-events: none
+      background: linear-gradient(90.00deg, rgb(0, 165, 126),rgb(0, 191, 146) 100%)
+      padding: 50px
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+   &__item 
+      display: flex
+      flex-direction: column 
+      align-items: flex-start
+      height: 422px
+      margin-bottom: 24px
+      overflow: hidden
+      border-radius: 40px
+      background: rgb(241, 244, 249)
+      width: 23.8%
+      position: relative
+      img 
+         width: 100%
+         height: 230px
+         border-radius: 40px 40px 0px 0px
+         object-fit: cover
+      &:first-child, &:last-child
+         width: 49%
+         .news__content 
+            display: flex
+            align-items: flex-start
+            justify-content: space-between
+            p 
+               max-width: 40%
+               width: 100%
+            h3 
+               width: 100%
+               max-width: 51%
+         &:hover 
+            .news__content 
+               p 
+                  top: 0
       &:hover 
-         .news__name 
-            color: $blue
-   &__pic 
-      width: 100% 
-      margin-bottom: 13px
-   &__data
-      font-weight: 500
-      font-size: 16px
-      line-height: 19px
-      color: #111720
-      opacity: 0.7
-      margin-bottom: 20px
-   &__name 
-      font-weight: 700
-      font-size: 20px
-      line-height: 150%
-      color: #111720
-      opacity: 0.9
-      margin-bottom: 20px
-      transition: 0.5s 
-   &__text 
-      font-size: 16px
-      line-height: 19px
-      color: #111720
-      opacity: 0.7
-      width: 99%
-   &__link 
+         .news__block 
+            bottom: 0
+            opacity: 1
+            z-index: 2
+         .news__content p 
+            color: white
+            top: -30px
+   &__read 
+      display: flex 
       align-items: center
-      justify-content: center
+      color: rgb(253, 255, 254)
+      font-size: 15px
       font-weight: 700
-      font-size: 16px
-      line-height: 19px
-      color: $blue
-      margin-top: -22px
-      .svg 
-         margin-left: 6px
+      line-height: 15px
+      text-transform: uppercase
+      margin-top: auto
+      .svg
+         margin-left: 15px
+         width: 7px
+         path 
+            stroke: white
+   &__content 
+      padding: 35px 50px 50px
+      h3 
+         margin-top: 0
+         color: rgb(69, 79, 96)
+         font-size: 26px
+         font-weight: 600
+         line-height: 28px
+         span 
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 106px
+            height: 31px
+            border-radius: 25px
+            color: rgb(69, 79, 96)
+            background: rgb(227, 233, 240)
+            font-size: 15px
+            font-weight: 600
+            line-height: 130%
+            margin-top: 10px
+      p 
+         color: rgb(69, 79, 96)
+         font-size: 15px
+         font-weight: 600
+         line-height: 130%
+         -webkit-line-clamp: 8
+         -webkit-box-orient: vertical
+         overflow: hidden
+         text-overflow: ellipsis
+         display: block
+         display: -webkit-box
          position: relative
-         top: 2px
+         transition: 0.5s 
+         position: relative
+         z-index: 3
+         top: 0
+   &__link 
+      margin: 40px auto 0 
+      color: $blue
+      font-size: 15px
+      font-weight: 700
+      line-height: 15px
+      text-transform: uppercase
+      justify-content: center
       &:hover 
          color: #000
-         .svg 
-            path 
-               stroke: black
 .chous 
    text-align: center
    cursor: pointer
@@ -1256,70 +1644,106 @@ input[type='search']::-webkit-search-results-decoration
    position: absolute
    z-index: -1
 .team 
-   padding: 50px 0
-   background: #EFF5FF
+   padding: 100px 24px
+   border-radius: 70px
+   background: rgb(255, 255, 255)
+   margin-top: 5px
    h2 
       text-align: left
    &__box 
-      padding: 30px
+      padding: 0px !important
       background: #FFFFFF
       border-radius: 16px
-      margin-top: 89px
-   &__line 
-      margin-top: 84px
+      display: flex
       justify-content: space-between
-   &__item 
-      text-align: center
-      width: 31.5%
-      height: auto
-      background: #F9FBFF
-      border-radius: 12px
-      padding: 45px 30px
-   &__ava 
-      margin-bottom: 10px
-      width: 110px
-      height: 110px
-      border-radius: 50%
-      margin-top: -97px
+   &__info 
+      padding: 30px
    &__name 
-      margin-bottom: 10px
+      margin-bottom: 6px
       font-weight: 600
-      font-size: 24px
-      line-height: 29px
-   &__text 
-      font-size: 16px
-      line-height: 19px
-   &__job
-      margin-bottom: 30px
+      font-size: 26px
+      line-height: 28px
+      color: #454F60
+   &__text
+      color: rgb(69, 79, 96)
+      font-size: 18px
       font-weight: 500
-      font-size: 16px
-      line-height: 19px
+      line-height: 140%
+      margin-bottom: 35px
+      min-height: 50.41px
+   .swiper_team 
+      overflow: hidden
+      height: 578px
+      .swiper-slide
+         background: rgb(241, 244, 249)
+         height: 100%
+         border-radius: 40px
+         overflow: hidden
+         img 
+            width: 100%
+            height: 380px
+            object-fit: cover
+         a 
+            display: flex
+            align-items: center
+            color: rgb(0, 182, 138)
+            font-size: 15px
+            font-weight: 700
+            line-height: 15px
+            text-transform: uppercase
+            .svg 
+               margin-left: 10px
+            &:hover 
+               color: #000
+               .svg 
+                  path
+                     stroke: black
    &__content 
       width: 100%
-      max-width: 520px
-      margin-right: 20px
+      max-width: 26%
+   &__arrows 
+      display: flex
+      position: relative
+      margin-top: 420px
+      div 
+         position: relative
+         cursor: pointer
+         transition: 0.5s 
+         width: 59px
+         height: 60px
+         border-radius: 20px
+         background: rgb(0, 182, 138)
+         display: flex
+         align-items: center
+         justify-content: center
+         &:first-child
+            margin-right: 4px
+         &:hover 
+            background: #454f60
    &__form 
       label 
          display: block
-         margin-bottom: 10px
-         font-size: 16px
-         line-height: 19px
+         margin-bottom: 13px
+         color: rgb(253, 255, 254)
+         font-size: 15px
+         font-weight: 600
+         line-height: 130%
       input 
          width: 100%
-         height: 47px
-         background: #FFFFFF
-         border: 1px solid rgba(17, 23, 32, 0.2)
-         backdrop-filter: blur(1.5px)
-         border-radius: 4px
-         padding-left: 15px
-         font-size: 14px
-         color: #000
+         height: auto
+         background: transparent
+         border: none
+         border-bottom: 1px solid white
+         padding-left: 0px
+         color: rgb(253, 255, 254)
+         font-size: 26px
+         font-weight: 600
+         line-height: 28px
+         padding-bottom: 15px
+         &:focus 
+            border: none !important
+            border-bottom: 1px solid #000 !important
       .chous
-         width: 211px
-         height: 65px
-         background: #EFF5FF
-         backdrop-filter: blur(1.5px)
-         border-radius: 4px
          display: flex
          align-items: center
          margin: 0
@@ -1328,56 +1752,99 @@ input[type='search']::-webkit-search-results-decoration
          justify-content: center
          padding: 0
          transition: 0.5s
-         border: 3px solid #EFF5FF
+         width: 211px
+         height: 65px
+         border: 1px solid rgb(227, 233, 240)
+         border-radius: 10px
+         backdrop-filter: blur(3px)
+         background: transparent
          p 
+            color: rgb(253, 255, 254)
             font-size: 16px
+            font-weight: 400
             line-height: 19px
-            color: #111720
             margin: 0 0 0 10px
+            transition: 0.5s
          &:hover 
-            background: transparent
-            border: 3px solid #EFF5FF
+            border: 1px solid black
+            p 
+               color: #000
+            .svg 
+               path 
+                  fill: black
    &__el 
       width: 100%
       textarea
          width: 100%
          max-width: 100% 
-         min-height: 132px
-         background: #FFFFFF
-         border: 1px solid rgba(17, 23, 32, 0.2)
-         backdrop-filter: blur(1.5px)
-         border-radius: 4px
-         font-size: 14px
-         color: #000
-         padding: 15px 0 0 15px
+         min-height: 104px
+         height: auto
+         background: transparent
+         border: none
+         border-bottom: 1px solid white
+         padding-left: 0px
+         color: rgb(253, 255, 254)
+         font-size: 26px
+         font-weight: 600
+         line-height: 28px
+         padding-bottom: 15px
+         padding-top: 10px
+         &:focus 
+            border: none !important
+            border-bottom: 1px solid #000 !important
    &__flex
       justify-content: space-between 
-      margin-bottom: 20px
+      margin-bottom: 35px
       .team__el 
-         width: 48%
+         width: 47%
    &__info 
       align-items: center
    &__files 
       margin-left: 20px
+      color: rgb(253, 255, 254)
       font-size: 16px
+      font-weight: 400
       line-height: 19px
    &__btn 
-      margin: 25px auto 9px
-      width: 243px
-      height: 59px
+      background: transparent
+      border: none
+      padding: 0
+      margin: 54px auto 0
+      div 
+         &:first-child
+            width: 148px
+      &:hover 
+         div 
+            background: rgb(69, 79, 96)
    &__sub 
-      text-align: center
-      font-size: 12px
-      line-height: 15px
-      color: rgba(26, 33, 38, 0.4)
+      text-align: left
+      color: rgb(253, 255, 254)
+      font-size: 15px
+      font-weight: 600
+      line-height: 130%
+      margin-top: 30px
       a 
-         border-bottom: 1px solid rgba(26, 33, 38, 0.4)
-         color: rgba(26, 33, 38, 0.4)
+         color: rgb(253, 255, 254)
          &:hover 
-            color: $blue
-            border-bottom: 1px solid $blue
+            color: black
    &__row 
-      margin-top: 23px
+      margin-top: 50px
+      flex-wrap: wrap
+      justify-content: space-between
+.van3 
+   h2 
+      text-align: center
+      color: white
+   .team__content
+      max-width: 100%
+   .team__info
+      padding: 40px 0 0 0
+   .van__content
+      padding: 90px 120px
+      background: linear-gradient(90.00deg, rgb(0, 165, 126),rgb(0, 191, 146) 100%)
+.swiper-button-disabled
+   opacity: 0
+   pointer-events: none
 .accordeon
    width: 100%
    margin-top: 20px
@@ -1455,1902 +1922,550 @@ input[type='search']::-webkit-search-results-decoration
    margin-top: 30px
    margin-bottom: 76px
 .par 
-   padding: 100px 0 50px
+   padding: 100px 24px 
+   margin-top: 5px
+   border-radius: 70px
+   background: rgb(255, 255, 255)
+   .map 
+      display: none
+      z-index: 1
+      width: 100%
+      margin-right: 40px
+      &.active 
+         display: block
+   &__all 
+      justify-content: center
+      font-size: 15px
+      color: $blue
+      font-weight: 700
+      line-height: 15px
+      text-transform: uppercase
+      margin: 40px auto 0
+      display: none
+      &:hover 
+         color: #000
    .container 
       position: relative
    h2 
       text-align: left
+      position: relative
+      z-index: 5
+      width: max-content
    &__box 
-      margin-top: 50px
+      margin-top: 0px
       height: auto
-      background: #FCFCFD
-      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.04)
-      border-radius: 8px
-      padding: 20px
+      padding: 0px
       position: relative
       z-index: 1
+      display: flex
+      align-items: flex-start
+      justify-content: space-between
    &__row 
       align-items: center
       justify-content: space-between
       width: 100%
+   &__item 
+      position: absolute
+      display: flex
+      align-items: center
+      justify-content: center
+      border-radius: 50%
+      background: #FDFFFE
+      box-shadow: 0px 10px 60.3px -28px rgba(147, 162, 186, 0.5)
+      padding: 30px
+      transition: 0.5s
+      transform: inherit
+      &.none 
+         display: none
+      &:hover 
+         transform: scale(1.3)
+      img 
+         width: 100%
+         object-fit: contain
+         max-width: 100% 
+         max-height: 100%
+      &_1 
+         width: 182.82px
+         height: 182.82px
+         top: 3px
+         right: 28.5%
+      &_2
+         width: 138px
+         height: 138px
+         top: 183px
+         right: 5%
+         z-index: 2
+         padding: 20px
+      &_3
+         width: 182.82px
+         height: 182.82px
+         top: 284px
+         right: 22%
+      &_4
+         width: 205.67px
+         height: 205.67px
+         top: 446px
+         right: 0
+         z-index: 2
+      &_5
+         width: 138px
+         height: 138px
+         top: 532px
+         right: 28%
+      &_6
+         width: 138px
+         height: 138px
+         top: 720px
+         right: 5%
+         z-index: 2
+      &_7
+         width: 182.82px
+         height: 182.82px
+         top: 721px
+         right: 26%
+      &_8
+         width: 137.11px
+         height: 137.11px
+         top: 717px
+         left: 32%
+         z-index: 2
+      &_9
+         width: 182.82px
+         height: 182.82px
+         top: 647px
+         left: 5.5%
+      &_10
+         width: 138px
+         height: 138px
+         top: 472px
+         left: 16%
+         z-index: 2
+      &_11
+         width: 137.11px
+         height: 137.11px
+         top: 441px
+         left: 0%
+         z-index: 1
+      &_12
+         width: 182.82px
+         height: 182.82px
+         top: 175px
+         left: 12%
+         z-index: 2
+      &_13
+         width: 137.11px
+         height: 137.11px
+         top: 158px
+         left: 37%
+      &_14
+         width: 182.82px
+         height: 182.82px
+         top: 438px
+         left: 50%
+         margin-left: -150px
+   &__info 
+      position: relative
+      width: 100%
+      max-width: 72%
+      &.active 
+         display: none
    &__map 
       position: absolute
       top: 15px
       left: -89px
       z-index: -1
    &__content 
-      margin-top: 17px
-      position: absolute
-      right: 0
-      top: 305px
-      z-index: 0
+      margin-top: 0px
+      position: relative
+      right: 0 !important
+      top: 0px !important
+      z-index: 2
+      width: 100%
+      max-width: 25.4%
    &__block 
       display: flex
-      align-items: center
-      justify-content: center
-      width: 370px
-      height: 127px
-      background: #F9FBFF
-      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.04)
-      border-radius: 8px
-      font-weight: 600
-      font-size: 42px
-      line-height: 160%
-      color: #111720
-      margin: 0 0 40px auto
-      &:last-child
-         margin-bottom: 0
-   &__bottom 
-      margin-top: 500px
-      position: relative
-      h2 
-         text-align: left
-         margin-bottom: 20px
-   &__one 
+      align-items: flex-start
       width: 100%
-      max-width: 770px 
-      font-size: 16px
-      line-height: 180%
-      color: #111720
-      opacity: 0.8
-      margin-bottom: 8px
+      height: 295px
+      border-radius: 40px
+      flex-direction: column
+      backdrop-filter: blur(20px)
+      padding: 20px 30px 30px 20px
+      margin-bottom: 4px
+      &_map
+         transition: 0.5s
+         cursor: pointer
+         &:hover 
+            opacity: 0.6
+      span 
+         font-size: 64px
+         font-weight: 400
+         line-height: 87px
+      p 
+         font-size: 32px
+         font-weight: 600
+         line-height: 38px
+         margin-top: auto
+         margin-left: auto
       &:last-child
          margin-bottom: 0
+         background: $blue
+         p 
+            margin-top: 0
+            margin-left: 0
+            color: rgb(253, 255, 254)
+            font-size: 26px
+            font-weight: 600
+            line-height: 28px
+         div 
+            display: flex
+            align-items: center
+            justify-content: center
+            margin-top: auto
+            margin-left: auto
+            width: 59px
+            height: 60px
+            border-radius: 20px
+            background: rgb(253, 255, 254)
+            .svg 
+               path 
+                  stroke: black
+         &:hover 
+            background: rgb(69, 79, 96)
+      &:first-child
+         background: rgb(152, 167, 191)
+         p, span 
+            color: rgb(253, 255, 254)
+      &:nth-child(2)
+         background: rgb(241, 244, 249)
+         p, span 
+            color: rgb(69, 79, 96)
+   &__bottom 
+      margin-top: 5px !important
+      position: relative
+      border-radius: 70px
+      background: rgb(253, 255, 254)
+      padding: 100px 30px
+      h2 
+         text-align: center
+         margin-bottom: 50px
+      a.par__el 
+         position: relative
+         p, img, span
+            position: relative
+            z-index: 3
+            transition: 0.5s 
+         &:after 
+            background: linear-gradient(90deg, #00A57E 0%, #00BF92 100%)
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 100%
+            height: 0%
+            z-index: 1
+            content: ""
+            display: block
+            transition: 0.5s
+         &:hover 
+            border: 2px solid $blue
+            &:after 
+               height: 100%
+            p 
+               color: white
+            .par__name span
+               background: white 
+               color: rgb(69, 79, 96)
+               opacity: 1
+      div.par__el 
+         background: transparent 
+         box-sizing: border-box
+         border: 1px solid rgb(152, 167, 191)
+         border-radius: 40px
+         .par__txt 
+            font-size: 25px
+            font-weight: 600
+            line-height: 28px
+            margin: auto auto 0
+            color: rgb(152, 167, 191)
+            span 
+               color: $blue
+   &__num 
+      color: rgb(152, 167, 191)
+      font-size: 64px
+      font-weight: 400
+      line-height: 87px
+      margin-left: auto
    &__wrap 
-      margin-top: 84px
+      margin-top: 0px
       justify-content: space-between
       flex-wrap: wrap
-      max-width: 1170px 
+      max-width: 100%
       width: 100%
       position: relative 
-      &:after 
-         content: ""
-         display: block
-         position: absolute
-         right: -134px
-         top: 138px
-         width: 619px
-         height: 606px
-         background: #658AC8
-         z-index: -1
    &__el 
-      width: 23.5%
-      margin-bottom: 20px
-      background: #F9FBFF
-      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.04)
-      border-radius: 8px
-      text-align: left
-      padding: 10px 10px 25px
-      transition: 0.5s
-      position: relative
-      top: 0
-      &:nth-child(n+9)
-         width: 32%
-      &:hover 
-         top: -5px
-   &__name 
+      width: 24%
+      margin-bottom: 24px
+      height: 422px
+      border-radius: 40px
+      background: rgb(241, 244, 249)
+      overflow: hidden
+      padding: 60px 40px 40px
+      display: flex
+      align-items: flex-start
+      flex-direction: column
+      border: 2px solid rgb(241, 244, 249)
+      img 
+         margin: 0 auto 40px
+         order: 1
+      &:nth-child(9)
+         width: 49%
+         align-items: center
+         justify-content: center
+         .par__txt
+            text-align: center
+            max-width: 461px
+            margin: 0 auto !important
+      &:last-child
+         width: 49%
+         flex-direction: inherit
+         justify-content: center
+         align-items: center
+         div 
+            margin-top: 0
+            margin-left: 25px
+      &:nth-child(1)
+         order: 4
+      &:nth-child(2)
+         order: 5
+      &:nth-child(3)
+         order: 7
+      &:nth-child(4)
+         order: 6
+      &:nth-child(5)
+         order: 8
+      &:nth-child(6)
+         order: 9
+      &:nth-child(7)
+         order: 2
+      &:nth-child(8)
+         order: 10
+      &:nth-child(9)
+         order: 13
+      &:nth-child(10)
+         order: 11
+      &:nth-child(11)
+         order: 1
+      &:nth-child(12)
+         order: 3
+      &:nth-child(13)
+         order: 12
+      &:nth-child(14)
+         order: 14
+         &:after 
+            display: none !important
+   &__name
+      color: rgb(69, 79, 96)
+      font-size: 26px
       font-weight: 600
-      font-size: 20px
-      line-height: 160%
-      margin: 15px 0 10px
-      color: #111720
-   &__info 
-      font-weight: 400
-      font-size: 16px
-      line-height: 160%
-      color: #111720
-      opacity: 0.8
+      line-height: 28px
+      order: 2
+      margin-bottom: 15px
+      span 
+         display: flex
+         align-items: center
+         justify-content: center
+         width: 247px
+         height: 31px
+         background: #E3E9F0
+         border-radius: 25px 
+         font-weight: 600
+         font-size: 15px
+         line-height: 130%
+         color: #454F60
+         opacity: 0.8
+         margin-top: 13px
+      &_2 
+         span 
+            background: linear-gradient(90deg, #00A57E 0%, #00BF92 100%)
+            color: white
+            width: 212px
+   &__txt 
+      color: rgb(69, 79, 96)
+      font-size: 15px
+      font-weight: 600
+      line-height: 130%
+      width: 100%
+      max-width: 309px
+      order: 3
 .ser 
-   padding: 50px 0 100px
-   h2 
-      text-align: left
+   padding: 80px 0 100px
    &__box 
+      display: flex
       justify-content: space-between
-      margin-top: 44px
-   &__item 
-      margin-bottom: 26px
-      display: block
-   &__flex 
-      align-items: center
-      .ser__item
+      align-items: flex-start
+   h2 
+      color: white
+   .ser__btn 
+      margin-top: 300px
+      div 
+         background: transparent
+         border: 1px solid rgb(0, 182, 138)
+         color: rgb(0, 176, 134)
+         .svg 
+            path 
+               stroke: rgb(0, 176, 134)
          &:first-child
-            margin-right: 30px
-   .news__link
-      margin-top: 28px
-   .team__box 
-      background: #EBF2FB
-   .team__form .chous
-      background: white
+            width: 146px
       &:hover 
-         background: #EBF2FB
-         border: 3px solid white
+         div 
+            background: white !important
+   &__wrap 
+      width: 100%
+      max-width: 66.3% 
+      position: relative
+      a 
+         display: flex
+         align-items: center
+         justify-content: center
+         position: absolute
+         bottom: 0
+         img 
+            width: 100%
+            height: 100%
+            object-fit: cover
+         &:first-child
+            position: relative
+            margin: 0 auto
+            z-index: 6
+            width: 55.55%
+         &:nth-child(2)
+            z-index: 5
+            left: 87px
+         &:nth-child(3)
+            z-index: 4
+            left: 0
+            bottom: 0
+            opacity: 0.5
+         &:nth-child(4)
+            z-index: 5
+            right: 87px
+         &:nth-child(5)
+            z-index: 4
+            right: 0
+            opacity: 0.5
+            width: 26.45%
 .footer 
-   background: #EBF2FB
-   padding: 60px 0
+   padding: 20px 0 60px
    &__box 
       justify-content: space-between
       align-items: flex-start
+      padding-top: 59px
+      border-top: 2px solid rgb(152, 167, 191)
    .logo
-      width: 190px
-      max-width: 161px
+      width: 100%
+      max-width: 313px
    &__list 
       margin-left: 0px
+      width: 100%
+      max-width: 390px 
+      display: flex
+      flex-wrap: wrap 
+      justify-content: space-between
       li 
-         margin-bottom: 17px
+         width: 37%
+         margin-bottom: 20px
          &:last-child
             margin-bottom: 0
-         a 
+            margin-left: auto
+         a
+            opacity: 0.9;
+            color: rgb(135, 147, 167)
             font-size: 18px
-            line-height: 19px
-            color: #000000
-            opacity: 0.9
-            font-weight: 600
+            font-weight: 500
+            line-height: 140%
          &:hover 
             a 
-               color: $blue
+               color: white 
+               opacity: 1
    &__left 
       align-items: flex-start
-   &__socials 
-      justify-content: center
-      margin-bottom: 27px
-      a 
-         margin-right: 30px
-         &:last-child
-            margin-right: 0
-         &:hover 
-            path
-               fill: $blue
-   &__btn 
-      width: 231px
-      height: 59px
-      margin: 0 auto
-   &__info 
-      p 
-         font-size: 16px
-         line-height: 19px
-         color: #000000
-         opacity: 0.9
-         margin-bottom: 15px
-   &__link 
-      color: #111720
-      font-size: 20px
-      font-weight: 400
-      opacity: 0.9
-      margin-bottom: 23px
-      display: block
-   &__content 
-      margin: 0
-      p 
-         color: #111720
-         text-align: right
-         font-size: 18px
-         font-style: normal
-         font-weight: 400
-         line-height: normal
-         opacity: 0.9
-         margin-bottom: 8px
-   &__bottom 
-      align-items: flex-end
-      justify-content: space-between
-      margin-top: 36px
-   &__left 
-      align-items: flex-start
-      p 
-         color: #000
-         font-family: Inter
-         font-size: 18px
-         font-style: normal
-         font-weight: 400
-         line-height: normal
-         margin-right: 43px
-         &:last-child
-            margin-right: 0
-   &__com 
-      p 
-         color: #000
-         font-size: 16px
-         font-style: normal
-         font-weight: 400
-         line-height: normal
-         margin-bottom: 10px
-   &__lists 
       width: 100%
-      max-width: 254px 
-      justify-content: space-between
-   &__soc 
-      position: relative
-      top: 25px
+      max-width: 313px
+   &__policy, &__order 
+      display: block
+      margin-top: 24px
+      opacity: 0.9
+      font-size: 15px
+      font-weight: 600
+      line-height: 130%
+      color: rgb(135, 147, 167)
+      &:hover 
+         color: white
+         opacity: 1
+   &__com 
+      display: flex
+      align-items: center
+      justify-content: flex-end
       &:hover 
          .svg 
             path 
-               fill: black
-.item 
-   padding: 25px 0 19px
-   position: relative
-   &__box 
-      margin-top: 40px
-      width: 100%
-      height: auto
-      padding-top: 40px
-      background: white
-      overflow: hidden
-   &__pic1 
-      display: block
-      margin: 0 auto 40px
-   &__left 
-      position: relative
-   &__flex 
-      justify-content: space-between
-      align-items: initial
-      border: 1px solid rgba(0, 35, 27, 0.03)
-   &__pic2
-      position: relative
-      object-fit: cover
-      bottom: 0
-      height: 100%
-   &__block 
-      position: absolute
-      bottom: 0px
-      right: -4px
-      background: #C7DDD7
-      padding: 20px 24px 24px 20px
-      width: 400px
-      height: 237px
-      display: flex
-      flex-direction: column
+               fill: $blue
+   &__info 
       p 
-         font-size: 24px
-         font-weight: 800
-         line-height: normal
-      img 
-         margin-top: auto
-         margin-left: auto
-   &__right 
-      flex-wrap: wrap
-      justify-content: space-between
-      position: relative
-      overflow: hidden
-      &:after 
-         content: ""
-         display: block
-         width: 1px
-         position: absolute
-         bottom: 0
-         left: 49.5%
-         background: rgba(0, 35, 27, 0.03)
-         height: 1000px
-   &__el 
-      padding: 30px
-      width: 48%
-      position: relative
-      &:nth-child(2)
-         &:after 
-            content: ""
-            display: block
-            width: 231%
-            position: absolute
-            bottom: 0
-            left: -111%
-            background: rgba(0, 35, 27, 0.03)
-            height: 1px
-      &:nth-child(3)
-         &:after 
-            content: ""
-            display: block
-            width: 231%
-            position: absolute
-            bottom: 0
-            left: -22%
-            background: rgba(0, 35, 27, 0.03)
-            height: 1px
-   &__name 
-      margin-bottom: 10px
-      font-size: 20px
-      font-weight: 700
-      line-height: 140%
-   &__text 
-      color: #808080
-      font-size: 16px
-      font-weight: 500
-   &__wrap 
-      position: relative 
-      margin-left: auto
-      background:#FDFFFE
-      padding: 75px 40px 60px 170px
-      width: 85%
-      img 
-         position: absolute
-         left: -194px
-         top: 162px
-   &__one 
-      font-size: 16px
-      margin-bottom: 10px
-   &__two 
-      font-size: 20px
-      font-weight: 700
-      margin-top: 20px
-      line-height: 140%
-   &__content 
-      width: 100%
-      max-width: 732px
-      h2 
-         text-align: left
-         font-size: 40px
-         margin-bottom: 20px
-   .main__fig33 
-      position: absolute
-      left: 0
-      top: 25%
-      z-index: -1
-   .main__fig44
-      position: absolute
-      right: 0
-      top: 60%
-      z-index: -1
-   &-info 
-      width: 100%
-      height: auto
-      padding: 60px 20px 40px 
-      position: relative
-      overflow: hidden
-      border-radius: 37px 0px 0px 37px
-      background:#E0EAE7
-      margin-top: 100px
-      &__pic 
-         position: absolute
-         right: -1px
-         bottom: 0
-      &__content 
-         width: 100%
-         max-width: 650px 
-      &__name 
-         text-align: center
-         margin-bottom: 40px
-         font-size: 20px
-         font-weight: 700
-      &__el 
-         align-items: center
-         margin-bottom: 40px
+         opacity: 0.9
+         color: rgb(135, 147, 167)
+         font-size: 18px
+         font-weight: 500
+         line-height: 140%
+         margin-bottom: 10px
          &:last-child
             margin-bottom: 0
-      &__left 
-         text-align: center
-         color: #000
-         font-size: 16px
-         font-weight: 600
+   &__content 
+      text-align: right
+      p 
+         margin-bottom: 5px
+         opacity: 0.9
+         color: rgb(135, 147, 167)
+         font-size: 18px
+         font-weight: 500
          line-height: 140%
-         border-right: 2px solid  #00D9A4
-         min-width: 66px
-         padding-right: 15px
-         margin-right: 15px
-      &__right 
-         color: #000
-         font-size: 16px
-   &-ultra 
-      position: relative
-      width: 85%
-      background:#FDFFFE
-      padding: 60px 40px 60px 170px
-      margin-left: auto
-      margin-top: 109px
-      img 
-         position: absolute
-         left: -116px
-         top: 29px
-      &__content 
-         h2
-            margin-bottom: 20px
-            text-align: left
-            font-size: 40px
-         p 
-            color: #00231B
+         margin-top: 15px
+   &__link 
+      display: block
+      opacity: 0.9
+      color: rgb(135, 147, 167)
+      font-size: 26px
+      font-weight: 600
+      line-height: 28px
+      margin-bottom: 10px
+      &:hover 
+         color: white 
+         opacity: 1
 .page 
    background: #F6F7F9
    h1 
       font-size: 55px
    .ser .team__box
       margin-top: 0
-.page2 
-   .ser .team__box
-      margin-top: 0
-.info 
-   padding: 72px 0 50px 
-   .item-ultra img 
-      left: -138px
-      top: -25px
-   &__box 
-      align-items: flex-start
-      justify-content: space-between
-      &_2 
-         margin-top: 40px
-         .info__block p
-            font-weight: 400
-         .info__block_2 
-            max-width: 278px
-            position: relative
-            top: -10px
-         .info__flex
-            margin: 30px 0 0
-            img 
-               position: relative
-               left: 38px
-         .info__pic5 
-            bottom: -36px
-            right: -152px
-         .info__block_1:after
-            width: 6px
-            height: 157px
-            bottom: -156px
-            left: 67px
-            background: url(/img/f11.svg) no-repeat
-            z-index: 2
-         .info__block_4:after
-            width: 6px
-            height: 82px
-            bottom: -81px
-            left: inherit
-            right: 153px
-            background: url(/img/f4.svg) no-repeat
-            z-index: 2
-            content: ""
-            display: block
-            position: absolute
-         .info__block_2:after
-            content: ""
-            display: block
-            width: 223px
-            height: 34px
-            bottom: -33px
-            left: -159px
-            background: url(/img/f22.svg) no-repeat
-            position: absolute
-            z-index: 2
-         .info__block_3:after
-            content: ""
-            display: block
-            width: 69px
-            height: 87px
-            top: -89px
-            right: -42px
-            left: inherit
-            background: url(/img/f33.svg) no-repeat
-            position: absolute
-            z-index: 2
-   &__wrap 
-      margin-left: 40px
-      border-radius: 26px
-      border: 2px solid#FDFFFE
-      background: #E0EAE7
-      padding: 19px
-      position: relative
-      width: 100%
-      max-width: 570px
-   &__block 
-      padding: 16px
-      border-radius: 18px
-      border: 2px solid#FDFFFE
-      position: relative
-      p 
-         margin-bottom: 10px
-         color: #000
-         font-size: 16px
-         font-weight: 600
-         &:last-child
-            margin-bottom: 0
-      &_1 
-         &:after 
-            content: ""
-            display: block
-            width: 68px
-            height: 96px
-            bottom: -152px
-            left: 139px
-            background: url(/img/f1.svg) no-repeat
-            position: absolute
-            z-index: 0
-      &_2 
-         max-width: 266px
-         &:after 
-            content: ""
-            display: block
-            width: 6px
-            height: 152px
-            bottom: -151px
-            left: 140px
-            background: url(/img/f2.svg) no-repeat
-            position: absolute
-            z-index: 0
-      &_3 
-         max-width: 365px
-         &:after 
-            content: ""
-            display: block
-            width: 6px
-            height: 89px
-            top: -89px
-            right: 60px
-            left: inherit
-            background: url(/img/f3.svg) no-repeat
-            position: absolute
-            z-index: 0
-      &_4 
-         max-width: 306px
-         margin-left: auto
-         margin-bottom: 355px
-         margin-top: -4px
-   &__flex 
-      align-items: center
-      margin: 12px 0 119px
-      justify-content: space-between
-      position: relative
-      z-index: 1
-   &__pic5 
-      position: absolute
-      bottom: -56px
-      right: -32px
-   &__name 
-      color:#00231B
-      font-size: 32px
-      font-weight: 700
-      line-height: normal
-      margin-bottom: 30px
-   &__list 
-      li 
-         align-items: center
-         margin-bottom: 20px
-         p 
-            color: #3F514D
-            font-size: 16px
-            font-weight: 500
-            line-height: normal
-            margin-left: 10px
-            max-width: 490px
-         &:before 
-            content: ""
-            display: inline-block
-            width: 28px
-            height: 28px
-            background: url(/img/item-dot.svg) no-repeat
-            flex: 1 0 auto 
-            max-width: 28px
-         &:last-child
-            margin-bottom: 0
-.eff 
-   padding: 50px 0
-   h2 
-      text-align: left
-      line-height: 120%
-   &__name 
-      margin: 10px 0
-      color: #00231B
-      font-size: 20px
-      font-weight: 700
-   &__top 
-      justify-content: space-between
-      align-items: center
-      margin-bottom: 28px
-   &__one 
-      align-items: center
-      p 
-         color:#00231B
-         font-size: 16px
-         font-weight: 400
-         width: 100%
-         max-width: 532px
-         margin-left: 10px
-   &__block 
-      width: 48%
-      border-radius: 25px
-      border: 1px solid #00D9A4
-      background:  #FDFFFE
-      padding: 30px
-      img 
-         width: 100%
-         margin-bottom: 20px
-   &__flex 
-      justify-content: space-between
-      margin-bottom: 100px
-   &__num 
-      display: flex
-      align-items: center
-      justify-content: center
-      border-radius: 50%
-      width: 26px
-      height: 26px
-      background: #E0EAE7
-      color:#00231B
-      font-size: 16px
-      font-weight: 700
-   &__el 
-      align-items: center
-      margin-bottom: 10px
-      p 
-         margin-left: 10px
-         color: #00231B
-   &__text 
-      color:#00231B
-      font-size: 16px
-      margin-top: 30px
-   .eff__title 
-      text-align: center
-      font-size: 40px
-   &__box 
-      justify-content: space-between
-      margin: 40px 0
-      flex-wrap: wrap 
-   &__item
-      width: 48.7%
-      padding: 0px 0 0px 20px
-      border-radius: 30px
-      border: 1px solid rgba(0, 217, 164, 0.50)
-      background: #FDFFFE
-      margin-bottom: 30px
-      justify-content: space-between
-      align-items: center
-      ul 
-         padding: 20px 0
-         li 
-            display: flex
-            align-items: center
-            color: #000
-            font-size: 16px
-            &::before
-               content: ""
-               display: inline-flex
-               width: 4px
-               height: 4px
-               border-radius: 50% 
-               background: black
-               margin-right: 10px
-               flex: 1 0 auto 
-               max-width: 4px
-   &__green 
-      display: flex
-      align-items: center
-      justify-content: center
-      width: 100px
-      height: 100%
-      padding: 9px 25px 10px 24px
-      border-radius: 0px 30px 30px 0px
-      background: #00D9A4
-   &__wrap 
-      justify-content: space-between
-      flex-wrap: wrap 
-      margin-top: 40px
-   &__let 
-      width: 48%
-      border-radius: 12px
-      border: 2px solid #C7DDD7
-      background: #E0EAE7
-      padding-top: 25px
-      margin-bottom: 30px
-      img 
-         text-align: center
-         display: block
-         margin: 0 auto
-      &:last-child
-         width: 100%
-   &__bottom 
-      margin-top: 40px
-      padding: 20px 60px
-      border-top: 2px solid  #C7DDD7
-      justify-content: space-between
-   &__info 
-      text-align: center
-      p 
-         font-weight: 500
-         color: #00231B
-         padding-bottom: 10px
-         margin-bottom: 10px
-         border-bottom: 2px solid #00D9A4
-      span 
-         font-size: 16px
-         color: #00231B
-         display: block
-         margin-bottom: 5px
-.item2 
-   &__flex 
-      align-items: center
-   &__info 
-      position: relative
-      z-index: 2
-      padding: 40px
-      background: white
-      width: 779px
-      flex: 1 0 auto
-      max-width: 779px
-      left: -205px
-   &__name 
-      margin-bottom: 20px
-      color:  #00231B
-      font-size: 26px
-      font-weight: 700
-      line-height: 142.1%
-   &__text 
-      margin-bottom: 10px
-      color:#00231B
-      font-size: 16px
-      &:last-child
-         margin-bottom: 0
-   &__wrap 
-      margin: 100px 0 88px
-      h2 
-         font-size: 40px
-      .tabs 
-         margin-top: 40px
-         &__nav 
-            justify-content: space-between
-            margin-bottom: 55px
-         .tabs__btn_active
-            background: #00D9A4
-            position: relative
-            p 
-               color: #FDFFFE
-            .old 
-               opacity: 0
-            .new 
-               opacity: 1
-            &:after 
-               opacity: 1
-      .tabs__btn 
-         flex-direction: column
-         border-radius: 14px
-         background: #DFEAE7
-         width: 170px
-         height: 170px
-         text-align: center
-         border: none
-         padding: 20px
-         p 
-            transition: 0.5s 
-            color: #00231B
-            font-size: 16px
-            font-weight: 600
-         &:after 
-            opacity: 0
-            content: ""
-            display: block
-            position: absolute
-            bottom: -18px
-            left: 50%
-            margin-left: -22px
-            width: 44px
-            height: 21px
-            background: url(/img/pol.svg) no-repeat 
-      .tabs__nav a:nth-child(3)
-         width: 170px
-   &__block 
-      position: relative
-      display: flex
-      align-items: center
-      justify-content: center
-      width: 71px
-      height: 71px
-      margin-bottom: 20px
-      .new 
-         opacity: 0
-         position: absolute
-         top: 0
-         left: 0
-      .old 
-         opacity: 1
-         position: absolute
-         top: 0
-         left: 0
-   &__right 
-      position: relative
-      margin-left: 23px
-      top: 25px
-   &__img 
-      position: absolute
-      top: 73px
-      left: 27px
-      z-index: 1
-   &__row 
-      align-items: center
-      .info__list li p
-         max-width: 712px
-   &__bottom 
-      h2 
-         font-size: 40px
-   &__box 
-      margin-top: 50px 
-      justify-content: space-between
-      align-items: flex-start    
-   &__one 
-      width: 48%
-   &__title 
-      padding-bottom: 10px
-      color: #00D9A4
-      font-size: 20px
-      font-weight: 700
-      border-bottom: 2px solid #00D9A4
-      margin-bottom: 10px
-   &__line 
-      margin-bottom: 10px
-      p 
-         color: #808080
-         font-size: 16px
-         font-weight: 500
-         width: 170px
-         border-bottom: 1px solid #808080
-         padding-bottom: 10px
-         margin-bottom: 10px
-         &:first-child
-            margin-right: 40px
-         &:nth-child(2)
-            width: 350px
-   &__el 
-      margin-bottom: 20px
-   &__nav 
-      display: none
-.item__sub2 
-   color: #3F514D
-   font-size: 16px
-   font-weight: 600
-   margin: -18px 0 30px
-.info__name.red
-   color: #F00
-.item_2 
-   .item__block 
-      background: #EFF5FF
-.item3 
-   &__box 
-      justify-content: space-between
-      flex-wrap: wrap
-      margin: 100px 0 80px
-   &__wrap 
-      width: 48.7%
-   &__block 
-      margin-bottom: 30px  
-      background: linear-gradient(135deg, #E8F3F0 0%, #EFF5FF 100%)
-      padding: 30px
-   &__top 
-      align-items: center
-      justify-content: space-between
-      margin-bottom: 20px
-      p 
-         margin-right: 86px
-         color: #22473E
-         font-weight: 700
-         font-size: 20px
-         line-height: 140%
-   &__text 
-      margin-bottom: 20px
-      color: #808080
-   &__row 
-      justify-content: space-between
-      align-items: center
-      margin: 100px 0
-      .info__list li:before
-         background: url(/img/item-dot2.svg) no-repeat
-      .eff__bottom
-         margin-top: 20px
-         padding: 20px 10px
-   &__content 
-      margin-left: 30px
-      width: 100%
-   &__bottom 
-      .info__name
-         text-align: center
-   &-table 
-      width: 100%
-      max-width: 770px 
-      margin: 0 auto 
-      justify-content: space-between
-      border-radius: 4px
-      border: 1px solid #658AC8
-      background: #FFF
-      margin-bottom: 60px
-      &__left 
-         width: 194px
-         flex: 1 0 auto 
-         max-width: 194px
-         .item3-table__block
-            width: 100%
-            border-right: 1px solid #658AC8
-            border-bottom: 1px solid #658AC8
-            min-height: 45.8px
-            &:last-child
-               border-bottom: none
-      &__block 
-         padding: 12px
-         color: #00231B
-         &.bl 
-            background: #EFF5FF
-         &.bold 
-            font-weight: 600
-      &__top
-         justify-content: space-between
-         div 
-            width: 25%
-            text-align: center
-            border-right: 1px solid #658AC8
-            border-bottom: 1px solid #658AC8
-            &:last-child
-               border-right: none
-      &__right 
-         width: 100%
-         .item3-table__block_3
-            padding: 11.9px 12px
-         .item3-table__block_4
-            padding: 12px 12px
-         .item3-table__block
-            text-align: center
-            border-bottom: 1px solid #658AC8
-         .item3-table__flex 
-            &:last-child
-               .item3-table__block
-                  border-bottom: none
-      &__flex 
-         width: 100%
-         .item3-table__block
-            width: 50%
-            &:first-child
-               border-right: 1px solid #658AC8
-         .item3-table__block_2
-            padding: 22.5px 12px
-      &__line 
-         justify-content: space-between
-         width: 50%
-         .item3-table__block
-            width: 50%
-            border-right: 1px solid #658AC8
-         &:nth-child(1)
-            .item3-table__block
-               border-right: 1px solid #658AC8
-         &:nth-child(2)
-            .item3-table__block
-               border-right: none
-   .item__name
-      line-height: 135%
-.info__name_2
-   margin: 40px 0 0px
-.item__flex_2
-   .item__right
-      background: white
-   .item__block
-      right: inherit
-      bottom: -1px
-      width: 313px
-      height: 192px
-      img 
-         transform: rotate(180deg)
-         margin-left: 0
-         width: 69px
-   ul 
-      margin-top: 5px
-      li 
-         color: #808080
-         font-size: 16px
-         font-weight: 500
-         padding-left: 10px
-         display: flex
-         align-items: flex-start
-         margin-bottom: 3px
-         &:before 
-            content: ""
-            display: inline-flex
-            width: 4px
-            height: 4px
-            border-radius: 50% 
-            background: #808080
-            margin-right: 10px
-            flex: 1 0 auto 
-            max-width: 4px
-            position: relative
-            top: 7px
-.item4 
-   .item__block
-      background: #EFF5FF
-      right: 0
-   .item__left
-      max-width: 500px
-      width: 500px
-      flex: 1 0 auto
-      .item__pic2
-         width: 100%
-   .item__wrap img
-      left: -95px
-      top: 52px
-   .item__el_main
-      width: 100%
-.info4
-   .info__list li:before
-      background: url(/img/item-dot2.svg) no-repeat
-   .info__list li p
-      max-width: 612px
-   .info__box
-      justify-content: flex-start
-   &__flex 
-      position: relative
-      margin: 60px 0
-      img 
-         position: absolute
-         right: -34px
-         bottom: -60px
-   &__block 
-      width: 770px
-      padding: 40px
-      border-radius: 4px
-      background: #FCFCFD
-   &__name 
-      margin-bottom: 20px
-      color: #111720
-      font-size: 26px
-      font-weight: 700
-      line-height: 142.1%
-   &__text 
-      color: #00231B
-      font-size: 16px
-      margin-bottom: 20px
-      &:last-child
-         margin-bottom: 0
-      &_2 
-         max-width: 399px 
-         width: 100%
-.item5 
-   .item3-table
-      max-width: 971px
-   .item__right:after 
-      bottom: inherit
-      height: 362px
-      top: 0
-   .item__wrap 
-      margin-top: 100px
-   .item__content h2
-      font-size: 30px
-   &__content 
-      width: 100%
-      max-width: 630px 
-   &__name 
-      margin-bottom: 10px
-      color: #00231B
-      font-size: 20px
-      font-weight: 700
-      line-height: 140%
-   &__text 
-      color: #00231B
-      font-size: 16px
-      margin-bottom: 40px
-   &__row 
-      align-items: center
-      margin-bottom: 40px
-      &:last-child
-         margin-bottom: 0
-      p 
-         &:first-child
-            border-right: 2px solid  #00D9A4
-            padding-right: 10px
-            margin-right: 20px
-            color: #000
-            font-weight: 600
-         &:nth-child(2)
-            color: #000
-   &__pic 
-      position: relative
-      z-index: 1
-   &__info 
-      margin-bottom: 100px
-      .info__name 
-         text-align: center
-         margin-bottom: 60px
-   &__flex 
-      align-items: flex-end
-      justify-content: space-between
-   &__el 
-      text-align: center
-      width: 21.2%
-   &__block 
-      margin-top: 10px
-      width: 100%
-      height: 174px
-      padding: 20px
-      border-radius: 4px
-      background: #EFF5FF
-      img
-         height: 94px
-      p 
-         margin-top: 15px
-         color:#111720
-         text-align: center
-         font-size: 16px
-         font-weight: 500
-         opacity: 0.800000011920929
-   &__cell
-      width: 100%
-      justify-content: space-between
-      div 
-         width: 25%
-         height: 66.59px
-         border-right: 1px solid #658AC8
-         display: flex
-         align-items: center
-         justify-content: center
-         &:last-child
-            border-right: none
-         span 
-            position: relative
-            left: -2px
-         p 
-            display: block
-            color: #000
-            margin-top: 5px
-      &_2 
-         .item3-table__block
-            &:nth-child(2), &:nth-child(3), &:nth-child(4)
-               flex-direction: column
-      &_5, &_6, &_7
-         .item3-table__block
-            height: 45.8px
-      &_10
-         .item3-table__block
-            border-bottom:  none
-   &__new 
-      h2 
-         font-size: 40px
-         text-align: left
-      .item3__box
-         margin: 40px 0
-   &__sub 
-      color:#111720
-      font-size: 24px
-      font-weight: 500
-      opacity: 0.800000011920929
-   .item3__row
-      border-radius: 8px
-      position: relative
-      picture 
-         position: absolute
-         right: 0
-         top: 0
-         z-index: 0
-         width: auto
-         height: 100%
-         img 
-            width: 100%
-            height: 100%
-      .item3__content
-         position: relative
-         z-index: 2
-         margin-left: 0
-         max-width: 645px 
-         width: 100%
-         .info__name
-            font-size: 24px
-            width: 100%
-            max-width: 613px
-         li 
-            span 
-               color: #3F514D
-               font-weight: 700
-            p 
-               max-width: 100%
-.item55__wrap
-   width: 100%
-   height: auto
-   border-radius: 37px 0px 0px 37px
-   background: #EFF5FF
-   position: relative
-   align-items: center
-   justify-content: space-between
-   padding: 30px 20px
-   margin: 100px 0
-   overflow: hidden
-   &:after 
-      content: ""
-      display: block
-      width: 431px
-      height: 423px
-      background: url(/img/white.svg) no-repeat 
-      position: absolute
-      bottom: 0
-      right: 0
-.item6 
-   &__row 
-      justify-content: space-between
-      flex-wrap: wrap 
-      width: 100%
-      max-width: 320px
-      position: relative
-      top: 20px
-   &__block 
-      display: flex
-      align-items: center
-      justify-content: center
-      width: 150px
-      height: 150px
-      border-radius: 8px
-      background: #F9FBFF
-      box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.04)
-      margin-bottom: 20px
-      img 
-         width: 130px
-         height: 130px
-         border-radius: 8px
-         object-fit: cover
-   .info__box 
-      justify-content: space-between
-      align-items: center
-.item7 
-   padding: 100px 0 
-   &__name 
-      margin-bottom: 20px
-      color: #111720
-      font-size: 20px
-      font-weight: 600
-   &__text 
-      color: #111720
-   .info__name 
-      text-align: center
-      margin-bottom: 60px
-   &__block 
-      width: 100%
-      height: auto
-      align-items: center
-      border-radius: 8px
-      background: #EFF5FF
-      padding: 20px
-      margin-bottom: 30px
-      &:last-child
-         margin-bottom: 0
-   &__pic 
-      object-fit: cover 
-      border-radius: 5px
-      width: 122px
-      height: 120px
-      margin-right: 20px
-   .info__list li p
-      max-width: 100%
-      span 
-         font-weight: 700
-   .info__list li:before
-      background: url(/img/item-dot2.svg) no-repeat
-.item8 
-   .info__list li:before
-      background: url(/img/item-dot2.svg) no-repeat
-   .info__list li p
-      max-width: 100%
-   .info__list li
-      margin-bottom: 15px
-   &__flex 
-      justify-content: space-between
-      padding: 0 40px 
-      margin-bottom: 60px
-   &__block 
-      text-align: center
-      width: 31%
-      border-radius: 4px
-      background: #EFF5FF
-      padding: 20px
-      img 
-         margin-bottom: 16px
-   &__name, &__info
-      color: #111720
-      font-size: 18px
-      font-weight: 600
-      line-height: normal
-      margin-bottom: 10px
-   &__text 
-      font-size: 14px
-.item9 
-   .item7__pic
-      margin-right: 40px
-.item10 
-   .main__fig33
-      display: none
-   &__box 
-      margin-top: 40px
-   &__flex 
-      margin-top: 40px
-      justify-content: space-between
-      flex-wrap: wrap 
-   &__block 
-      align-items: center
-      justify-content: space-between
-      border-radius: 12px
-      border: 1px solid rgba(124, 173, 253, 0.50)
-      background:#FDFFFE
-      padding: 0px 
-      overflow: hidden
-      min-height: 84px
-      margin-bottom: 30px
-      p 
-         color: #000
-         padding: 20px
-      &:nth-child(1),  &:nth-child(2),  &:nth-child(3)
-         width: 31.5%
-      &:nth-child(4),  &:nth-child(5)
-         width: 48.5%
-   &__el 
-      display: flex
-      align-items: center
-      justify-content: center
-      border-radius: 0px 12px 12px 0px
-      background: #7CADFD
-      height: 100%
-      width: 66px
-      flex: 1 0 auto 
-      max-width: 66px
-.item11 
-   .item__right:after 
-      bottom: inherit
-      height: 408px
-      top: 0
-   &__wrap 
-      margin-top: 90px
-      .info__name
-         text-align: center
-         margin-bottom: 60px
-.item3__row.item12
-   border-radius: 8px
-   position: relative
-   picture 
-      position: absolute
-      right: 0
-      top: 0
-      z-index: 0
-      width: auto
-      height: 100%
-      img 
-         width: 100%
-         height: 100%
-   .item3__content
-      position: relative
-      z-index: 2
-      margin-left: 0
-      max-width: 645px 
-      width: 100%
-   .info__name
-      font-size: 24px
-      width: 100%
-      max-width: 613px
-   li 
-      span 
-         color: #3F514D
-         font-weight: 700
-      p 
-         max-width: 100%
-.item12__box
-   .item10__block
-      width: 48.5% !important
-.item12__bottom 
-   margin: 60px 0
-   align-items: center
-   width: 100%
-   padding: 30px
-   border-radius: 37px
-   background: #EFF5FF
-   justify-content: space-between
-   .info__name
-      font-size: 20px
-   .info__list li:before
-      background: url(/img/item-dot2.svg) no-repeat
-   .info__list li
-      margin-bottom: 15px
-   .item3__content
-      margin-left: 0
 .q 
    display: flex
-.item13 
-   .item3__content
-      white-space: nowrap
-   &__bott
-      position: relative
-      justify-content: space-between
-      overflow: hidden
-      background: transparent
-      img 
-         mix-blend-mode: darken
-         position: absolute
-         right: 0
-         top: -25px
-      .info__name
-         font-size: 32px
-   &__box 
-      padding-top: 51px
-      background: #FDFFFE
-      margin-top: 40px
-      overflow: hidden
-   &__top
-      align-items: flex-start
-      justify-content: space-between
-      margin-top: -9px
-      .item__text 
-         margin-bottom: 20px
-         line-height: 148%
-   &__btn 
-      width: 100%
-      margin-top: 30px
-   &__content 
-      border: 1px solid rgba(0, 35, 27, 0.03)
-      padding: 30px 35px 35px
-      position: relative
-      bottom: 0px
-      border-bottom: none
-   &__el 
-      align-items: center
-      padding: 20px
-      border: 0.5px solid rgba(0, 35, 27, 0.03)
-      border-right: none
-      p 
-         margin-left: 20px
-         color: #111720
-         font-size: 16px
-         font-style: normal
-         font-weight: 600
-         line-height: normal
-         width: 100%
-         max-width: 206px
-      &:last-child
-         border-right: 0.5px solid rgba(0, 35, 27, 0.03)
-   &__wrap 
-      justify-content: space-between
-      flex-wrap: wrap 
-      margin-top: 40px
-   &__one 
-      background: #FCFCFD
-      box-shadow: 0px 4px 30px 0px rgba(79, 101, 139, 0.05)
-      padding: 20px
-      margin-bottom: 30px
-      width: 31.5%
-      &:nth-child(4), &:nth-child(5)
-         width: 48.6%
-   &__title 
-      margin: 15px 0 
-      color: #2758AA
-      font-size: 20px
-      font-style: normal
-      font-weight: 700
-      line-height: 150%
-      opacity: 0.9
-   &__txt 
-      color: #111720
-      font-size: 16px
-      font-style: normal
-      font-weight: 400
-      line-height: 150%
-      opacity: 0.6
-   .item10__block
-      width: 31.6% !important
-      transition: 0.5s
-      cursor: pointer
-      p
-         font-size: 16px
-         font-style: normal
-         font-weight: 600
-         line-height: 150%
-         transition: 0.5s
-      &:hover 
-         background: #7CADFD
-         p
-            color: white
-   &-area 
-      width: 100%
-      max-width: 971px 
-      margin: 20px auto 20px
-      &__sub 
-         color:  #111720
-         font-size: 24px
-         font-style: normal
-         font-weight: 400
-         line-height: normal
-         white-space: nowrap
-         margin-bottom: 40px
-         img 
-            margin: 0px 10px 0
-            display: inline-flex
-            position: relative
-            top: -5px
-      &__item 
-         align-items: start
-         margin-bottom: 40px
-         span 
-            margin-right: 10px 
-            color:#111720
-            font-size: 16px
-            font-style: normal
-            font-weight: 400
-            line-height: normal
-            opacity: 0.3
-         &:last-child
-            margin-bottom: 0
-      &__name 
-         color: #111720
-         font-size: 32px
-         font-style: normal
-         font-weight: 500
-         line-height: 150%
-         margin-bottom: 20px
-      &__text 
-         color:  #111720
-         font-size: 16px
-         font-style: normal
-         font-weight: 400
-         line-height: 150%
-         opacity: 0.7
-         width: 100%
-         max-width: 760px
-         margin-bottom: 15px
-         &:last-child
-            margin-bottom: 0
-   &-main 
-      margin: 104px 0 100px
-      &__title 
-         color:  #00231B
-         font-size: 32px
-         font-style: normal
-         font-weight: 700
-         line-height: normal
-         margin-bottom: 30px
-         text-align: center
-      &__box 
-         border-radius: 16px
-         background: #FFF
-         padding: 30px
-         width: 100%
-         max-width: 842px
-         margin: 0 auto
-         img 
-            width: 100%
-   .item2__bottom
-      h2 
-         font-size: 24px
-         font-weight: 700
-      .item2__title
-         color: #658AC8
-         border-bottom: 2px solid #658AC8
-   .item2__box
-      margin-top: 37px
-.popup2, .popup3, .popup4, .popup5, .popup6, .popup7
-   width: 970px
+.popup2
+   padding: 50px 160px
+   background: #FDFFFE
+   border-radius: 60px
    overflow: hidden
-   padding: 50px
+   width: 1300px
    &__wrap 
       overflow: hidden
 .popup3
-   &__title 
-      color: #658AC8
-      font-size: 36px
+   padding: 167px 40px
+   .policy__name
       font-weight: 600
-      line-height: normal
-      margin-bottom: 20px
-   &__text 
-      margin-bottom: 10px
-      width: 100%
-      max-width: 600px
-      font-size: 18px
-      font-style: normal
-      font-weight: 400
-      line-height: 150%
-      opacity: 0.7
-   &__pic 
-      position: absolute
-      right: 0
-      top: 0
-.item14 
-   &__link 
-      color: #7CADFD
-      font-size: 16px
-      font-weight: 500
-      line-height: 150%
-      text-decoration-line: underline
-      &:hover 
-         color: black
-   &__box 
-      justify-content: space-between
-      flex-wrap: wrap 
-      padding: 30px 30px 10px
-      border-radius: 16px
-      background: #FFF
-      display: flex
-      margin-top: 100px
-   &__item 
-      width: 31.5%
-      border-radius: 4px
-      background: #EFF5FF
-      padding: 20px
-      margin-bottom: 30px
-      a 
-         color: #7CADFD
-         font-size: 16px
-         font-style: normal
-         font-weight: 400
-         display: block
-         margin-top: 16px
-         line-height: normal
-         text-decoration-line: underline
-         &:hover 
-            color: black
-.item15 
-   &__box 
-      .item10__flex
-         &:after
-            content: ""
-            justify-content: flex-start
-            flex-basis: 31.6%
-   &-area 
-      margin: 70px auto 80px
-      &__pic 
-         width: 100%
-         margin-bottom: 40px
-.menu-btn3
-   display: flex
-   align-items: center
-   justify-content: center
-   border-radius: 8px
-   background: #658AC8
-   height: 49px
-   width: 242px
-   color: #FFF
-   font-size: 18px
-   font-weight: 500
-   flex: 1 0 auto 
-   cursor: pointer
-   max-width: 242px
-   margin-right: 18px
-   line-height: 18px
-   position: relative
-   padding-left: 22px
-   .svg 
-      transition: 0.5s
-      position: absolute
-      left: 65px
-      top: 15px
-   .new 
-      opacity: 0
-      top: 12px
-.menu-btn3.active 
-   .new 
-      opacity: 1
-   .old
-      opacity: 0
-.menu3
-   position: absolute
-   right: 0
-   top: 0px
-   width: 99%
-   right: 0.5%
-   top: 100%
-   height: auto
-   transform: translateY(-500%)
-   transition: transform 0.5s
-   z-index: 10
-   height: auto
-   background: #ffffff
-   border-radius: 8px
-   overflow: hidden
-   box-shadow: 0px 4px 15px 0px rgba(17, 23, 32, 0.34)
-   &__item 
-      border-right: 1px solid rgba(0, 0, 0, 0.15)
-      padding: 18px
-      width: 20%
-      &:last-child
-         border-right: none
-   &__name 
-      color: #111720
-      display: block
-      font-size: 20px
-      font-weight: 700
-      margin-bottom: 28px
-      line-height: 130%
-   &__list 
-      li 
-         margin-bottom: 26px
-         text-decoration: none 
-         background-image: linear-gradient($blue, $blue) 
-         background-position: 0% 100% 
-         background-repeat: no-repeat 
-         padding-bottom: 5px
-         background-size: 0% 2px 
-         transition: background-size .3s
-         &:last-child
-            margin-bottom: 0
-         a 
-            color: #111720
-            font-size: 16px
-            font-weight: 400
-            line-height: 130%
-            br 
-               display: none
-         &:hover 
-            background-size: 100% 2px 
-            a 
-               color: $blue 
-.menu3.active
-   transform: translateY(0)
-.new 
-   &__flex 
-      align-items: flex-start
-      justify-content: space-between
-      margin-top: 11px
-      .header__form
-         height: 50px
-         margin-top: 0
-         input 
-            border-radius: 8px
-            background: #FFF
-            padding-left: 50px
-            border: 1px solid #FFF
-            font-size: 18px
-         button 
-            right: inherit
-            top: 15px
-            left: 12px
-   &__mail 
-      color:  #111720
-      font-size: 18px
-      font-weight: 500
-      line-height: 18px
-   &-main 
-      h1 
-         font-size: 55px
-         line-height: normal
-         margin-bottom: 36px
-         span 
-            color: #658AC8
-      &__sub 
-         color: #000
-         font-size: 40px
-         font-weight: 700
-         line-height: normal
-         margin-bottom: 28px
-      &__box 
-         justify-content: space-between
-         align-items: flex-start
-      &__content 
-         width: 100%
-         max-width: 537px
-      &__pic 
-         border-radius: 8px
-         overflow: hidden
-      &__text 
-         color: #2B436A
-         font-size: 18px
-         font-weight: 500
-         line-height: 150%
-         margin-bottom: 12px
-         &:last-child
-            margin-bottom: 0
-      &__flex 
-         align-items: center
-         position: relative
-         left: -214px
-         top: 3px
-         &_2 
-            left: -252px
-            top: 57px
-            .new-main__block
-               width: 590px
-               max-width: 590px
-      &__block 
-         border-radius: 10px
-         background: #658AC8
-         flex: 1 0 auto
-         width: 100%
-         width: 551px
-         max-width: 551px 
-         padding: 25px 30px
-         color: #FCFCFD
-         font-size: 18px
-         font-weight: 500
-         line-height: 160%
-         white-space: nowrap
-      &__area 
-         align-items: center
-         justify-content: center
-         width: 101px
-         flex: 1 0 auto 
-         max-width: 101px
-         height: 101px
-         border-radius: 50%
-         background: #FCFCFD
-         position: relative
-         right: -18px
-      &__wrap 
-         margin: 100px 0 15px
-         h2 
-            color: #000
-            font-size: 40px
-            font-style: normal
-            font-weight: 700
-            text-align: left
-            line-height: normal
-            margin-bottom: 15px
-      &__one 
-         color: #2B436A
-         font-size: 18px
-         font-weight: 500
-         line-height: 150%
-         margin-bottom: 26px
-      &__row 
-         justify-content: space-between
-         flex-wrap: wrap 
-         margin-bottom: 48px
-      &__item
-         width: 32%
-         margin-bottom: 19px
-         height: 336px
-         border-radius: 8px
-         padding: 16px
-         background: #EBF2FB
-         position: relative
-         overflow: hidden
-         transition: 0.5s
-         &:first-child
-            background: linear-gradient(240deg, #83ADE2 -9.61%, #557AB9 91.84%)
-            .new-main__name
-               font-size: 24px
-            .new-main__name, .new-main__txt
-               color: white
-            .new-main__el
-               background: white
-         // &:after 
-         //    content: ""
-         //    background: linear-gradient(240deg, #83ADE2 -9.61%, #557AB9 91.84%)
-         //    width: 100%
-         //    height: 100%
-         //    position: absolute
-         //    top: 0
-         //    left: 0
-         //    transition: 0.5s
-         //    opacity: 0
-         // &:hover 
-         //    &:after 
-         //       opacity: 1
-         //    .new-main__name, .new-main__txt
-         //       color: white
-         //    .new-main__el
-         //       background: white
-      &__el 
-         display: flex
-         align-items: center
-         justify-content: center
-         border-radius: 50% 
-         width: 54px
-         margin-bottom: 12px
-         transition: 0.5s
-         position: relative
-         z-index: 1
-         height: 54px
-         background: #658AC8
-      &__name 
-         transition: 0.5s
-         color: #2B436A
-         font-size: 20px
-         font-weight: 700
-         line-height: 150%
-         position: relative
-         z-index: 1
-         margin-bottom: 8px
-      &__txt 
-         transition: 0.5s
-         color: #2B436A
-         font-size: 18px
-         font-weight: 400
-         line-height: 150%
-         position: relative
-         z-index: 1
+      font-size: 48.2838px
+      line-height: 48px
+      text-align: center
+      color: #FDFFFE
+      margin-bottom: 0
 .team2 
    padding: 69px 0 0px
    background: #EBF2FB
@@ -3454,393 +2569,6 @@ input[type='search']::-webkit-search-results-decoration
          display: inline-block
          &:hover 
             color: $blue
-.socials 
-   align-items: center
-   justify-content: center
-   width: 295px
-   height: 60px
-   position: fixed
-   right: 5%
-   z-index: 3
-   background: white
-   bottom: 5%
-   border-radius: 48px
-   border: 1px solid #658AC8
-   .socials__link
-      margin-right: 4px
-      color: #658AC8
-      font-size: 18px
-      font-weight: 600
-      line-height: 18px
-      position: relative
-      top: 1px
-   a 
-      margin-left: 12px
-      position: relative
-      top: 2.5px
-      &:hover 
-         opacity: 0.7
-.item-new
-   padding: 40px 0 100px
-   &__item 
-      width: 100%
-      border-radius: 16px
-      border: 1px solid rgba(124, 173, 253, 0.50)
-      background: #FDFFFE
-      margin-bottom: 16px
-      padding: 36px
-      align-items: flex-start
-      justify-content: space-between
-   &__box 
-      margin-top: 28px
-   &__main 
-      width: 100%
-      max-width: 646px 
-      color: #111720
-      font-size: 24px
-      font-style: normal
-      font-weight: 500
-      line-height: 135.023%
-      margin-bottom: 60px
-   &__info 
-      align-items: center
-      justify-content: center
-      width: 173px
-      height: 46px
-      border-radius: 57px
-      border: 1px solid #111720
-      color: #111720
-      font-size: 18px
-      font-weight: 400
-      line-height: normal
-      margin-top: 40px
-   &__right 
-      max-width: 334px 
-      width: 100%
-   &__block 
-      align-items: center
-      justify-content: center
-      width: 180px
-      height: 46px
-      border-radius: 57px
-      border: 1px solid #658AC8
-      background: #658AC8
-      color: #FFF
-      font-size: 18px
-      font-style: normal
-      font-weight: 400
-      line-height: normal
-      margin-bottom: 40px
-      opacity: 0
-      &.active 
-         opacity: 1
-   &__title 
-      color: #111720
-      font-size: 32px
-      font-style: normal
-      font-weight: 700
-      line-height: 135.023%
-      margin-bottom: 20px
-      width: 100%
-      max-width: 280px
-   &__name 
-      margin-bottom: 12px
-      color: #658AC8
-      font-size: 24px
-      font-weight: 400
-      line-height: normal
-   &__text 
-      margin-bottom: 20px
-      line-height: normal
-      &:last-child
-         margin-bottom: 0
-      a
-         color: #111720
-         font-size: 18px
-         font-weight: 400
-         padding-left: 4px
-         &:first-child
-            padding-left: 0
-         &:hover 
-            color: $blue
-   &__flex 
-      justify-content: space-between
-      align-items: flex-start
-      margin-bottom: 39px
-      p 
-         color: #111720
-         font-size: 18px
-         font-style: normal
-         font-weight: 400
-         line-height: 135.023%
-         width: 100%
-         max-width: 140px
-   &__pic 
-      margin: 0 auto
-      display: block
-   &__bottom 
-      margin-top: 80px
-      h2 
-         text-align: left
-         font-size: 40px
-         margin-bottom: 0
-   &__area 
-      margin-top: 20px
-      justify-content: space-between
-      p 
-         width: 48%
-         color: #2B436A
-         font-size: 18px
-         font-weight: 500
-         line-height: 150%
-.about-main 
-   &__sub 
-      margin-bottom: 32px
-      font-size: 28px
-      font-weight: 500
-      line-height: 160%
-   .new-main__pic
-      width: 100%
-   .new-main__flex
-      position: absolute
-      bottom: 40px
-      right: 102px
-      top: inherit
-      left: inherit
-   .new-main__box
-      position: relative
-      margin-bottom: 24px
-   .new-main__block
-      width: 620px
-      max-width: 620px
-      padding-left: 80px
-   .new-main__area
-      right: -54px
-   .swiper5 
-      overflow: hidden
-      box-sizing: content-box
-      height: 406px
-      .swiper-slide
-         height: 100%
-         border-radius: 8px
-         overflow: hidden
-         img 
-            width: 100%
-            height: 100%
-            object-fit: cover
-   &__area
-      position: relative
-      .med-arr
-         position: absolute
-         top: 44%
-      .swiper-button-prev5
-         left: -80px
-      .swiper-button-next5
-         right: -80px
-      .swiper-pagination5
-         justify-content: center
-         margin: 25px auto 0
-         display: flex
-         .swiper-pagination-bullet
-            width: 12px
-            height: 12px
-            background: #111720
-            opacity: 0.2
-            border-radius: 50%
-         .swiper-pagination-bullet-active
-            opacity: 1
-   &__wrap 
-      h2 
-         span 
-            color: #658AC8
-      .new-main__one
-         width: 100%
-         max-width: 701px
-         color: #111720
-      &_2 
-         .new-main__one
-            max-width: 723px
-         .new-main__box
-            justify-content: space-between
-            align-items: flex-start
-            height: 425px
-            .new-main__pic
-               height: 100%
-               object-fit: cover
-               &:first-child
-                  width: 55%
-               &:nth-child(2)
-                  width: 43%
-            .new-main__block
-               width: 710px
-               max-width: 710px
-            .new-main__flex
-               right: 40px
-               bottom: 49px
-   &__row   
-      justify-content: space-between
-      align-items: flex-start
-      height: 348px
-   &__big 
-      height: 100%
-      width: 100%
-      max-width: 426px 
-      position: relative
-      overflow: hidden
-      border-radius: 8px
-      flex: 1 0 auto
-      display: flex
-      flex-direction: column
-      padding: 20px
-      margin-right: 24px
-      p
-         position: relative
-         z-index: 2
-         margin-top: 16px
-         color: #FFF
-         font-size: 18px
-         font-weight: 500
-         line-height: 150%
-   &__picture 
-      position: absolute
-      top: 0
-      left: 0
-      width: 100%
-      height: 100%
-      object-fit: cover
-      z-index: 0
-   &__block 
-      align-items: center
-      justify-content: center
-      margin-top: auto
-      width: 60px
-      height: 60px
-      background: white 
-      border-radius: 50%
-      z-index: 2
-      position: relative
-   &__right 
-      justify-content: space-between
-      width: 100%
-      flex-wrap: wrap 
-   &__item 
-      position: relative
-      overflow: hidden
-      border-radius: 8px
-      display: flex
-      flex-direction: column
-      padding: 20px
-      height: 169px
-      margin-bottom: 10px
-      width: 49.3%
-      background: #EBF2FB
-      .about-main__block
-         background: #658AC8
-         margin-top: 0
-      p
-         position: relative
-         z-index: 2
-         margin-top: 16px
-         color: #111720
-         font-size: 18px
-         font-weight: 500
-         line-height: 150%
-.partners 
-   &__link, &__link2
-      align-items: center
-      justify-content: center
-      color: #111720
-      font-size: 12px
-      font-weight: 500
-      line-height: 100%
-      margin: 12px 0
-      display: none
-      img 
-         margin-left: 4px
-   .new-main__one
-      width: 100%
-      max-width: 720px
-      color: #111720
-   .new-main__wrap
-      margin-top: 60px
-   h2 
-      span 
-         color: #658AC8
-   &__row 
-      justify-content: space-between
-      flex-wrap: wrap 
-   &__item 
-      align-items: center
-      justify-content: center
-      margin-bottom: 9px
-      width: 24.4%
-      border-radius: 5px
-      height: 167px
-      overflow: hidden
-      background: #EBF2FB
-.ser.new-main__wrap 
-   padding-top: 0
-   .new-main__one
-      width: 100%
-      max-width: 677px
-      color: #111720
-   h2 
-      span 
-         color: #658AC8
-   .news__link 
-      height: 59px
-      width: 204px
-      border-radius: 40px
-      background: #658AC8
-      color: #FFF
-      font-size: 18px
-      font-style: normal
-      font-weight: 500
-      margin: 0 auto
-      border: 1px solid #658AC8
-      &:hover 
-         background: transparent
-         color: #658AC8
-   .ser__box 
-      flex-wrap: wrap 
-      margin-top: 0
-      justify-content: space-between
-      .ser__item
-         width: 32%
-         height: 273px
-         img 
-            width: 100%
-            height: 100%
-.global 
-   padding-bottom: 0px
-   margin-top: 40px
-   margin-bottom: -30px
-   .new-main__one
-      width: 100%
-      max-width: 585px
-      color: #111720
-   h2 
-      span 
-         color: #658AC8
-   &__box 
-      position: relative
-      top: -20px
-      img 
-         width: 100%
-         position: relative
-         top: -100px
-   &__info 
-      position: absolute
-      right: 0
-      top: 0
-      p 
-         color: #658AC8
-         font-size: 72px
-         font-weight: 500
-         line-height: 100%
-         margin-bottom: 40px
-         &:last-child
-            margin-bottom: 0
 /*ACCORDION*/
 .accordion-container  
    position: relative 
@@ -3919,360 +2647,6 @@ input[type='search']::-webkit-search-results-decoration
    padding-top: 40px !important
 .bol 
    font-weight: bold
-.item17 
-   &__top
-      align-items: center
-      margin-bottom: 30px
-   &__block 
-      align-items: center
-      justify-content: center
-      width: max-content
-      height: 40px
-      padding: 0px 15px
-      border-radius: 34px
-      border: 1px solid #7CADFD
-      font-size: 16px
-      color: #7CADFD
-      font-style: normal
-      font-weight: 400
-      padding-top: 2px
-      margin-right: 16px
-      &:last-child
-         margin-right: 0
-      &:hover 
-         background: #7CADFD
-         color: white
-   &__name 
-      width: 100%
-      margin-bottom: 20px
-      color:  #111720
-      font-size: 20px
-      padding-left: 32px
-      font-weight: 700
-      line-height: 150%
-   &__row 
-      justify-content: flex-start
-      flex-wrap: wrap 
-      padding-left: 30px
-      width: 100%
-      max-width: 808px
-      padding-bottom: 20px
-      .item13__el
-         padding: 0
-         margin-bottom: 19px
-         border: none
-         margin-right: 16px
-         p
-            margin-left: 6px
-            color: #111720
-            font-size: 16px
-            font-weight: 400
-            line-height: 150%
-            max-width: initial
-   &__bott 
-      li
-         p 
-            width: 100%
-            max-width: 650px
-            line-height: 24px
-            color: rgba(128, 128, 128, 0.80)
-      img 
-         top: 90px
-   &__wrap 
-      margin: 80px 0
-      h2 
-         text-align: left
-         margin-bottom: 24px
-      .tabs__nav
-         justify-content: flex-start
-         margin-bottom: 32px  
-         .tabs__btn
-            height: 46px
-            padding: 0px 24px
-            border-radius: 23px
-            border: 1px solid #7CADFD
-            width: max-content
-            margin-right: 16px
-            color: #111720
-            font-size: 16px
-            font-style: normal
-            font-weight: 600
-            line-height: normal
-      &_2 
-         margin-bottom: 70px
-         .item13__one
-            border-radius: 8px
-            border: 1px solid rgba(124, 173, 253, 0.50)
-            background: #FFF
-            box-shadow: initial
-            padding: 24px
-            margin-bottom: 24px
-            &:nth-child(1)
-               width: 65.83%
-            &:nth-child(2)
-               width: 32%
-            &:nth-child(3), &:nth-child(4), &:nth-child(5)
-               width: 32%
-            &:nth-child(6)
-               width: 32%
-            &:nth-child(7)
-               width: 65.83%
-            .item13__txt
-               width: 100%
-               max-width: 623px
-   &__sub      
-      width: 100%
-      max-width: 770px
-      margin-bottom: 30px
-      color: #111720
-      font-size: 16px
-      color: #808080
-      font-weight: 500
-      line-height: 135%
-   &__content  
-      width: 100%
-      height: auto
-      padding: 20px 36px 20px
-      border-radius: 16px
-      border: 1px solid rgba(124, 173, 253, 0.50)
-      background: #FDFFFE
-      margin-bottom: 20px
-      h3 
-         margin-top: 0
-         color: #658AC8
-         font-size: 24px
-         font-weight: 700
-         line-height: 135.023%
-         margin-bottom: 16px
-   &__size 
-      color: #111720
-      font-size: 18px
-      font-weight: 500
-      line-height: 135.023%
-      margin-bottom: 8px
-      span 
-         color: rgba(17, 23, 32, 0.60)
-   &__info 
-      color: #111720
-      font-size: 18px
-      font-weight: 500
-      line-height: 135.023%
-      margin-bottom: 20px
-   &__flex 
-      align-items: center
-      justify-content: space-between
-      img 
-         &:first-child
-            margin-right: 10px
-   &__box 
-      margin: 60px 0 100px
-      h2 
-         text-align: left
-         margin-bottom: 15px
-   &__sub2 
-      color: #808080
-      font-size: 18px
-      font-weight: 500
-      line-height: 150%
-      margin-bottom: 25px
-      margin-top: -10px
-   &__view 
-      overflow: hidden 
-      position: relative
-      width: 100%
-      border-radius: 4px
-      height: 500px
-   &__bg 
-      width: 100%
-      height: 100%
-      position: absolute
-      top: 0
-      left: 0
-      z-index: 0
-   &__video
-      position: absolute
-      top: 50%
-      left: 50%
-      transition: 0.5s 
-      cursor: pointer
-      margin-left: -47px
-      margin-top: -47px
-      z-index: 2
-      &:hover 
-         opacity: 0.6
-.item17
-   background: #F8FAFF
-   .item2__bottom_3
-      h2
-         text-align: left
-         color: #111720
-         font-size: 32px
-         font-style: normal
-         font-weight: 700
-         line-height: normal
-         margin-bottom: 30px
-   .accordeon_17
-      margin-bottom: 90px
-      .accordeon__button
-         height: 59px !important
-         justify-content: space-between !important
-         border: 1px solid #658AC8 !important
-         padding: 10px !important
-         margin-bottom: 2px
-         background: #F8FAFF !important
-         color: #658AC8 !important
-         font-size: 16px !important
-         font-weight: 700 !important
-         line-height: normal
-         border-radius: 5px !important
-         left: 0  !important
-         position: relative !important
-         bottom: 0 !important
-         margin-left: 0 !important
-         transition: 0.5s !important
-         &:hover 
-            background: $blue !important
-            color: white !important
-            border: 1px solid $blue !important
-         &:after 
-            left: initial
-            right: 1px
-            background: url(/img/own2.svg) no-repeat !important
-         &.active 
-            width: 100% !important
-            color: white !important
-            background: #7CADFD !important
-            &:after 
-               left: initial
-               right: 4px
-               background: url(/img/down.svg) no-repeat !important
-               transform: rotate(180deg)
-               top: -10px
-   .accordeon__panel
-      transition: 0.5s !important
-   .panel__text
-      margin: 20px 0
-      align-items: center
-      justify-content: space-between
-      padding: 0 10px 10px
-      border-bottom: 1px solid #D3D3D3
-      p 
-         color: #808080
-         font-size: 16px
-         font-style: normal
-         font-weight: 500
-         line-height: normal
-      &:last-child
-         border-bottom: none 
-         margin-bottom: 10px
-   &__area 
-      h2 
-         text-align: left
-         margin-bottom: 30px
-   &__line 
-      justify-content: space-between
-      flex-wrap: wrap
-      div 
-         width: 23%
-         margin-bottom: 30px
-         border-radius: 12px
-         border: 1px solid rgba(124, 173, 253, 0.50)
-         background: #7CADFD
-         height: 64px
-         color: #F8FAFF
-         font-size: 16px
-         font-style: normal
-         font-weight: 600
-         line-height: 150%
-         padding: 20px 10px 20px 20px
-   .accordeon_18
-      margin-top: 0
-      margin-bottom: 25px
-      .accordeon__button, .accordeon__button.active
-         background: transparent !important
-         padding-left: 11px !important
-         padding-right: 0 !important
-         border: none !important
-         padding-top: 0 !important
-         padding-bottom: 0 !important
-         height: auto !important
-         padding-left: 0 !important
-         &:hover 
-            background: transparent !important
-            border: none !important
-            color: white !important
-      .accordeon__button:after
-         background: transparent !important
-         content: "Подробнее"
-         color: #658AC8
-         font-size: 14px
-         font-style: normal
-         font-weight: 700
-         line-height: 135.023%
-         height: auto !important
-         width: auto !important
-         top: -9px !important
-         right: 0 !important
-      .accordeon__item
-         padding: 13px 0 13px 14px
-         border-bottom: 1px solid #D3D3D3
-         box-sizing: border-box
-         &:hover 
-            .area__title, .accordeon__button:after
-               color: $blue
-      .accordeon__button.active:after 
-         content: "Скрыть"
-         transform: inherit
-      .accordeon__panel
-         max-width: 760px
-         margin-left: auto
-         width: 100%
-   .partners__link2, .partners__link
-      display: inline-block
-      margin: 0
-      color: #658AC8
-      font-size: 16px
-      font-style: normal
-      font-weight: 700
-      line-height: normal
-      &:hover 
-         opacity: 0.7
-   .partners__see2, .partners__see
-      display: none
-   .partners__see
-      margin-bottom: 40px
-   .accordeon_19 
-      margin-top: -2px
-      margin-bottom: 20px
-      position: relative
-      .area__nums 
-         &:last-child
-            margin-bottom: 40px
-      .accordeon__button, .accordeon__button.active
-         width: 100% !important
-         height: 54px !important
-         border-radius: 5px !important
-         background: #EFF5FF !important
-         justify-content: center !important
-         border: none !important
-         &:after 
-            display: none
-         &:hover 
-            background: $blue !important
-            color: white !important
-            border: none !important
-            .new 
-               color: white !important
-      .accordeon__button.active
-         position: absolute !important
-         bottom: -27px !important
-         left: 0 !important
-         .ol 
-           display: none
-         .new 
-            display: block
-            transition: 0.5s
-            color: #658AC8 !important 
 .area 
    &__images 
       align-items: center
@@ -4443,47 +2817,6 @@ input[type='search']::-webkit-search-results-decoration
          &:nth-child(4)
             min-width: 107px
             margin-right: 45px
-.item17__content_2
-   .area__head
-      height: 39px
-      padding: 13px 35px 13px 10px
-      p 
-         font-size: 16px
-         &:first-child
-            margin-right: 102px
-         &:nth-child(2)
-            margin-right: 122px
-         &:nth-child(3)
-            margin-right: 104px
-         &:last-child
-            margin-left: auto
-            margin-right: 0
-.item17__content_3 
-   .area__images img:first-child 
-      margin-right: -37px
-   .area__lap
-      p 
-         max-width: 79.5%
-      .area-name 
-         margin-bottom: 26px
-         color:#111720
-         font-size: 32px
-         font-style: normal
-         font-weight: 700
-         line-height: normal
-         max-width: 609px
-   .info__list li
-      margin-bottom: 15px
-      &:before 
-         background: url(/img/item-dot2.svg) no-repeat
-.item17__content_4 
-   padding: 20px 0px 20px 100px
-   .per__images img:first-child
-      margin-right: 0
-.item17__content_5 
-   padding: 40px 100px
-   .per__images img:first-child
-      margin-right: 0
 .per 
    &__box 
       align-items: center
@@ -4545,418 +2878,8 @@ input[type='search']::-webkit-search-results-decoration
       width: 25.52%
       &:first-child
          width: 30%
-.item18
-   &__photos 
-      display: none !important
-   &__pic 
-      display: block
-      margin: 25px auto
-   &__sub 
-      width: 100%
-      margin-bottom: 39px
-      color: #00231B
-      text-align: center
-      font-size: 24px
-      font-style: normal
-      font-weight: 800
-      line-height: normal
-   &__row 
-      justify-content: space-between
-   &__item 
-      width: 33%
-      border-radius: 0px 10px 0px 0px
-      border: 1px solid rgba(0, 35, 27, 0.03)
-      background: #FDFFFE
-      padding: 30px 27px 40px
-      img 
-         margin-bottom: 20px
-         width: 229px
-         height: 144.185px
-         object-fit: cover
-   &__name 
-      font-size: 20px
-      font-weight: 700
-      line-height: normal
-      margin-bottom: 21px
-   &__text 
-      margin-bottom: 30px
-      color:  #808080
-      font-size: 15.5px
-      font-style: normal
-      font-weight: 400
-      line-height: normal
-   &-wrap 
-      h1 
-         font-size: 55px
-         font-style: normal
-         font-weight: 800
-         line-height: normal
-      .bread a
-         color: #00231B
-         font-size: 15px
-         font-style: normal
-         font-weight: 800
-         line-height: normal
-         opacity: 0.8
-   &__btn
-      width: 370px
-      height: 59px
-      margin: 47px auto 64px
-   &__title 
-      color:#00231B
-      text-align: center
-      font-size: 24px
-      font-style: normal
-      font-weight: 700
-      line-height: normal
-      margin-bottom: 34px
-   &__area
-      justify-content: space-between
-      margin-bottom: 80px
-   &__el 
-      width: 47%
-      height: 641px
-      border-radius: 16px
-      border: 1px solid rgba(124, 173, 253, 0.50)
-      background: #FDFFFE
-      text-align: center
-      padding: 45px 50px
-      p 
-         color: #111720
-         font-size: 22px
-         font-family: 'Inter', sans-serif
-         font-style: normal
-         font-weight: 500
-         line-height: 135.023%
-   &__block 
-      align-items: center
-      justify-content: center
-      width: 100%
-      height: 100%
-      max-height: 450px
-      margin-bottom: 50px
-      img 
-         width: 100%
-         height: 100%
-         object-fit: contain
-   &__wrap 
-      font-family: 'Inter', sans-serif
-      .item13__one 
-         border-radius: 8px
-         border: 1px solid rgba(124, 173, 253, 0.50)
-         background: #FCFCFD
-         width: 32%
-         margin-bottom: 26px
-         padding: 24px 23px 29px
-         &:nth-child(1), &:last-child
-            width: 66%
-      .item13__txt
-         width: 100%
-         max-width: 623px
 .mbb 
    display: none
-.item19
-   &__row 
-      justify-content: space-between
-      margin-top: 38px
-      width: 100%
-      .item2__one
-         width: 100%
-         margin-top: 40px
-      .item2__title
-         color: #658AC8
-         margin-bottom: 20px
-         border-bottom: 2px solid #658AC8
-      .item2__line
-         justify-content: space-between
-      .item2__line p:first-child
-         margin-right: 30px
-         width: 100%
-         max-width: 36%
-   &__left 
-      max-width: 513px
-      width: 100%
-      border-radius: 10px 12px 12px 10px
-      background: #EFF5FF
-      padding: 42px 20px 42px 30px
-      flex: 1 0 auto
-      p 
-         color:  #808080
-         font-size: 16px
-         font-style: normal
-         font-weight: 500
-         line-height: normal
-         margin-top: 30px
-   &__top 
-      align-items: center
-      font-size: 24px
-      font-style: normal
-      margin-bottom: 40px
-      font-weight: 800
-      line-height: normal
-      img
-         margin-left: 25px 
-         margin-top: 7px
-   &__pic 
-      width: 100%
-   &__right 
-      border-radius: 0px 10px 0px 0px
-      border: 1px solid rgba(0, 35, 27, 0.03)
-      background: #FDFFFE
-      padding: 30px
-      width: 100%
-   &__name 
-      font-size: 20px
-      font-style: normal
-      font-weight: 700
-      line-height: normal
-      margin-bottom: 10px
-   &__list 
-      padding-left: 20px
-      li 
-         color:  #808080
-         font-size: 16px
-         font-weight: 500
-         line-height: normal
-         color:#808080
-         display: flex 
-         align-items: flex-start
-         font-size: 16px
-         font-weight: 400
-         line-height: normal
-         &:before 
-            content: ""
-            display: inline-flex 
-            width: 4px
-            height: 4px
-            flex: 1 0 auto 
-            max-width: 4px 
-            position: relative
-            background: #808080
-            border-radius: 50%
-            margin-right: 9px
-            top: 10px
-   &__el 
-      margin-bottom: 50px
-.item20 
-   &__row 
-      .item19__left
-         position: relative
-      .item19__top
-         position: relative
-         img 
-            position: absolute
-            left: 207px
-            bottom: 0
-   &__pic 
-      position: absolute
-      right: 12px
-      top: 25px
-   &__sub 
-      color: #808080
-      font-size: 16px
-      font-weight: 400
-      line-height: normal
-      span 
-         color: #03A3DD
-   &__bottom 
-      margin-bottom: 100px
-      h2 
-         text-align: left
-   &__btn 
-      width: 281px
-.item21
-   &__left
-      padding-bottom: 20px
-      .item19__pic
-         max-height: 408px
-         object-fit: contain
-   &__right 
-      .item19__el:last-child
-         margin-bottom: 0
-.mar1 
-   margin-bottom: 107px
-.mar2 
-   margin-bottom: 68px
-.mar3 
-   margin-bottom: 51px
-.mar4
-   margin-bottom: 49px
-.pairs
-   &-wrap 
-      background: rgb(246, 247, 249)
-      .main__fig2,.main__fig33 
-         z-index: 1
-         top: 0%
-   &__box 
-      margin-top: 40px
-      h2 
-         text-align: left
-         margin-bottom: 24px
-         font-weight: 700
-   &__link 
-      display: flex
-      align-items: center
-      justify-content: center
-      height: 46px
-      padding: 0 24px 
-      width: max-content
-      border: 1px solid rgb(124, 173, 253)
-      border-radius: 23px
-      margin: 0 16px 24px 0
-      color: rgb(17, 23, 32)
-      font-size: 16px
-      font-weight: 600
-      &:hover 
-         background: $blue
-         color: white
-   &__row 
-      justify-content: flex-start
-      flex-wrap: wrap
-   &__wrap 
-      margin: 30px 0
-   &__item 
-      align-items: flex-start
-      margin-bottom: 40px
-      justify-content: space-between
-   &__content 
-      width: 100%
-      max-width: 450px
-   &__logo 
-      margin-bottom: 30px
-   &__sub 
-      color: rgb(0, 0, 0)
-      font-size: 20px
-      font-weight: 700
-      line-height: 27px
-      margin-bottom: 20px
-   &__info 
-      width: 100%
-      max-width: 680px
-      padding: 40px
-      border-radius: 8px
-      background: rgb(255, 255, 255)
-      p:last-child
-         margin-bottom: 0
-   &__title 
-      margin-bottom: 20px
-      color: rgb(0, 0, 0)
-      font-size: 20px
-      font-weight: 600
-      line-height: 27px
-   &__list 
-      li 
-         margin-bottom: 8px
-         a 
-            color: rgb(0, 0, 0)
-            font-size: 16px
-            font-weight: 400
-            text-decoration: underline
-         &:hover 
-            a 
-               color: $blue
-   &__local 
-      margin-bottom: 20px
-      color: rgb(0, 0, 0)
-      font-size: 26px
-      font-weight: 700
-      line-height: 36px
-   &__text 
-      margin-bottom: 25px
-      color: rgb(0, 0, 0)
-      font-size: 16px
-      font-weight: 400
-      line-height: 22px
-      span 
-         font-weight: 600
-.media
-   &__box 
-      h1 
-         color: rgb(0, 35, 27)
-      h2 
-         text-align: left
-         color: rgb(0, 35, 27)
-         font-weight: 800
-         margin: 10px 0 40px
-      .media__title 
-         margin-top: 80px
-      .tabs__pane_show
-         display: flex
-         flex-wrap: wrap
-   &__item 
-      justify-content: space-between
-      align-items: center
-      overflow: hidden
-      background: rgb(255, 255, 255)
-      border-radius: 8px
-      margin-bottom: 30px
-      &:hover 
-         .media__name 
-            color: $blue
-   &__pic 
-      width: 370px
-      height: 100%
-      border-radius: 8px 0 0 8px
-      object-fit: cover
-   &__content 
-      padding: 40px
-   &__data
-      margin-bottom: 20px
-      color: rgb(0, 89, 68)
-      font-size: 16px
-      font-weight: 700
-      line-height: 22px
-   &__name
-      transition: 0.5s 
-      margin-bottom: 20px
-      color: rgb(0, 0, 0)
-      font-size: 20px
-      font-weight: 700
-      line-height: 27px
-   &__text 
-      color: rgb(128, 128, 128)
-      font-size: 16px
-      font-weight: 500
-      line-height: 22px
-   &__top 
-      margin-top: 70px
-      align-items: center
-      justify-content: space-between
-      .swiper-button-prev_news
-         margin-right: 20px
-      .swiper-button-disabled
-         opacity: 0
-   &__arrow 
-      display: flex
-      align-items: center
-      justify-content: center
-      width: 50px
-      height: 50px
-      border-radius: 7px
-      box-shadow: 0px 4px 20px 0px rgba(25, 89, 74, 0.08)
-      background: rgba(255, 255, 255, 0.5)
-      cursor: pointer
-      transition: 0.5s
-      &:hover 
-         background: $blue
-         .svg 
-            path 
-               stroke: white
-   &__bottom 
-      align-items: center 
-      margin: 40px 0
-      p 
-         margin-right: 15px
-         opacity: 0.8 
-         color: rgb(0, 0, 0)
-         font-size: 16px
-         line-height: 19px
-      a 
-         color: rgb(0, 89, 68)
-         font-size: 16px
-         font-weight: 700
-         &:hover 
-            color: $blue
 .swiper_news
    .swiper-wrapper
       flex-direction: initial
@@ -4971,71 +2894,1748 @@ input[type='search']::-webkit-search-results-decoration
          margin-top: 0 !important
          margin-bottom: 5px
 .video 
-   &__top 
-      align-items: center
-      margin-bottom: 47px
-      .tabs__nav 
-         margin: 0 0 0 25px
-         position: relative
-         top: 3px
-         a 
-            display: flex
-            align-items: center
-            justify-content: center
-            height: 46px
-            padding: 0 24px 
-            width: max-content
-            border: 1px solid rgb(124, 173, 253)
-            border-radius: 23px
-            color: rgb(17, 23, 32)
-            font-size: 16px
-            font-weight: 600
-            &:hover 
-               background: $blue
-               color: white
+   border-radius: 70px
+   background: #fdfffe
+   overflow: hidden
+   margin-top: 5px
+   padding: 100px 30px 60px
    &__box 
       flex-wrap: wrap 
       justify-content: flex-start
-      margin-bottom: 40px
+      display: flex
    &__item 
-      border: 1px solid transparent
       transition: 0.5s
       overflow: hidden
-      border-radius: 8px
-      background: rgb(255, 255, 255)
-      width: 31.62%
-      margin: 0 30px 30px 0 
-      &:nth-child(3n)
+      width: 23.9%
+      margin: 0 24px 60px 0 
+      position: relative
+      &:nth-child(4n)
          margin-right: 0
+      & > img 
+         width: 100%
+         object-fit: cover 
+         margin-bottom: 24px
+         height: 230px
+         border-radius: 30px
+      p 
+         color: rgb(69, 79, 96)
+         font-size: 26px
+         font-weight: 600
+         line-height: 28px
+         transition: 0.5s
+      &:after 
+         content: ""
+         display: block
+         position: absolute
+         width: 79.95px
+         height: 56.09px
+         top: 87px
+         left: 50%
+         margin-left: -40px
+         z-index: 2
+         background: url(/img/youtube.svg) no-repeat !important
+         transition: 0.5s
       &:hover 
-         border: 1px solid $blue
-   &__content 
-      padding: 30px
-   &__name 
-      margin-bottom: 15px
-      color: rgb(0, 0, 0)
-      font-size: 19px
-      font-weight: 700
-      line-height: 27px
-   &__text 
-      color: rgb(128, 128, 128)
-      font-size: 16px
-      font-weight: 500
-      line-height: 22px
-      margin-bottom: 15px
-   &__btn 
-      height: 46px
-      width: 220px
-      border: 1px solid rgb(124, 173, 253)
-      border-radius: 23px
-      color: rgb(17, 23, 32)
-      font-size: 16px
+         &:after 
+            opacity: 0.75
+         p 
+            color: $blue
+// FAQ // 
+.faq 
+   position: relative
+   padding: 60px 0px
+   border-radius: 70px
+   background: #fdfffe
+   overflow: hidden
+   .accordeon
+      margin-top: 0px
+      .accordeon__button
+         border-radius: 20px !important
+         background: rgb(241, 244, 249) !important
+         text-align: left
+         padding-left: 60px
+         padding-right: 47%
+         justify-content: flex-start !important
+         height: 160px !important
+         transition: 0.5s !important
+         color: rgb(69, 79, 96) !important
+         font-size: 26px !important
+         font-weight: 600 !important
+         line-height: 28px !important
+         &:hover 
+            transition: 0.5s
+            color: $blue !important
+      .accordeon__item
+         background: white
+         position: relative
+         box-sizing: border-box
+         margin-bottom: 24px
+         .panel__text
+            ul 
+               padding-left: 15px
+               li 
+                  display: flex
+                  color: rgb(128, 128, 128)
+                  font-size: 16px
+                  line-height: 19px
+                  align-items: center
+                  &:before 
+                     content: ""
+                     display: inline-block
+                     width: 4px
+                     height: 4px
+                     max-width: 4px 
+                     border-radius: 50%
+                     background: rgb(128, 128, 128)
+                     margin-right: 7px
+                     flex: 1 0 auto
+      .accordeon__panel
+         transition: 0.5s
+      .accordeon__button.active
+         position: relative !important
+         bottom: 0
+         width: 100% !important
+         margin-left: -20px  !important
+         border-radius: 20px 20px 0px 0px !important
+         background: rgb(69, 79, 96) !important
+         color: white !important
+      .panel__info
+         color: rgb(69, 79, 96)
+         font-size: 18px
+         font-weight: 500
+         line-height: 140%
+         width: 100%
+         max-width: 1080px
+      .panel__text 
+         padding: 40px 70px
+         border: 1px solid rgba(13, 11, 48, 0.3)
+         border-radius: 0 0 20px 20px
+         max-width: 100%
+         overflow: hidden
+         margin-top: 0px
+         margin-bottom: 0
+      .accordeon__button:after
+         position: absolute
+         left: initial
+         right: 50px 
+         top: 50%
+         margin-top: -45.5px
+         width: 92.68px
+         height: 91px
+         // transform: rotate(180deg)
+         background: url(/img/own.svg) no-repeat !important
+      .accordeon__button.active:after
+         background: url(/img/top.svg) no-repeat !important
+         transform: rotate(0deg)
+   &__block 
+      align-items: center
+      justify-content: space-between
+      width: 100%
+      padding: 38px 30px 
+      border-radius: 16px
+      background: rgb(235, 242, 251)
+      margin: 90px 0
+      h3 
+         margin-top: -5px
+         margin-bottom: 15px
+         color: rgb(17, 23, 32)
+         font-size: 32px
+         font-weight: 600
+         line-height: 39px
+      p 
+         color: rgb(17, 23, 32)
+         font-size: 16px
+         font-weight: 400
+         line-height: 19px
+      a 
+         width: 217px
+         height: 59px
+@media screen and (max-width: 1199px)
+   .faq 
+      .accordeon__button
+         display: flex !important
+      .accordeon
+         margin-left: 0
+         margin-right: 0
+      .accordeon__panel
+         overflow: hidden
+         max-height: 0
+.van2 
+   .van__content 
+      padding: 155px 50px 60px
+      overflow: hidden
+      position: relative
+      .btn 
+         position: relative
+         z-index: 3
+         div 
+            background: $blue
+            color: white
+            &:first-child
+               width: 156px
+         .svg 
+            path
+               stroke: white
+         &:hover
+            div 
+               background: rgb(69, 79, 96)
+      .van__text
+         font-size: 26px
+         font-weight: 600
+         line-height: 30px
+         max-width: 558px
+         position: relative
+         z-index: 2
+         span 
+            color: $blue
+      .van__bottom 
+         margin-top: 0
+   &__logo 
+      margin: 0 auto 100px
+      display: block
+      position: relative
+      z-index: 2
+   &__bg 
+      position: absolute
+      bottom: 0
+      right: 0
+      width: 100%
+      object-fit: cover
+      z-index: -0
+   .van__pic
+      height: 864px
+   &__slider 
+      max-width: 49.8%
+      width: 100%
+      border-radius: 70px
+      overflow: hidden
+      position: relative
+      .swiper_van, .swiper_van2
+         width: 100%
+         height: 100%
+         .swiper-slide
+            height: 100%
+            width: 100%
+            img 
+               object-fit: cover 
+               width: 100%
+               height: 100%
+      .team__arrows
+         position: absolute
+         right: 60px
+         bottom: 60px
+         z-index: 3
+         div 
+            background: rgb(253, 255, 254)
+            .svg 
+               path 
+                  stroke: rgb(69, 79, 96)
+            &:hover 
+               background: $blue
+               .svg 
+                  path 
+                     stroke: white
+   &__area 
+      width: 100%
+      display: flex
+      align-items: center
+      justify-content: space-between
+      border-radius: 70px
+      background: rgb(253, 255, 254)
+      padding: 140px 80px 140px 50px
+      margin-top: 5px
+      h2 
+         width: 100%
+         max-width: 33%
+         font-size: 54px
+         line-height: 54px
+         span
+            color: $blue
+      p 
+         color: rgb(69, 79, 96)
+         font-size: 26px
+         font-weight: 600
+         line-height: 28px
+         width: 100%
+         max-width: 34.25%
+   &__row 
+      justify-content: space-between
+      margin-top: 5px
+      display: flex
+      div 
+         position: relative
+         overflow: hidden
+         height: 560px
+         border-radius: 70px
+         background: rgb(253, 255, 254)
+         padding: 40px
+         display: flex
+         align-items: flex-start
+         flex-direction: column
+         width: 19.8% 
+         &:after 
+            content: ""
+            display: block
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 100%
+            height: 80%
+            background: linear-gradient(180.00deg, rgba(80, 181, 141, 0),rgb(0, 127, 97) 100%)
+            z-index: 1
+            opacity: 0
+            transition: 0.5s
+         img 
+            position: absolute
+            z-index: 1
+            transition: 0.5s
+            top: 0
+            left: 0
+            opacity: 0
+            width: 100%
+            height: 100%
+            object-fit: cover
+         .svg 
+            position: relative
+            z-index: 2
+            path 
+               fill: #00A57E
+         p 
+            color: rgb(69, 79, 96)
+            font-size: 18px
+            font-weight: 600
+            line-height: 24px
+            width: 100%
+            max-width: 270px
+            transition: 0.5s
+            margin-top: auto
+            position: relative
+            z-index: 2
+         &:hover 
+            p 
+               color: white
+            img 
+               opacity: 1
+            .svg 
+               path 
+                  fill: white
+            &:after 
+               opacity: 1
+   &__per 
+      border-radius: 70px
+      background: rgb(253, 255, 254)
+      overflow: hidden
+      margin-top: 5px
+      padding: 110px 70px 200px 
+      position: relative
+      img 
+         position: absolute
+         right: 42px
+         top: 27px
+      h2 
+         width: 100%
+         max-width: 40%
+         font-size: 54px
+         line-height: 54px
+         margin-bottom: 250px
+         span
+            color: $blue 
+      p 
+         color: rgb(69, 79, 96)
+         font-size: 18px
+         font-weight: 600
+         line-height: 24px
+         width: 100%
+         max-width: 41%
+.pg 
+   position: relative
+   .bg 
+      position: absolute
+      top: 0
+      left: 0
+      z-index: -1
+      width: 100%
+      height: auto
+      object-fit: cover
+   .header
+      padding-bottom: 0px
+   .tabs__nav
+      flex-wrap: wrap
+      margin-bottom: 0
+      a, div
+         height: 55px
+         padding: 0 20px
+         border: 1px solid rgb(69, 79, 96)
+         border-radius: 30px
+         background: transparent
+         color: rgb(69, 79, 96)
+         font-size: 18px
+         font-weight: 500
+         line-height: 140%
+         margin: 0
+         margin-right: 4px
+         width: max-content !important
+         &:last-child
+            margin-right: 0
+         &:hover 
+            color: $blue
+      .tabs__btn_active
+         background: rgb(69, 79, 96) !important
+   .header_white 
+      .header__form input
+         background: rgb(253, 255, 254)
+         color: #000
+      .header__form button
+         background: rgb(253, 255, 254)
+         .svg 
+            path 
+               fill: black
+         &:hover 
+            background: $blue
+            .svg 
+               path 
+                  fill: white
+.top 
+   border-radius: 70px
+   background: rgb(253, 255, 254)
+   overflow: hidden
+   padding: 50px 50px 60px
+   h1 
+      color: rgb(69, 79, 96)
+      font-size: 120px
       font-weight: 600
-      background: transparent
+      line-height: 120%
+      margin-bottom: 100px
+      text-align: center
+   p 
+      color: rgb(69, 79, 96)
+      font-size: 18px
+      font-weight: 500
+      line-height: 140%
+      text-align: center
+      margin: 0 auto
+.pg 
+   .van2
+      .van__content
+         padding-top: 60px
+         display: flex
+         flex-direction: column 
+         align-items: flex-start
+         .van__text
+            font-size: 42px
+            line-height: 44px
+            max-width: 621px
+         .van__bottom
+            margin-top: auto
+.news-page 
+   padding: 100px 20px 60px
+   border-radius: 70px
+   background: rgb(253, 255, 254)
+   overflow: hidden
+   margin-top: 5px
+   h2 
+      text-align: center
+   .news__item
+      width: 49.3%
+      flex-direction: inherit
+      p 
+         color: rgb(69, 79, 96) !important
+      img 
+         height: 100%
+         flex: 1 0 auto 
+         max-width: 48.7%
+         width: 48.7%
+         border-radius: 40px 0 0 40px
+      .news__content
+         flex-direction: column
+         padding-top: 50px
+         h3, p
+            max-width: 100% !important
+            top: 0 !important
+            transition: 0.5s
+         h3 
+            min-height: 153px
+            margin-bottom: 10px
+            -webkit-line-clamp: 4
+            -webkit-box-orient: vertical
+            overflow: hidden
+            text-overflow: ellipsis
+            display: block
+            display: -webkit-box
+         p 
+            -webkit-line-clamp: 7
+      .news__block
+         position: relative
+         height: auto
+         bottom: 0
+         opacity: 1
+         pointer-events: inherit
+         padding: 0
+         background: transparent
+         margin-top: 24px
+         .news__read
+            transition: 0.5s
+            color: rgb(69, 79, 96)
+            .svg
+               path
+                  stroke: rgb(69, 79, 96)
+      &:hover
+         h3
+            color: $blue !important
+         .news__block, .news__read
+            color: $blue
+            .svg
+               path
+                  stroke: $blue !important
+   &__nav 
+      display: flex
+      justify-content: center
+      align-items: center
+      margin-top: 40px
+      .prev, .next
+         font-size: 14px
+         font-weight: 400
+         line-height: 150%
+         color: $blue
+         &:hover 
+            color: rgb(69, 79, 96)
+      ul 
+         display: flex
+         margin: 0 30px
+         li 
+            margin-right: 20px
+            &:last-child
+               margin-right: 0
+            a 
+               color: $blue
+               font-size: 30px
+               font-weight: 500
+               line-height: 35px
+            &.active 
+               a 
+                  color: rgb(69, 79, 96)
+            &:hover 
+               a 
+                  color: rgb(69, 79, 96)
+.footer_2 
+   .footer__box 
+      border-top: none
+.bread 
+   display: flex
+   align-items: center
+   flex-wrap: wrap 
+   justify-content: center
+   margin-bottom: 150px
+   a 
+      font-weight: 700
+      font-size: 15px
+      line-height: 140%
+      color: rgba(69, 79, 96, 0.6)
+      margin-right: 0 !important
+      &::before
+         display: none
+      &:after 
+         content: ""
+         display: inline-flex
+         border-radius: 50% 
+         width: 11px
+         height: 17px
+         margin: 0 7px
+         opacity: 1
+         position: relative
+         top: 1px
+         background: url(/img/bread.svg) no-repeat center center
+      &:last-child
+         color: rgba(69, 79, 96, 1)
+         &:after 
+            display: none
       &:hover 
+         color: $blue
+.news-item 
+   padding-top: 50px
+   h1 
+      font-size: 42px
+      font-weight: 600
+      line-height: 44px
+      text-align: center
+      color: rgb(69, 79, 96)
+      width: 100%
+      max-width: 590px
+      margin: 0 auto 140px
+   article 
+      box-sizing: border-box
+      width: 100%
+      max-width: 64.8%
+      margin: 0 auto
+      img 
+         width: 100%
+         object-fit: cover 
+         overflow: hidden
+         border-radius: 20px
+         height: 500px
+         margin-bottom: 30px
+      p 
+         width: 100% 
+         max-width: 75% 
+         margin: 0 auto 50px
+         color: rgb(69, 79, 96)
+         font-size: 18px
+         font-weight: 500
+         line-height: 140%
+   &__nav 
+      display: flex
+      justify-content: center
+      margin: 0 auto 
+      align-items: center
+      a 
+         display: flex
+         align-items: center
+         font-size: 15px
+         font-weight: 700
+         line-height: 15px
+         text-transform: uppercase
+         color: $blue
+         p 
+            transition: 0.5s
+            font-size: 15px
+            font-weight: 700
+            line-height: 15px
+            color: $blue
+            text-transform: uppercase
+            overflow: hidden
+            white-space: nowrap
+            text-overflow: ellipsis
+            max-width: 280px
+         &:nth-child(2)
+            margin: 0 90px
+         .svg 
+            flex: 1 0 auto 
+            width: 8px
+            max-width: 8px
+            path 
+               stroke: $blue
+         &:nth-child(1)
+            .svg 
+               margin-right: 15px
+         &:nth-child(3)
+            .svg 
+               margin-left: 15px
+         &:hover 
+            color: #000
+            p 
+               color: #000
+            .svg 
+               path 
+                  stroke: black
+.top_2 
+   background: transparent
+   .bread a
+      color: white
+      &:hover 
+         color: $blue
+   .bread a:after
+      background: url(/img/bread-white.svg) no-repeat center center
+   h1 
+      color: white
+   p 
+      color: rgb(253, 255, 254)
+.van4 
+   .van__pic
+      display: none
+   .van__content
+      max-width: 100%
+      .team__form
+         max-width: 688px
+         margin: 0 auto
+.contacts 
+   .container
+      padding: 0
+   #map
+      overflow: hidden
+      border-radius: 70px
+      width: 100%
+      max-width: 49.8%
+      height: 796px
+   [class*="ymaps-"][class*="-ground-pane"] 
+      filter: grayscale(100)
+   &__box 
+      display: flex
+      justify-content: space-between
+      align-items: center
+   .van__content
+      padding: 70px 50px 
+   &__item 
+      margin-bottom: 120px
+      h3 
+         margin-top: 0
+         margin-bottom: 50px
+         color: rgb(69, 79, 96)
+         font-size: 18px
+         font-weight: 600
+         line-height: 24px
+      p 
+         color: rgb(69, 79, 96)
+         font-size: 26px
+         font-weight: 600
+         line-height: 28px
+      a 
+         font-size: 26px
+         font-weight: 600
+         line-height: 28px
+         color: $blue
+         &:hover 
+            color: #000
+   &__flex
+      display: flex
+      align-items: flex-start
+      justify-content: space-between
+      .contacts__item 
+         margin-bottom: 0
+   &__tel 
+      a 
+         display: block
+         color: rgb(69, 79, 96)
+         font-size: 42px
+         font-weight: 600
+         line-height: 64px
+         &:hover 
+            color: $blue
+.service 
+   .container
+      padding: 0
+   &__row 
+      justify-content: space-between
+      align-items: flex-end
+      display: flex
+   .van__content
+      padding: 70px 50px 50px
+      h2 
+         font-size: 64px
+         line-height: 65px
+         margin-bottom: 120px
+   &__text 
+      width: 100%
+      max-width: 50.4% 
+      p 
+         color: rgb(69, 79, 96)
+         font-size: 18px
+         font-weight: 600
+         line-height: 24px
+         margin-bottom: 25px
+         &:last-child
+            margin-bottom: 0
+   &__info 
+      width: 100%
+      max-width: 32%
+      span 
+         margin-left: 47px
+         margin-bottom: 25px
+         font-size: 64px
+         font-weight: 600
+         line-height: 65px
+         color: $blue
+         display: block
+      p 
+         color: rgb(69, 79, 96)
+         font-size: 18px
+         font-weight: 600
+         line-height: 24px
+         margin-bottom: 200px
+   .service__btn 
+      div 
          background: $blue
          color: white
-   &__pic 
+         &:first-child
+            width: 172px
+      .svg 
+         path
+            stroke: white
+      &:hover
+         div 
+            background: black
+   .van2__area 
+      margin-bottom: 5px
+.tech
+   overflow: hidden
+   border-radius: 70px
+   padding: 100px 20px
+   background: white
+   margin-top: 5px
+   &__top 
+      justify-content: space-between
+      align-items: flex-start
+      margin-bottom: 60px
+      p 
+         width: 100%
+         max-width: 308px 
+         color: rgb(69, 79, 96)
+         font-size: 18px
+         font-weight: 600
+         line-height: 24px
+   &__box
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap 
+   &__item 
+      overflow: hidden
+      position: relative
+      height: 542.68px
+      border-radius: 68.57px
+      background: rgb(241, 244, 249)
+      width: 32.5%
+      display: flex
+      flex-direction: column 
+      align-items: flex-start
+      padding: 60px 50px
+      margin-bottom: 23px
+      &:first-child
+         background: linear-gradient(90.00deg, rgb(0, 165, 126),rgb(0, 191, 146) 100%)
+         img 
+            position: absolute
+            z-index: 1
+            bottom: 0
+            left: 58px
+         p 
+            color: rgb(253, 255, 254)
+            font-size: 42px
+            font-weight: 600
+            line-height: 44px
+            position: relative
+            z-index: 2
+   &__btn 
+      margin-top: auto
+      margin-left: auto
+      z-index: 2
+      position: relative
+      &:hover 
+         div 
+            background: black
+   &__row 
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
       width: 100%
-      height: 207px
+      p 
+         color: rgb(69, 79, 96)
+         font-size: 26px
+         font-weight: 600
+         line-height: 28px
+         width: 100%
+         max-width: 320px
+   &__text 
+      width: 100%
+      max-width: 460px 
+      color: rgb(69, 79, 96)
+      font-size: 18px
+      font-weight: 500
+      line-height: 140%
+      margin-top: auto
+.partners 
+   &__wrap 
+      border-radius: 70px
+      background: #fdfffe
+      overflow: hidden
+      padding: 60px 50px
+      justify-content: space-between
+      align-items: flex-start
+      display: flex
+      max-width: 1920px 
+      margin: 5px auto 0
+   &__content 
+      width: 100%
+      border-radius: 40px
+      overflow: hidden
+      background: rgb(241, 244, 249)
+      padding: 60px 200px
+      max-width: 74.3%
+      img 
+         display: block
+         margin: 0 auto 24px
+      p 
+         color: rgb(69, 79, 96)
+         font-size: 20px
+         font-weight: 500
+         line-height: 140%
+         margin-bottom: 25px
+         &:last-child
+            margin-bottom: 0
+         &:first-of-type
+            margin-bottom: 40px
+            text-align: center
+            font-size: 18px
+            font-weight: 600
+            line-height: 24px
+   &__info 
+      width: 100%
+      max-width: 23.9%
+      p 
+         color: rgb(69, 79, 96)
+         font-size: 18px
+         font-weight: 600
+         line-height: 24px 
+         margin-bottom: 30px
+      ul 
+         li 
+            margin-bottom: 20px
+            &:last-child
+               margin-bottom: 0
+            a 
+               font-size: 26px
+               font-weight: 600
+               line-height: 32px
+               color: $blue
+               &:hover 
+                  color: #000
+.top-partners 
+   .tabs__nav
+      justify-content: center
+      flex-wrap: wrap
+      width: 100%
+      max-width: 1315px 
+      margin: 0 auto
+      a, div 
+         margin: 5px
+         &:hover 
+            background: rgb(69, 79, 96)
+            border: 1px solid rgb(69, 79, 96)
+            color: white
+.van-partners
+   padding: 150px 0
+   position: relative
+   margin: 5px 30px 0
+   .van__box
+      position: initial
+   .van__pic
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
       object-fit: cover
+      max-width: 100%
+   .van__content
+      background: white
+      position: relative
+      z-index: 2
+      margin: 0 auto
+   h2
+      color: rgb(69, 79, 96)
+   .team__form label
+      color: rgb(69, 79, 96)
+   .team__form input, .team__form textarea
+      color: #000
+      border-bottom: 1px solid rgb(69, 79, 96) !important
+      &:focus
+         border-bottom: 1px solid $blue !important
+   input::-webkit-input-placeholder 
+      color: rgb(69, 79, 96) !important
+      opacity: 0.5
+   input::-moz-placeholder
+      color: rgb(69, 79, 96) !important
+      opacity: 0.5
+   input:-ms-input-placeholder 
+      color: rgb(69, 79, 96) !important
+      opacity: 0.5
+   input:-moz-placeholder 
+      color: rgb(69, 79, 96) !important
+      opacity: 0.5
+   textarea::-webkit-input-placeholder 
+      color: rgb(69, 79, 96) !important
+      opacity: 0.5
+   textarea::-moz-placeholder
+      color: rgb(69, 79, 96) !important
+      opacity: 0.5
+   textarea:-ms-input-placeholder 
+      color: rgb(69, 79, 96) !important
+      opacity: 0.5 
+   textarea:-moz-placeholder 
+      color: rgb(69, 79, 96) !important
+      opacity: 0.5
+   .team__form .chous
+      border: 1px solid rgb(69, 79, 96)
+      p 
+         color: rgb(69, 79, 96) 
+      .svg 
+         path 
+            fill: rgb(69, 79, 96)
+      &:hover 
+         border: 1px solid $blue
+         p 
+            color: $blue
+         .svg 
+            path 
+               fill: $blue
+   .team__files
+      color: rgb(69, 79, 96) 
+   .team__sub
+      color: rgb(69, 79, 96) 
+   .team__sub a
+      color: rgb(69, 79, 96) 
+      &:hover 
+         color: $blue
+   .btn div:first-child
+      background: $blue
+      color: white
+   .btn div:nth-child(2)
+      background: $blue
+      .svg 
+         path 
+            stroke: white
+   .btn 
+      &:hover 
+         div 
+            background: #454f60
+.catalog 
+   border-radius: 70px
+   background: rgb(253, 255, 254)
+   padding: 50px 50px 60px
+   .med__name
+      color: #454F60
+   .med__area ul li a
+      color: #454F60
+      &:hover 
+         color: $blue
+   h1 
+      color: rgb(69, 79, 96)
+      font-size: 120px
+      font-weight: 600
+      line-height: 120%
+      margin-bottom: 140px
+      text-align: center
+   .med__item
+      background: #F1F4F9
+.van-catalog
+   display: none
+.med__content_set
+   .med__item
+      height: auto
+      border: 1px solid rgb(152, 167, 191)
+      background: rgb(253, 255, 254)
+      &:after 
+         height: 100%
+         background: transparent
+         border: 10px solid rgb(0, 182, 138)
+         border-radius: 40px
+         box-sizing: border-box
+         opacity: 0
+      &:hover
+         .med__title
+            color: $blue 
+         .med__title span
+            color: $blue 
+         .med__text 
+            color: rgb(69, 79, 96)
+         &:after 
+           opacity: 1
+   .med__title
+      span 
+         padding: 0 !important
+         height: auto !important
+         font-weight: 400
+         width: auto !important
+         margin: 0
+         background: transparent
+         justify-content: flex-start
+         font-size: 26px
+   .med__info 
+      color: rgb(69, 79, 96)
+      font-size: 18px
+      font-weight: 500
+      line-height: 140%
+      -webkit-line-clamp: 6
+      -webkit-box-orient: vertical
+      overflow: hidden
+      text-overflow: ellipsis
+      display: block
+      display: -webkit-box
+   .med__pic
+      margin-bottom: 20px
+      height: 230px
+.productionMenuHoverItem.active
+   &:before
+      width: 164px
+      height: 61px
+      display: flex
+      justify-content: center
+      align-items: center
+      border: 1px solid rgb(0, 217, 164)
+      border-radius: 1000px
+      content: ""
+      position: absolute
+      z-index: -2
+      top: -8px
+      left: -27px
+      pointer-events: none
+.error 
+   &__content 
+      width: 100%
+      max-width: 800px
+      margin: 0 auto
+      position: relative
+      h1 
+         font-weight: 600
+         font-size: 400px
+         line-height: 100%
+         color: #454F60
+         margin-bottom: 10px
+      p 
+         font-weight: 600
+         font-size: 42px
+         line-height: 44px
+         text-align: center
+         color: #454F60
+         margin-bottom: 40px
+      a 
+         font-size: 18px
+         font-weight: 500
+         color: $blue
+         margin: 0 auto
+         display: block
+         text-align: center
+         width: max-content
+         &:hover
+            color: #000
+      img 
+         position: absolute
+         top: 149px
+         left: 50%
+         margin-left: -226px
+.policy 
+   &__name 
+      font-weight: 600
+      font-size: 26px
+      line-height: 28px
+      text-align: center
+      color: #454F60
+      margin-bottom: 40px
+   &__text 
+      margin-bottom: 20px
+      font-weight: 500
+      font-size: 20px
+      line-height: 140%
+      color: #454F60
+      &:last-child
+         margin-bottom: 0
+.top-catalog 
+   h1 
+      font-size: 68px
+      line-height: 100%
+   img 
+      display: block
+      margin: 0 auto
+.item 
+   .pagination
+      position: absolute
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      left: 40px
+      bottom: 60px
+      z-index: 3
+      .swiper-pagination-bullet
+         margin: 0 10px 0 0 !important
+         width: 15px
+         height: 15px
+         border: 1px solid rgb(0, 182, 138)
+         border-radius: 50%
+         background: transparent
+         opacity: 1
+         &:last-child
+            margin-right: 0 !important
+      .swiper-pagination-bullet-active
+         background: $blue
+   .team__arrows div
+      background: $blue
+      .svg 
+         path 
+            stroke: white
+      &:hover 
+         background: #454f60 !important
+   .tabs__nav
+      justify-content: flex-start
+      margin-bottom: 45px
+      a, div 
+         margin-right: 12px
+         &:last-child
+            margin-right: 0
+   .van__content
+      padding-top: 10px
+      .tabs__pane
+         p 
+            margin-bottom: 10px
+            color: rgb(69, 79, 96)
+            font-size: 18px
+            font-weight: 500
+            line-height: 140%
+   .van2__slider
+      border-radius: 40px
+   &__btn 
+      margin-top: 40px
+      &:hover
+         div
+            background: #454f60 !important
+   .btn div:first-child
+      width: 172px
+   .btn div:first-child, .btn div:nth-child(2)
+      background: $blue
+      color: white
+      .svg 
+         path 
+            stroke: white
+   .van__flex 
+      display: flex
+   &__area 
+      width: 100%
+      max-width: 50.67%
+      h2 
+         margin-bottom: 45px
+         width: 100%
+         max-width: 815px
+      .item__btn
+         margin-top: 50px
+      p 
+         color: rgb(69, 79, 96)
+         font-size: 18px
+         font-weight: 500
+         line-height: 140%
+         margin-bottom: 10px
+   &__uls 
+      display: flex
+      align-items: flex-start
+      ul 
+         width: 100% 
+         max-width: 45%
+         &:first-child
+            margin-right: 45px
+         li 
+            color: rgb(69, 79, 96)
+            font-size: 20px
+            font-weight: 500
+            line-height: 140%
+            margin-bottom: 5px
+            display: flex
+            align-items: flex-start
+            &:before 
+               content: ""
+               display: inline-flex
+               background: rgb(69, 79, 96)
+               border-radius: 50px 
+               margin-right: 10px
+               width: 4px
+               height: 4px
+               flex: 1 0 auto 
+               max-width: 4px
+               position: relative
+               top: 11px
+   .van__flex_item
+      padding-right: 200px
+      img
+         max-width: 100% 
+         max-height: 100% 
+         object-fit: contain
+         height: 100%
+   .item__images 
+      display: flex
+      align-items: center
+      flex-wrap: wrap 
+      justify-content: space-between
+      width: 100%
+      max-width: 41%
+      img 
+         width: 48%
+         height: 225px
+         margin-bottom: 50px
+         object-fit: contain
+   .van__flex_item2
+      padding: 80px 100px 40px
+.info
+   padding-bottom: 40px
+   &__block 
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      overflow: hidden
+      border-radius: 40px
+      background: rgb(241, 244, 249)
+      padding: 60px
+      margin-bottom: 30px
+      img 
+         display: block
+         margin: 0 auto 
+      h3 
+         margin-top: 0
+         margin-bottom: 25px
+         color: rgb(69, 79, 96)
+         font-size: 26px
+         font-weight: 600
+         line-height: 28px
+         width: 100%
+         max-width: 309px
+      p 
+         color: rgb(69, 79, 96)
+         font-size: 14px
+         font-weight: 600
+         line-height: 130%
+         margin-top: auto
+         width: 100%
+         max-width: 433px
+      ul 
+         li 
+            color: rgb(69, 79, 96)
+            font-size: 15px
+            font-weight: 600
+            line-height: 130%
+            margin-bottom: 5px
+            display: flex
+            align-items: flex-start
+            &:before 
+               content: ""
+               display: inline-flex
+               background: rgb(69, 79, 96)
+               border-radius: 50px 
+               margin-right: 7px
+               width: 3px
+               height: 3px
+               flex: 1 0 auto 
+               max-width: 3px
+               position: relative
+               top: 8px
+   .info__block_image 
+      padding: 0 0 60px
+      img 
+         width: 100%
+         object-fit: cover
+         height: 262px
+      h3, p 
+         margin-left: 60px
+      p 
+         margin-top: 0 !important
+      h3 
+         margin-top: auto
+   &__top 
+      justify-content: space-between
+      flex-wrap: wrap 
+      display: flex
+      div 
+         width: 32.5%
+         min-height: 387px
+      &_2 
+         div 
+            width: 24%
+            min-height: 422px
+   .van2__row
+      margin-top: 0
+      margin-bottom: 30px
+      div
+         background: rgb(241, 244, 249)
+         border-radius: 40px
+         width: 19%
+         small 
+            margin-top: 23px
+            color: rgb(69, 79, 96)
+            font-size: 15px
+            font-weight: 600
+            line-height: 130%
+            display: block
+            position: relative
+            z-index: 2
+         p 
+            max-width: 243px
+      &:hover
+         small 
+            color: white
+   &__flex 
+      display: flex
+      align-items: flex-start
+      justify-content: space-between
+      img 
+         object-fit: cover 
+         overflow: hidden
+         width: 100% 
+         max-width: 49.3%
+         height: 868px
+         border-radius: 40px
+      .info__top
+         width: 100%
+         max-width: 49.3%
+         div 
+            width: 48.5%
+            min-height: 422px
+   .info__top_3
+      div 
+         min-height: 523px
+         h3 
+            margin-top: auto
+         p 
+            margin-top: 0
+   .info__top_4
+      div
+         min-height: auto
+         h3 
+            margin-bottom: 0
+   .info__flex_2 
+      align-items: inherit
+      div 
+         width: 49.3%
+         flex-direction: inherit
+         justify-content: space-between
+         img 
+            height: auto
+            max-width: 317px
+            margin: 0
+   &__content 
+      width: 100% 
+      max-width: 47.3% 
+      height: 100%
+      display: flex
+      flex-direction: column  !important
+      align-items: flex-start
+      ul 
+         margin-top: auto
+.char 
+   margin-top: 5px !important
+   position: relative
+   border-radius: 70px
+   background: #fdfffe
+   padding: 80px 30px
+   margin: 0 30px
+   .tabs__nav
+      margin-bottom: 60px
+      a, div 
+         margin-right: 12px
+   h2 
+      text-align: center
+      margin-bottom: 40px
+      span 
+         display: flex
+         align-items: center
+         justify-content: center
+         padding: 0 15px 
+         width: max-content
+         height: 31px
+         border-radius: 25px
+         background: rgb(227, 233, 240)
+         color: rgb(69, 79, 96)
+         font-size: 15px
+         font-weight: 600
+         line-height: 130%
+         margin-left: 20px
+         position: relative
+         top: 5px
+   table 
+      border-collapse: separate
+      width: 100%
+      border-spacing: 0
+      margin-bottom: 0px
+      border: 2px solid rgb(200, 211, 228)
+      border-radius: 20px
+      overflow: hidden
+      td
+         color: rgb(69, 79, 96)
+         font-size: 20px
+         font-weight: 500
+         line-height: 140%
+         padding: 10px 30px
+         border-bottom: 1px solid #f3f3f3
+         &:first-child
+            text-align: left
+            border-left: 1px solid #f3f3f3
+         &:last-child
+            border-right: 1px solid #f3f3f3
+      tr 
+         &:last-child
+            td
+               &:first-child
+                  border-radius: 0 0 0 10px
+               &:last-child
+                  border-radius: 0 0 10px 0
+      thead
+         td
+            background: rgb(253, 255, 254)
+            color: rgb(69, 79, 96)
+            font-size: 26px
+            font-weight: 600
+            line-height: 28px
+            padding: 20px 30px
+            &:first-child
+               border-radius: 10px 0 0 0  !important
+            &:last-child
+               border-radius: 0 10px 0 0 !important
+      tbody
+         tr 
+            td 
+               background: rgb(241, 244, 249)
+            &:nth-child(2n)
+               td 
+                  background: rgb(227, 233, 240)
+         td 
+            &:nth-child(2)
+               color: rgb(69, 79, 96)
+               font-size: 18px
+               font-weight: 700
+               line-height: 140%
+               text-align: right
+   &__wrap 
+      width: 100%
+      overflow: hidden
+      border-radius: 40px
+      background: rgb(241, 244, 249)   
+      padding: 60px
+      display: flex
+      justify-content: space-between
+      align-items: flex-end
+      margin-bottom: 10px
+      .tabs__nav
+         justify-content: flex-start
+         a, div 
+            height: 42px
+            margin-right: 8px
+            &.active 
+               background: #454f60
+               color: white
+      .tab-content
+         h3 
+            margin-top: 0
+            margin-bottom: 34px
+            color: rgb(69, 79, 96)
+            font-size: 26px
+            font-weight: 600
+            line-height: 28px
+         small 
+            margin-bottom: 25px
+            color: rgb(69, 79, 96)
+            font-size: 18px
+            font-weight: 600
+            line-height: 24px
+            display: block
+         p 
+            color: rgb(69, 79, 96)
+            font-size: 20px
+            font-weight: 500
+            line-height: 140%
+            width: 100%
+            max-width: 638px
+   &__info 
+      width: 100%
+      max-width: 50% 
+   &__slider 
+      width: 100%
+      max-width: 40%
+      position: relative
+      .pagination
+         display: none
+      .team__arrows
+         position: absolute
+         margin-top: 0
+         bottom: 0
+         right: 0
+      .swiper_1, .swiper_2
+         overflow: hidden
+      .swiper_1
+         width: 100%
+         height: 355px
+         .swiper-slide
+            width: 100%
+            height: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+            img 
+               object-fit: contain 
+               max-width: 100% 
+               max-height: 100% 
+               width: 100%
+               max-width: 546px
+      .swiper_2
+         width: 69%
+         .swiper-slide
+            height: 58px
+            opacity: 0.4
+            transition: 0.5s
+            img 
+               object-fit: contain 
+               max-width: 100% 
+               max-height: 100% 
+               width: 100%
+               max-width: 546px
+         .swiper-slide-thumb-active
+            opacity: 1
+   .tabs3 
+      table 
+         thead 
+            tr 
+               td 
+                  color: rgb(69, 79, 96)
+                  font-size: 15px
+                  background: rgb(200, 211, 228)
+                  font-weight: 600
+                  line-height: 130%
+                  padding: 20px 0
+                  &:first-child
+                     padding-left: 30px
+         tbody 
+            tr 
+               td 
+                  color: rgb(13, 11, 48)
+                  font-size: 15px
+                  font-weight: 600
+                  line-height: 130%
+                  padding: 25px 0
+                  border-bottom: 1px solid rgb(200, 211, 228)
+                  background: white !important
+                  &:first-child
+                     padding-left: 30px
+               img 
+                  mix-blend-mode: darken
+                  max-width: 107px
+               &:last-child
+                  td
+                     border-bottom: none
+         tr 
+            td 
+               box-sizing: border-box
+               border-left: none
+               border-right: none
+               &:first-child
+                  width: 222px
+               &:nth-child(2)
+                  text-align: center
+               &:nth-child(4)
+                  width: 227px
+                  padding-right: 30px
+.char2 
+   h2 
+      display: flex 
+      align-items: center
+      justify-content: center
+.tab-content
+   display: none 
+.tab-content.active
+   display: block
+.visual 
+   &__top 
+      display: flex
+      align-items: center
+      justify-content: space-between
+      margin-bottom: 50px
+      h2 
+         margin-bottom: 0
+   &__video 
+      width: 100%
+      overflow: hidden
+      position: relative
+      cursor: pointer
+      border-radius: 40px
+      height: 701px
+      img 
+         position: absolute
+         width: 100%
+         height: 100%
+         top: 0
+         left: 0
+         object-fit: cover
+      .svg 
+         position: absolute
+         top: 50%
+         left: 50%
+         z-index: 2
+         margin-left: -50px
+         margin-top: -50px
+         transition: 0.5s
+      &:hover 
+         .svg 
+            path 
+               fill: $blue
+.possibilities
+   &__item 
+      width: 100%
+      overflow: hidden
+      border-radius: 40px
+      background: rgb(241, 244, 249)
+      padding: 60px
+      display: flex
+      align-items: flex-start
+      justify-content: space-between
+      margin-bottom: 24px
+      img 
+         margin-left: 50px
+      h3 
+         margin-top: 0
+         margin-bottom: 0
+         color: rgb(69, 79, 96)
+         font-size: 42px
+         font-weight: 600
+         line-height: 44px
+         width: 100%
+         max-width: 43%
+      &:nth-child(2)
+         align-items: center
+         border-radius: 40px
+         background: transparent
+         border: 1px solid #A8B8D2
+      &:nth-child(5)
+         align-items: flex-start
+         border-radius: 40px
+         background: transparent
+         border: 1px solid #A8B8D2
+      &_big 
+         padding: 200px 50px 50px
+         position: relative
+         img 
+            width: 100%
+            height: 100%
+            object-fit: cover 
+            position: absolute
+            top: 0
+            left: 0
+            margin-left: 0
+   &__block 
+      position: relative
+      z-index: 3
+      margin-top: auto 
+      margin-left: auto
+      width: 100%
+      max-width: 49%
+      padding: 50px
+      border-radius: 30px
+      overflow: hidden
+      background: rgb(253, 255, 254)
+      p 
+         color: rgb(69, 79, 96)
+         font-size: 18px
+         font-weight: 500
+         line-height: 140%
+         margin-bottom: 10px
+         &:last-child
+            margin-bottom: 0
+   &__content 
+      width: 100%
+      max-width: 49.8%
+      p 
+         color: rgb(69, 79, 96)
+         font-size: 20px
+         font-weight: 500
+         line-height: 140%
+         margin-bottom: 20px
+         &:last-child
+            margin-bottom: 0
+      h3 
+         margin-bottom: 40px
+         max-width: 94%
+   &__flex 
+      display: flex
+      align-items: center
+      justify-content: space-between
+      margin-bottom: 34px
+   &__btn 
+      &:hover
+         div
+            background: #454f60 !important
+   .btn div:first-child
+      width: 172px
+   .btn div:first-child, .btn div:nth-child(2)
+      background: $blue
+      color: white
+      .svg 
+         path 
+            stroke: white
