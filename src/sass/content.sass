@@ -10,6 +10,10 @@
    transition: 0.5s
    &:hover 
       transform: rotate(90deg)
+// body 
+//    transform: scale(0.8)
+//    transform-origin: top left
+//    width: 125%
 input::-webkit-input-placeholder 
    color: rgb(253, 255, 254) !important
    opacity: 0.5
@@ -174,7 +178,7 @@ button
    padding: 0
    display: inline-block
    position: relative
-   color: black
+   color: #454F60
    display: flex
    align-items: center
    justify-content: center
@@ -602,7 +606,7 @@ header
 .itemWithArrow:hover .childList  
    display: flex 
 .dropdownMenuCustom a  
-   color: #000 
+   color: #454F60 
 .underLinedLink  
    text-decoration: none 
    background-image: linear-gradient($blue, $blue) 
@@ -611,7 +615,7 @@ header
    background-size: 0% 2px 
    transition: background-size .3s 
    line-height: 35px 
-   color: #000
+   color: #454F60
 .underLinedLink:hover, .underLinedLink:focus  
    background-size: 100% 2px 
    color: $blue 
@@ -701,7 +705,7 @@ section.geader-section
    border-right: 1px solid rgba(0, 0, 0, 0.15) 
    padding: 20px 10px 
    span 
-      color: #000
+      color: #454F60
       transition: 0.5s 
       &:hover 
          color: $blue
@@ -831,7 +835,7 @@ section.geader-section
       width: max-content
       height: 43px
       position: relative
-      margin-top: 5px
+      margin-top: 4px
       display: flex
       align-items: center
       input 
@@ -839,7 +843,7 @@ section.geader-section
          height: 63px
          background: #5D6777
          border-radius: 100px
-         border: 1px solid rgba(17, 23, 32, 0.2)
+         border: 1px solid transparent
          font-weight: 500
          font-size: 18px
          line-height: 140%
@@ -953,7 +957,7 @@ input[type='search']::-webkit-search-results-decoration
    display: inline-block 
 .menu-box_inner li a  
    display: inline-block 
-   color: #000 
+   color: #454F60 
 .menu-box_inner li a:hover  
    background-color: #f0f1f1 
 .menu-box_main2 a  
@@ -1040,7 +1044,7 @@ input[type='search']::-webkit-search-results-decoration
             font-weight: 600
             line-height: 44px
             &:hover 
-               color: #000
+               color: #454F60
 .main-section  
 	background: url(/img/main-section-bg.svg) no-repeat center bottom/cover 
 	height: 810px 
@@ -1171,7 +1175,7 @@ input[type='search']::-webkit-search-results-decoration
       background: rgb(255, 255, 255)
       padding: 53px 50px 22px
       width: 100%
-      max-width: 49.8%
+      max-width: 49.86%
       h2 
          margin-bottom: 20px
    &__sub 
@@ -1200,7 +1204,7 @@ input[type='search']::-webkit-search-results-decoration
          margin-right: 0
    &__txt
       font-size: 20px
-      margin-top: 5px
+      margin-top: 4px
       margin-bottom: 200px
    &__pic 
       position: relative
@@ -1210,11 +1214,11 @@ input[type='search']::-webkit-search-results-decoration
       right: 0
       bottom: 0
       width: 100%
-      max-width: 49.8%
+      max-width: 49.86%
       height: 881px
    &__flex 
       justify-content: space-between
-      margin-top: 5px
+      margin-top: 4px
       border-radius: 70px
       backdrop-filter: blur(60px)
       background: rgb(255, 255, 255)
@@ -1250,7 +1254,7 @@ input[type='search']::-webkit-search-results-decoration
                stroke: white
          &:hover
             div 
-               background: black
+               background: #454F60
    &__name 
       color: rgb(69, 79, 96)
       font-size: 42px
@@ -1315,7 +1319,6 @@ input[type='search']::-webkit-search-results-decoration
       display: flex
       align-items: center
       justify-content: space-between
-      padding: 10px 30px 
       overflow: hidden 
       width: 100%
       border-radius: 20px
@@ -1326,8 +1329,9 @@ input[type='search']::-webkit-search-results-decoration
       margin-bottom: 0px
       background: transparent
       transition: 0.5s
+      padding: 0px 30px 
       cursor: pointer
-      min-height: 86px
+      min-height: 64.5px
       img 
          width: 77px
          opacity: 0
@@ -1336,7 +1340,9 @@ input[type='search']::-webkit-search-results-decoration
          background: rgb(13, 141, 111) !important
          color: white !important
          margin-bottom: 20px
+         padding: 10px 30px 
          margin-top: 40px
+         min-height: 86px
          img
             opacity: 1
       &_last 
@@ -1344,7 +1350,8 @@ input[type='search']::-webkit-search-results-decoration
             width: auto
       &:hover 
          background: #F1F4F9
-         color: #000
+         min-height: 120px
+         color: #454F60
    &__area 
       margin-bottom: 10px
       &:first-child
@@ -1369,7 +1376,7 @@ input[type='search']::-webkit-search-results-decoration
                justify-content: flex-start
                &:hover 
                   background: #F1F4F9
-                  color: black !important
+                  color: #454F60 !important
    &__content 
       width: 100%
       max-width: 100%
@@ -1487,7 +1494,7 @@ input[type='search']::-webkit-search-results-decoration
    padding: 100px 0 70px
    border-radius: 70px
    background: rgb(253, 255, 254)
-   margin-top: 5px
+   margin-top: 4px
    &__box 
       justify-content: space-between
       margin-top: 60px
@@ -1609,7 +1616,7 @@ input[type='search']::-webkit-search-results-decoration
       text-transform: uppercase
       justify-content: center
       &:hover 
-         color: #000
+         color: #454F60
 .chous 
    text-align: center
    cursor: pointer
@@ -1635,7 +1642,7 @@ input[type='search']::-webkit-search-results-decoration
 .chous:hover 
    background-position: bottom left
    background: transparent
-   border: 1px dashed black
+   border: 1px dashed #454F60
 .my 
    width: 0.1px
    height: 0.1px
@@ -1647,7 +1654,7 @@ input[type='search']::-webkit-search-results-decoration
    padding: 100px 24px
    border-radius: 70px
    background: rgb(255, 255, 255)
-   margin-top: 5px
+   margin-top: 4px
    h2 
       text-align: left
    &__box 
@@ -1694,10 +1701,10 @@ input[type='search']::-webkit-search-results-decoration
             .svg 
                margin-left: 10px
             &:hover 
-               color: #000
+               color: #454F60
                .svg 
                   path
-                     stroke: black
+                     stroke: #454F60
    &__content 
       width: 100%
       max-width: 26%
@@ -1742,7 +1749,7 @@ input[type='search']::-webkit-search-results-decoration
          padding-bottom: 15px
          &:focus 
             border: none !important
-            border-bottom: 1px solid #000 !important
+            border-bottom: 1px solid #454F60 !important
       .chous
          display: flex
          align-items: center
@@ -1766,12 +1773,12 @@ input[type='search']::-webkit-search-results-decoration
             margin: 0 0 0 10px
             transition: 0.5s
          &:hover 
-            border: 1px solid black
+            border: 1px solid #454F60
             p 
-               color: #000
+               color: #454F60
             .svg 
                path 
-                  fill: black
+                  fill: #454F60
    &__el 
       width: 100%
       textarea
@@ -1791,7 +1798,7 @@ input[type='search']::-webkit-search-results-decoration
          padding-top: 10px
          &:focus 
             border: none !important
-            border-bottom: 1px solid #000 !important
+            border-bottom: 1px solid #454F60 !important
    &__flex
       justify-content: space-between 
       margin-bottom: 35px
@@ -1826,7 +1833,7 @@ input[type='search']::-webkit-search-results-decoration
       a 
          color: rgb(253, 255, 254)
          &:hover 
-            color: black
+            color: #454F60
    &__row 
       margin-top: 50px
       flex-wrap: wrap
@@ -1843,7 +1850,7 @@ input[type='search']::-webkit-search-results-decoration
       padding: 90px 120px
       background: linear-gradient(90.00deg, rgb(0, 165, 126),rgb(0, 191, 146) 100%)
 .swiper-button-disabled
-   opacity: 0
+   opacity: 0.5
    pointer-events: none
 .accordeon
    width: 100%
@@ -1923,7 +1930,7 @@ input[type='search']::-webkit-search-results-decoration
    margin-bottom: 76px
 .par 
    padding: 100px 24px 
-   margin-top: 5px
+   margin-top: 4px
    border-radius: 70px
    background: rgb(255, 255, 255)
    .map 
@@ -1943,7 +1950,7 @@ input[type='search']::-webkit-search-results-decoration
       margin: 40px auto 0
       display: none
       &:hover 
-         color: #000
+         color: #454F60
    .container 
       position: relative
    h2 
@@ -2090,21 +2097,31 @@ input[type='search']::-webkit-search-results-decoration
       border-radius: 40px
       flex-direction: column
       backdrop-filter: blur(20px)
+      background: #f1f4f9
       padding: 20px 30px 30px 20px
       margin-bottom: 4px
-      &_map
+      transition: 0.5s
+      &.active 
+         background: rgb(152, 167, 191)
+         p, span 
+            color: #FDFFFE
+      &_map, &_clinics
          transition: 0.5s
          cursor: pointer
          &:hover 
-            opacity: 0.6
+            opacity: 0.8
       span 
          font-size: 64px
          font-weight: 400
+         color: #454f60
          line-height: 87px
+         transition: 0.5s
       p 
          font-size: 32px
          font-weight: 600
+         color: #454f60
          line-height: 38px
+         transition: 0.5s
          margin-top: auto
          margin-left: auto
       &:last-child
@@ -2129,19 +2146,11 @@ input[type='search']::-webkit-search-results-decoration
             background: rgb(253, 255, 254)
             .svg 
                path 
-                  stroke: black
+                  stroke: #454F60
          &:hover 
             background: rgb(69, 79, 96)
-      &:first-child
-         background: rgb(152, 167, 191)
-         p, span 
-            color: rgb(253, 255, 254)
-      &:nth-child(2)
-         background: rgb(241, 244, 249)
-         p, span 
-            color: rgb(69, 79, 96)
    &__bottom 
-      margin-top: 5px !important
+      margin-top: 4px !important
       position: relative
       border-radius: 70px
       background: rgb(253, 255, 254)
@@ -2167,7 +2176,6 @@ input[type='search']::-webkit-search-results-decoration
             display: block
             transition: 0.5s
          &:hover 
-            border: 2px solid $blue
             &:after 
                height: 100%
             p 
@@ -2319,6 +2327,7 @@ input[type='search']::-webkit-search-results-decoration
       &:hover 
          div 
             background: white !important
+            border: 1px solid white
    &__wrap 
       width: 100%
       max-width: 66.3% 
@@ -2601,7 +2610,7 @@ input[type='search']::-webkit-search-results-decoration
    padding-bottom: 20px
    transition: all 0s linear 
    margin-bottom: 20px
-   border-bottom: 1px solid #000
+   border-bottom: 1px solid #454F60
    &:last-child
       padding-bottom: 0
       margin-bottom: 0
@@ -2897,7 +2906,7 @@ input[type='search']::-webkit-search-results-decoration
    border-radius: 70px
    background: #fdfffe
    overflow: hidden
-   margin-top: 5px
+   margin-top: 4px
    padding: 100px 30px 60px
    &__box 
       flex-wrap: wrap 
@@ -2957,7 +2966,7 @@ input[type='search']::-webkit-search-results-decoration
          padding-right: 47%
          justify-content: flex-start !important
          height: 160px !important
-         transition: 0.5s !important
+         transition: 0s !important
          color: rgb(69, 79, 96) !important
          font-size: 26px !important
          font-weight: 600 !important
@@ -3105,7 +3114,7 @@ input[type='search']::-webkit-search-results-decoration
    .van__pic
       height: 864px
    &__slider 
-      max-width: 49.8%
+      max-width: 49.86%
       width: 100%
       border-radius: 70px
       overflow: hidden
@@ -3143,7 +3152,7 @@ input[type='search']::-webkit-search-results-decoration
       border-radius: 70px
       background: rgb(253, 255, 254)
       padding: 140px 80px 140px 50px
-      margin-top: 5px
+      margin-top: 4px
       h2 
          width: 100%
          max-width: 33%
@@ -3160,7 +3169,7 @@ input[type='search']::-webkit-search-results-decoration
          max-width: 34.25%
    &__row 
       justify-content: space-between
-      margin-top: 5px
+      margin-top: 4px
       display: flex
       div 
          position: relative
@@ -3225,13 +3234,15 @@ input[type='search']::-webkit-search-results-decoration
       border-radius: 70px
       background: rgb(253, 255, 254)
       overflow: hidden
-      margin-top: 5px
+      margin-top: 4px
       padding: 110px 70px 200px 
       position: relative
       img 
          position: absolute
          right: 42px
          top: 27px
+         width: 100%
+         max-width: 730px
       h2 
          width: 100%
          max-width: 40%
@@ -3284,12 +3295,12 @@ input[type='search']::-webkit-search-results-decoration
    .header_white 
       .header__form input
          background: rgb(253, 255, 254)
-         color: #000
+         color: #454F60
       .header__form button
          background: rgb(253, 255, 254)
          .svg 
             path 
-               fill: black
+               fill: #454F60
          &:hover 
             background: $blue
             .svg 
@@ -3299,7 +3310,7 @@ input[type='search']::-webkit-search-results-decoration
    border-radius: 70px
    background: rgb(253, 255, 254)
    overflow: hidden
-   padding: 50px 50px 60px
+   padding: 50px 50px 50px
    h1 
       color: rgb(69, 79, 96)
       font-size: 120px
@@ -3332,7 +3343,7 @@ input[type='search']::-webkit-search-results-decoration
    border-radius: 70px
    background: rgb(253, 255, 254)
    overflow: hidden
-   margin-top: 5px
+   margin-top: 4px
    h2 
       text-align: center
    .news__item
@@ -3425,7 +3436,7 @@ input[type='search']::-webkit-search-results-decoration
    align-items: center
    flex-wrap: wrap 
    justify-content: center
-   margin-bottom: 150px
+   margin-bottom: 100px
    a 
       font-weight: 700
       font-size: 15px
@@ -3521,12 +3532,12 @@ input[type='search']::-webkit-search-results-decoration
             .svg 
                margin-left: 15px
          &:hover 
-            color: #000
+            color: #454F60
             p 
-               color: #000
+               color: #454F60
             .svg 
                path 
-                  stroke: black
+                  stroke: #454F60
 .top_2 
    background: transparent
    .bread a
@@ -3554,7 +3565,7 @@ input[type='search']::-webkit-search-results-decoration
       overflow: hidden
       border-radius: 70px
       width: 100%
-      max-width: 49.8%
+      max-width: 49.86%
       height: 796px
    [class*="ymaps-"][class*="-ground-pane"] 
       filter: grayscale(100)
@@ -3584,7 +3595,7 @@ input[type='search']::-webkit-search-results-decoration
          line-height: 28px
          color: $blue
          &:hover 
-            color: #000
+            color: #454F60
    &__flex
       display: flex
       align-items: flex-start
@@ -3628,7 +3639,7 @@ input[type='search']::-webkit-search-results-decoration
       width: 100%
       max-width: 32%
       span 
-         margin-left: 47px
+         margin-left: 0px
          margin-bottom: 25px
          font-size: 64px
          font-weight: 600
@@ -3652,7 +3663,7 @@ input[type='search']::-webkit-search-results-decoration
             stroke: white
       &:hover
          div 
-            background: black
+            background: #454F60
    .van2__area 
       margin-bottom: 5px
 .tech
@@ -3660,7 +3671,7 @@ input[type='search']::-webkit-search-results-decoration
    border-radius: 70px
    padding: 100px 20px
    background: white
-   margin-top: 5px
+   margin-top: 4px
    &__top 
       justify-content: space-between
       align-items: flex-start
@@ -3709,7 +3720,7 @@ input[type='search']::-webkit-search-results-decoration
       position: relative
       &:hover 
          div 
-            background: black
+            background: #454F60
    &__row 
       display: flex
       justify-content: space-between
@@ -3740,7 +3751,7 @@ input[type='search']::-webkit-search-results-decoration
       align-items: flex-start
       display: flex
       max-width: 1920px 
-      margin: 5px auto 0
+      margin: 4px auto 0
    &__content 
       width: 100%
       border-radius: 40px
@@ -3785,7 +3796,7 @@ input[type='search']::-webkit-search-results-decoration
                line-height: 32px
                color: $blue
                &:hover 
-                  color: #000
+                  color: #454F60
 .top-partners 
    .tabs__nav
       justify-content: center
@@ -3823,7 +3834,7 @@ input[type='search']::-webkit-search-results-decoration
    .team__form label
       color: rgb(69, 79, 96)
    .team__form input, .team__form textarea
-      color: #000
+      color: #454F60
       border-bottom: 1px solid rgb(69, 79, 96) !important
       &:focus
          border-bottom: 1px solid $blue !important
@@ -3891,6 +3902,25 @@ input[type='search']::-webkit-search-results-decoration
    padding: 50px 50px 60px
    .med__name
       color: #454F60
+      position: relative
+      &:after 
+         content: ""
+         position: absolute
+         display: block
+         transition: 0.5s
+         width: 100%
+         height: 100%
+         top: 0
+         left: 0
+         background: linear-gradient(90deg, #00A57E 0%, #00BF92 100%)
+         border-radius: 30px
+         opacity: 0
+         z-index: -1
+      &.active
+         background: transparent !important
+         min-height: 120px
+         &:after 
+            opacity: 1
    .med__area ul li a
       color: #454F60
       &:hover 
@@ -3974,10 +4004,10 @@ input[type='search']::-webkit-search-results-decoration
       position: relative
       h1 
          font-weight: 600
-         font-size: 400px
-         line-height: 100%
+         font-size: 400px !important
+         line-height: 100% !important
          color: #454F60
-         margin-bottom: 10px
+         margin: 0 auto 10px !important
       p 
          font-weight: 600
          font-size: 42px
@@ -3994,7 +4024,7 @@ input[type='search']::-webkit-search-results-decoration
          text-align: center
          width: max-content
          &:hover
-            color: #000
+            color: #454F60
       img 
          position: absolute
          top: 149px
@@ -4018,12 +4048,16 @@ input[type='search']::-webkit-search-results-decoration
          margin-bottom: 0
 .top-catalog 
    h1 
-      font-size: 68px
+      font-size: 68px !important
       line-height: 100%
    img 
       display: block
       margin: 0 auto
+   .bread
+      margin-top: 0
+      margin-bottom: 65px
 .item 
+   margin-top: 0 !important
    .pagination
       position: absolute
       display: flex
@@ -4146,8 +4180,8 @@ input[type='search']::-webkit-search-results-decoration
          height: 225px
          margin-bottom: 50px
          object-fit: contain
-   .van__flex_item2
-      padding: 80px 100px 40px
+         &:nth-child(n+3)
+            margin-bottom: 0
 .info
    padding-bottom: 40px
    &__block 
@@ -4293,7 +4327,7 @@ input[type='search']::-webkit-search-results-decoration
       ul 
          margin-top: auto
 .char 
-   margin-top: 5px !important
+   margin-top: 4px !important
    position: relative
    border-radius: 70px
    background: #fdfffe
@@ -4610,7 +4644,7 @@ input[type='search']::-webkit-search-results-decoration
             margin-bottom: 0
    &__content 
       width: 100%
-      max-width: 49.8%
+      max-width: 49.86%
       p 
          color: rgb(69, 79, 96)
          font-size: 20px
@@ -4639,3 +4673,28 @@ input[type='search']::-webkit-search-results-decoration
       .svg 
          path 
             stroke: white
+.ser-page
+   h2 
+      text-align: center
+      margin-bottom: 70px
+   .ser__row 
+      flex-wrap: wrap 
+      justify-content: center
+      a 
+         margin: 26px
+         display: flex
+         align-items: center
+         justify-content: center
+         width: max-content
+         height: 274px
+         img 
+            height: 100%
+            width: 100%
+            display: block
+            object-fit: contain
+   .btn 
+      margin: 40px auto 0
+      div 
+         &:first-child
+            width: 192px
+

@@ -34,6 +34,30 @@ window.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const showBtn = document.querySelector(".show");
+  const certificates = document.querySelectorAll(".ser__item");
+  let expanded = false;
+
+  // Показываем только первые 9 сертификатов
+  certificates.forEach((cert, index) => {
+    if (index >= 9) cert.style.display = "none";
+  });
+
+  showBtn.addEventListener("click", function (event) {
+    event.preventDefault();
+    expanded = !expanded;
+
+    certificates.forEach((cert, index) => {
+      if (index >= 9) {
+        cert.style.display = expanded ? "block" : "none";
+      }
+    });
+
+    showBtn.querySelector("div").textContent = expanded ? "Скрыть" : "Показать еще 10";
+  });
+});
+
 $(document).ready(function () {
   $(".productionDropdownMenum").hover(
     function () {
@@ -1108,13 +1132,40 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 document.addEventListener("DOMContentLoaded", function () {
   const parBlockMap = document.querySelector(".par__block_map");
+  const parBlockClinics = document.querySelector(".par__block_clinics");
   const map = document.querySelector(".map");
   const parInfoElements = document.querySelectorAll(".par__item");
 
   if (parBlockMap && map) {
     parBlockMap.addEventListener("click", function () {
-      map.classList.toggle("active");
-      parInfoElements.forEach(element => element.classList.toggle("none"));
+      map.classList.add("active");
+      parBlockMap.classList.add("active"); // Добавляем класс active для par__block_map
+      if (parBlockClinics) {
+        parBlockClinics.classList.remove("active"); // Убираем класс active у par__block_clinics
+      }
+      parInfoElements.forEach(element => element.classList.add("none"));
+    });
+  }
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const parBlockMap2 = document.querySelector(".par__block_clinics");
+  const parBlockClinics2 = document.querySelector(".par__block_map");
+  const map2 = document.querySelector(".par__item");
+  const parInfoElements2 = document.querySelectorAll(".map");
+  const allParItems = document.querySelectorAll(".par__item");
+
+  if (parBlockMap2 && map2) {
+    parBlockMap2.addEventListener("click", function () {
+      allParItems.forEach(item => item.classList.remove("none")); // Убираем класс none у всех .par__item
+
+      map2.classList.remove("none");
+      parBlockMap2.classList.add("active"); // Добавляем класс active для par__block_map
+
+      if (parBlockClinics2) {
+        parBlockClinics2.classList.remove("active"); // Убираем класс active у par__block_clinics
+      }
+
+      parInfoElements2.forEach(element => element.classList.remove("active"));
     });
   }
 });
